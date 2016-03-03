@@ -1,0 +1,26 @@
+\select@language {italian}
+\select@language {italian}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Parole con vettori simili\relax }}{8}
+\contentsline {figure}{\numberline {1.2}{\ignorespaces Alcuni esempi di analogie\relax }}{8}
+\contentsline {figure}{\numberline {1.3}{\ignorespaces Visualizzazione con t-SNE di un word embedding bilingua. \relax }}{9}
+\contentsline {figure}{\numberline {1.4}{\ignorespaces Vettori corrispondenti alle parole\relax }}{10}
+\contentsline {figure}{\numberline {1.5}{\ignorespaces Vettori corrispondenti alle frasi\relax }}{11}
+\contentsline {figure}{\numberline {1.6}{\ignorespaces Matrice di similarit\IeC {\`a}\relax }}{11}
+\contentsline {figure}{\numberline {1.7}{\ignorespaces Assegna uno "score" utilizzando Pagerank\relax }}{12}
+\contentsline {figure}{\numberline {1.8}{\ignorespaces Rappresentazione visuale di 8 random walk monodimensionali. \relax }}{13}
+\contentsline {figure}{\numberline {1.9}{\ignorespaces Rappresentazione visuale di un random walk di 25.000 passi su due dimensioni. \relax }}{14}
+\contentsline {figure}{\numberline {1.10}{\ignorespaces Differenze fra i vari tipi di funzioni distanza\relax }}{17}
+\contentsline {figure}{\numberline {1.11}{\ignorespaces Betweenneess centrality score\relax }}{19}
+\contentsline {figure}{\numberline {1.12}{\ignorespaces Modularity score\relax }}{20}
+\contentsline {figure}{\numberline {1.13}{\ignorespaces Diagramma di Voronoi\relax }}{22}
+\contentsline {figure}{\numberline {1.14}{\ignorespaces Matrice termini-documenti. Ogni riga rappresenta un singolo termine ed ogni colonna rappresenta un singolo documento\relax }}{23}
+\contentsline {figure}{\numberline {1.15}{\ignorespaces La visualizzazione dei dati \IeC {\`e} un passo fondamentale nell'analisi dei dati.\relax }}{26}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Architettura di un web crawler\relax }}{29}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Differenze tra ricerca in ampiezza e ricerca in profondit\IeC {\`a}\relax }}{30}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Random walk sul grafo. \relax }}{34}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Partizionamento di un grafo.\relax }}{47}
+\addvspace {10\p@ }

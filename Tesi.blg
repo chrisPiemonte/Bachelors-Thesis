@@ -1,0 +1,52 @@
+This is BibTeX, Version 0.99d (TeX Live 2013/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: Tesi.aux
+The style file: plain.bst
+Database file #1: Bibliografia.bib
+A bad cross reference---entry "Zou13"
+refers to entry "conf/emnlp/2013", which doesn't exist
+Warning--I didn't find a database entry for "GTD"
+Warning--I didn't find a database entry for "Deng12"
+Warning--I didn't find a database entry for "conf/emnlp/2013"
+You've used 19 entries,
+            2118 wiz_defined-function locations,
+            648 strings with 8298 characters,
+and the built_in function-call counts, 7677 in all, are:
+= -- 797
+> -- 338
+< -- 8
++ -- 136
+- -- 114
+* -- 533
+:= -- 1208
+add.period$ -- 67
+call.type$ -- 19
+change.case$ -- 112
+chr.to.int$ -- 0
+cite$ -- 19
+duplicate$ -- 309
+empty$ -- 600
+format.name$ -- 114
+if$ -- 1675
+int.to.chr$ -- 0
+int.to.str$ -- 19
+missing$ -- 20
+newline$ -- 98
+num.names$ -- 38
+pop$ -- 122
+preamble$ -- 1
+purify$ -- 95
+quote$ -- 0
+skip$ -- 227
+stack$ -- 0
+substring$ -- 509
+swap$ -- 94
+text.length$ -- 8
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 72
+warning$ -- 0
+while$ -- 73
+width$ -- 21
+write$ -- 231
+(There was 1 error message)

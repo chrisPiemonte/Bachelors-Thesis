@@ -1,0 +1,42 @@
+% !TEX encoding = UTF-8
+% !TEX TS-program = pdflatex
+% !TEX root = ../Tesi.tex
+% !TEX spellcheck = it-IT
+
+%************************************************
+
+%************************************************
+
+Il clustering di pagine web è un argomento trattato estensivamente in letteratura che ha come obiettivo raggruppare pagine all'interno di cluster omogenei, anche se gran parte del lavoro svolto si basa su un insieme arbitrario di pagine derivanti da molteplici siti differenti. Relativamente poco è stato il lavoro svolto sul clustering di un specifico sito di una determinata organizzazione.
+\\\\
+Principalmente si dividono sulla base dei criteri che utilizzano per raggruppare le pagine, ovvero se considerano la semantica, la struttura o l'utilizzo.
+
+\subsubsection{Semantica delle pagine web}
+Come proposto in \cite{Cooley03}, questo approccio suggerisce l'utilizzo di informazioni semantiche per migliorare il processo di estrazione, necessitano quindi meta-informazioni aggiuntive sulla struttura e sulla gerarchia. Le foglie nel livello più basso sono le pagine web, che sono poi raggruppate in cluster sulla base di una qualche affinità semantica. 
+\\
+Gerarchie semantiche possono essere definite seguendo diversi criteri, che dipendono dagli obiettivi e dalle analisi. Le informazioni aggiuntive necessarie possono essere basate sul contenuto delle pagine web, come ad esempio i metadati, o sapere se è stato un particolare tool o processo nella creazione delle pagine.
+
+\subsubsection{Struttura interna delle pagine web}
+Questi prendono in considerazione la struttura interna di una pagina analizzandone il DOM. La struttura ad albero di una pagine HTML è stata usata per la segmentazione di una pagina ed utilizzare i collegamenti tra queste per raggrupparle \cite{Lin10} o per scovare pattern \cite{Kudelka08} ricorrenti, utili nel misurare la similarità.
+
+\subsubsection{Struttura del grafo del web}
+Utilizza il grafo del web, dove le pagine sono i nodi e gli archi sono i collegamenti fra queste.
+\\
+In questo caso il clustering delle pagine web diventa il partizionamento del grafo. Soluzioni proposte \cite{Luxburg07} si basano sul dividere tale struttura in sotto-grafi, tramite una funzione che minimizza il numero di archi tra cluster e massimizza il numero degli archi tra i nodi di un cluster.
+
+\subsubsection{Web usage clustering}
+Possono essere estratti pattern di utilizzo dai web log ed essere utilizzati per predire il comportamento futuro degli utenti, per raggruppare le pagine in cluster in base agli interessi in comune o per pesare gli archi del grafo, in modo da combinare diversi approcci \cite{Shahabi97}. Lavori recenti si stanno dirigendo sempre più sullo web usage mining, quindi raggruppando pagine web prevalentemente in base all'utilizzo da parte degli utenti, in modo da personalizzare le risposte alle query immesse nei motori di ricerca~\cite{Crabtree06}.
+
+
+\section{In-domain clustering}
+Molto del lavoro svolto sull'argomento si focalizza sul clustering di pagine web provenienti da siti diversi basandosi su di un approccio specifico piuttosto che un altro. Un caso interessante è il sistema SiteMap Generator (SMG)~\cite{Lin11} che mette in pratica un approccio ibrido, analizzando sia la struttura interna che quella esterna. Infatti esso divide la pagina in blocchi, li classifica sulla base della loro rilevanza ed infine analizza i collegamenti che ci sono fra blocchi, eventualmente anche di pagine diverse. In seguito i blocchi con alta frequenza di occorrenza e un alto valore hub, ottenuto nell'ultima fase tramite l'algoritmo HITS, vengono utilizzati per generare la sitemap.
+\\
+In SMG l'obiettivo è dunque la costruzione della sitemap, estraendo dalla struttura delle pagine di uno stesso dominio gli hyperlink necessari.
+
+\section{Random walk come frasi}
+Nell'ambito della social networks analysis, DeepWalk \cite{Perozzi14} propone una metodologia interessante attraverso l'analisi dei grafi. Dato un grafo, vengono generati random walk di piccola lunghezza. Questi vengono poi trattati come frasi, e applicando tecniche di Natural Language Processing viene stimata la verosimiglianza che specifiche sequenze di parole (in questo caso i nodi del grafo) appaiano nel corpus, ovvero l'insieme dei random walk generati. Queste vengono poi mappate in uno spazio vettoriale.
+\\
+Questo approccio viene applicato nell'ambito dei social network per apprendere rappresentazioni sociali dei vertici. La parte interessante è l'applicazione di tecniche consolidate per la risoluzione di problemi differenti.
+
+\section{Sviluppi recenti}
+Articoli recenti si allontanano dalla classica rappresentazione vettoriale dei documenti, basata sula frequenza di occorrenza delle parole all'interno dei documenti. Questa può evidenziare una similarità tra i documenti non esaustiva. Può rivelarsi utile disambiguare le query immesse nei motori di ricerca o assegnare una misura di rilevanza di un documento ad un dato argomento.
