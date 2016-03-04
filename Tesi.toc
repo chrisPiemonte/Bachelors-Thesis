@@ -63,23 +63,10 @@
 \contentsline {subsubsection}{sequencesIDsFromHomepage.txt}{46}
 \contentsline {section}{\numberline {4.2}Metodologie confrontate}{46}
 \contentsline {subsection}{\numberline {4.2.1}Partizionamento del Grafo Web}{46}
-\contentsline {subsection}{\numberline {4.2.2}URL Embedding}{47}
+\contentsline {subsection}{\numberline {4.2.2}URL Embedding}{48}
 \contentsline {subsection}{\numberline {4.2.3}Text Mining}{48}
-\contentsline {subsection}{\numberline {4.2.4}Analisi combinata}{48}
-\contentsline {subsection}{\numberline {4.2.5}Algoritmi utilizzati}{49}
-\contentsline {subsubsection}{WalTrap}{49}
-\contentsline {subsubsection}{Fastgreedy}{49}
-\contentsline {subsubsection}{K-Means}{49}
-\contentsline {subsubsection}{DBSCAN}{49}
-\contentsline {subsubsection}{HDBSCAN}{49}
-\contentsline {section}{\numberline {4.3}Metriche}{49}
-\contentsline {subsubsection}{Silohuette}{49}
-\contentsline {subsubsection}{Adj rand index}{49}
-\contentsline {subsubsection}{V-Measure}{49}
-\contentsline {subsubsection}{Homogeneity}{49}
-\contentsline {subsubsection}{Mutual Information}{49}
-\contentsline {section}{\numberline {4.4}Risultati ottenuti}{49}
-\contentsline {section}{\numberline {4.5}Sperimentazione modulo estrazione dei perpetratori}{50}
-\contentsline {paragraph}{}{51}
-\contentsline {section}{\numberline {4.6}Sperimentazione predizione attivit\IeC {\`a} criminali}{56}
-\contentsline {chapter}{\numberline {5}Conclusioni e sviluppi futuri}{68}
+\contentsline {subsection}{\numberline {4.2.4}Informazione combinata}{49}
+\contentsline {section}{\numberline {4.3}Algoritmi utilizzati}{49}
+\contentsline {section}{\numberline {4.4}Metriche}{51}
+\contentsline {section}{\numberline {4.5}Risultati ottenuti}{53}
+\contentsline {chapter}{\numberline {5}Conclusioni e sviluppi futuri}{54}

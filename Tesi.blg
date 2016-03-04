@@ -8,45 +8,45 @@ refers to entry "conf/emnlp/2013", which doesn't exist
 Warning--I didn't find a database entry for "GTD"
 Warning--I didn't find a database entry for "Deng12"
 Warning--I didn't find a database entry for "conf/emnlp/2013"
-You've used 19 entries,
+You've used 20 entries,
             2118 wiz_defined-function locations,
-            648 strings with 8298 characters,
-and the built_in function-call counts, 7677 in all, are:
-= -- 797
-> -- 338
+            656 strings with 8536 characters,
+and the built_in function-call counts, 8083 in all, are:
+= -- 837
+> -- 361
 < -- 8
-+ -- 136
-- -- 114
-* -- 533
-:= -- 1208
-add.period$ -- 67
-call.type$ -- 19
-change.case$ -- 112
++ -- 145
+- -- 122
+* -- 571
+:= -- 1276
+add.period$ -- 70
+call.type$ -- 20
+change.case$ -- 119
 chr.to.int$ -- 0
-cite$ -- 19
-duplicate$ -- 309
-empty$ -- 600
-format.name$ -- 114
-if$ -- 1675
+cite$ -- 20
+duplicate$ -- 320
+empty$ -- 628
+format.name$ -- 122
+if$ -- 1755
 int.to.chr$ -- 0
-int.to.str$ -- 19
-missing$ -- 20
-newline$ -- 98
-num.names$ -- 38
-pop$ -- 122
+int.to.str$ -- 20
+missing$ -- 21
+newline$ -- 103
+num.names$ -- 40
+pop$ -- 127
 preamble$ -- 1
-purify$ -- 95
+purify$ -- 101
 quote$ -- 0
-skip$ -- 227
+skip$ -- 234
 stack$ -- 0
-substring$ -- 509
-swap$ -- 94
+substring$ -- 542
+swap$ -- 95
 text.length$ -- 8
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 72
+type$ -- 76
 warning$ -- 0
-while$ -- 73
-width$ -- 21
-write$ -- 231
+while$ -- 77
+width$ -- 22
+write$ -- 242
 (There was 1 error message)

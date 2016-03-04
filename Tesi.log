@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.12.22)  3 MAR 2016 18:47
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.12.22)  4 MAR 2016 01:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1350,130 +1350,61 @@ Overfull \hbox (36.79134pt too wide) in paragraph at lines 98--99
  [][] 
  []
 
-[46] [47 <./Immagini/graphpartitioning.png (PNG copy)>] [48]
-Overfull \hbox (19.47772pt too wide) in paragraph at lines 131--131
-[]\OT1/cmr/bx/n/17.28 Sperimentazione mo-du-lo estra-zio-ne dei per-
+[46] [47 <./Immagini/graphpartitioning.png (PNG copy)>] [48] [49]
+Overfull \hbox (11.68765pt too wide) in paragraph at lines 142--144
+[]\OT1/cmr/m/it/12 i)\OT1/cmr/m/n/12 Tutti i pun-ti al-l'in-ter-no del clu-ster
+ so-no mu-tual-men-te density-connected.
  []
 
-[49]
-
-LaTeX Warning: Citation `GTD' on page 50 undefined on input line 134.
-
-[50] [51] [52] [53]
-
-LaTeX Warning: Reference `figConfrontoRis' on page 54 undefined on input line 2
-60.
-
-[54]
-
-LaTeX Warning: Citation `Deng12' on page 55 undefined on input line 268.
-
-[55] [56] [57]
-Overfull \hbox (12.7542pt too wide) in paragraph at lines 354--355
-[] $\OML/cmm/m/it/12 numDocsTw \OMS/cmsy/m/n/12   []\OT1/cmr/m/n/12 (0\OML/cmm/
-m/it/12 ; numDocs=n; criminalPresentProb\OT1/cmr/m/n/12 )$; 
- []
-
-[58] [59] [60] [61]
-
-LaTeX Warning: Reference `predizione_fin_note' on page 62 undefined on input li
-ne 454.
-
-[62]
-Overfull \hbox (48.02354pt too wide) in paragraph at lines 494--495
-[] $\OML/cmm/m/it/12 cluster \OMS/cmsy/m/n/12   []\OT1/cmr/m/n/12 (\OML/cmm/m/i
-t/12 criminal; listClusterCurrentTW\OT1/cmr/m/n/12 )$ 
- []
-
-
-Overfull \hbox (22.40128pt too wide) in paragraph at lines 495--496
-[] $\OML/cmm/m/it/12 clusterCorrect \OMS/cmsy/m/n/12   []\OT1/cmr/m/n/12 (\OML/
-cmm/m/it/12 criminal; timeWindow\OT1/cmr/m/n/12 )$ 
- []
-
-[63]
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 517.
-
-Overfull \hbox (5.12886pt too wide) in paragraph at lines 518--519
-[]$\OML/cmm/m/it/10 InsertIntoListClusters\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 lis
-tClusterCurrentTW\OT1/cmr/m/n/10 )$ in-se-ri-sce in \OT1/cmr/m/it/10 list-Clu-s
-ter-Cur-rentTW
- []
-
-
-Overfull \hbox (6.9598pt too wide) in paragraph at lines 520--521
-[]$\OML/cmm/m/it/10 getCorrectCluster\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 criminal
-; timeWindow\OT1/cmr/m/n/10 )$ re-sti-tui-sce il clu-ster rea-le in cui $\OML/c
-mm/m/it/10 criminal$
- []
-
-[64] [65] [66]) [67]
+[50] [51] [52]) [53]
 Capitolo 5.
 (./MaterialeInizialeFinale/Conclusioni.tex)
 
 Package Fancyhdr Warning: \fancyfoot's `E' option without twoside option is use
 less on input line 147.
 
-[68
+[54
 
-] (./Tesi.bbl [69]
+] (./Tesi.bbl [55]
 
 Package Fancyhdr Warning: \fancyfoot's `E' option without twoside option is use
-less on input line 60.
+less on input line 45.
 
-[70
+[56
 
-]
-Underfull \hbox (badness 1057) in paragraph at lines 95--98
-[]\OT1/cmr/m/n/10 Anand Ra-ja-ra-man and Jef-frey Da-vid Ull-man.  \OT1/cmr/m/i
-t/10 Mi-ning of Mas-si-ve Da-ta-se-ts\OT1/cmr/m/n/10 .
- []
-
-[71]) [72] (./Tesi.aux)
-
-LaTeX Warning: There were undefined references.
-
+] [57]) [58] (./Tesi.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 15258 strings out of 493304
- 293741 string characters out of 6139870
- 316810 words of memory out of 5000000
- 18387 multiletter control sequences out of 15000+600000
- 18021 words of font info for 69 fonts, out of 8000000 for 9000
+ 15210 strings out of 493304
+ 293144 string characters out of 6139870
+ 313740 words of memory out of 5000000
+ 18347 multiletter control sequences out of 15000+600000
+ 13732 words of font info for 51 fonts, out of 8000000 for 9000
  958 hyphenation exceptions out of 8191
- 39i,12n,45p,10418b,603s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texli
-ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/texlive/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/texlive/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texlive/texmf-dist/fo
-nts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/ty
-pe1/public/amsfonts/cm/cmitt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
-mmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pf
-b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr
-/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/
-texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmsl12.pfb></usr/share/texlive/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/f
-onts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/ty
-pe1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
-lic/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-tt12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msb
-m10.pfb>
-Output written on Tesi.pdf (81 pages, 3048486 bytes).
+ 39i,12n,45p,10418b,589s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share
+/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/texliv
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/font
+s/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl12.pf
+b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share
+/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on Tesi.pdf (67 pages, 2913417 bytes).
 PDF statistics:
- 414 PDF objects out of 1000 (max. 8388607)
- 276 compressed objects within 3 object streams
+ 335 PDF objects out of 1000 (max. 8388607)
+ 219 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
  101 words of extra memory for PDF output out of 10000 (max. 10000000)
 
