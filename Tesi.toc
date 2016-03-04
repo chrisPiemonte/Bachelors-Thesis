@@ -68,5 +68,6 @@
 \contentsline {subsection}{\numberline {4.2.4}Informazione combinata}{49}
 \contentsline {section}{\numberline {4.3}Algoritmi utilizzati}{49}
 \contentsline {section}{\numberline {4.4}Metriche}{51}
+\contentsline {paragraph}{Silhouette}{53}
 \contentsline {section}{\numberline {4.5}Risultati ottenuti}{53}
 \contentsline {chapter}{\numberline {5}Conclusioni e sviluppi futuri}{54}

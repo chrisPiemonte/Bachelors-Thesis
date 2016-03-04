@@ -157,9 +157,7 @@ Nota la ground truth, questo valore rappresenta quanto ogni cluster sia omogeneo
 \item \textbf{Completeness}
 Note la ground truth, indica se tutti i membri di una sono stati assegnati allo stesso cluster
 \item \textbf{V-Measure} rappresenta la media armonica fra l'\textit{homogeneity score} e il \textit{completeness score}.
-\end{itemize}
-Nelle metriche presentate $0.0$ rappresenta il valore peggiore, mentre $1.0$ il perfect score. Questi valori offrono una interpretazione intuitiva e può aiutare alla scoperta degli errori commessi nella assegnazione. Fra i vantaggi è degno di nota che nessuna assunzione viene fatta sulla struttura dei cluster, quindi possono essere utilizzate con algoritmi che identificano cluster di forma diversa.
-\begin{itemize}
+
 \item \textbf{Adjusted rand index}
 Nota la ground truth, ovvero le classi reali, e le assegnazioni di un algritmo di apprendimento, viene calcolata una funzione che misura la similarità delle due informazioni, ignorandole permutazioni. I valori che può assumere vanno da $-1$ a $1$. Vicino allo $0$ rappresentano una assegnazione casuale delle etichette.
 \\
@@ -180,11 +178,17 @@ Il $RI$ non garantisce comunque che le assegnazioni casuali avranno valori pross
 ARI = \frac{RI - E[RI]}{\max (RI) - E[RI]}
 \end{equation}
 \item \textbf{Mutual Information}
+Nota la ground truth e le asseganzioni dell'algoritmo di clustering, la \textit{Mutual Information} è una funzione che misura la corrispondenza delle due informazioni, ignorando le permutazioni. 
+\\
+Anche qui, una assegnazione uniforme (o casuale) dei cluster avrà valori prossimi allo $0.0$, evidenziando l'indipendenza delle due informazioni, mentre valori prossimi a $1.0$ indicano una corrispondenza significativa.
 
-\item \textbf{Silohuette}
 
 \end{itemize}
 
+
+Nelle metriche presentate, fatta eccezione per l'Adjusted Rand Index, $0.0$ rappresenta il valore peggiore, mentre $1.0$ il perfect score. Questi valori offrono una interpretazione intuitiva e può aiutare alla scoperta degli errori commessi nella assegnazione. Fra i vantaggi è degno di nota che nessuna assunzione viene fatta sulla struttura dei cluster, quindi possono essere utilizzate con algoritmi che identificano cluster di forma diversa.
+
+\paragraph{Silhouette}
 
 \section{Risultati ottenuti}
 tabellazze tabellazze tabellazze tabellazze tabellazze tabellazzetabellazze tabellazze tabellazze tabellazze tabellazze tabellazzetabellazze tabellazze tabellazze tabellazze tabellazze tabellazzetabellazze tabellazze tabellazze tabellazze tabellazze tabellazzetabellazze tabellazze tabellazze tabellazze tabellazze tabellazzetabellazze tabellazze tabellazze tabellazze tabellazze tabellazzetabellazze tabellazze tabellazze tabellazze tabellazze tabellazze
