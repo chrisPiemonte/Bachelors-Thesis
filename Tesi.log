@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.12.22)  4 MAR 2016 15:44
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.12.22)  4 MAR 2016 17:52
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -687,7 +687,7 @@ LaTeX Warning: Label `englishchinese' multiply defined.
 LaTeX Warning: Label `englishchinese' multiply defined.
 
 
-LaTeX Warning: Label `modularity' multiply defined.
+LaTeX Warning: Label `metricheGraph' multiply defined.
 
 )
 \openout1 = `Tesi.aux'.
@@ -848,7 +848,7 @@ less on input line 91.
 
 [5
 
-] (./MaterialeInizialeFinale/Introduzione.tex [6]
+] [6] (./MaterialeInizialeFinale/Introduzione.tex [7]
 (/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-0.def
 File: uni-0.def 2013/05/13 UCS: Unicode data U+0000..U+00FF
 )
@@ -856,10 +856,10 @@ File: uni-0.def 2013/05/13 UCS: Unicode data U+0000..U+00FF
 Package Fancyhdr Warning: \fancyfoot's `E' option without twoside option is use
 less on input line 25.
 
-[7
+[8
 
 
-]) [8]
+]) [9]
 
 Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
 less on input line 121.
@@ -935,7 +935,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 72--78
 [6] (/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-33.def
 File: uni-33.def 2013/05/13 UCS: Unicode data U+2100..U+21FF
 )
-<./Immagini/weanalogies.png, id=84, 1367.1075pt x 481.8pt>
+<./Immagini/weanalogies.png, id=88, 1367.1075pt x 481.8pt>
 File: ./Immagini/weanalogies.png Graphic file (type png)
 
 <use ./Immagini/weanalogies.png>
@@ -946,14 +946,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 84--94
 
  []
 
-[7] <./Immagini/weanalogies2.png, id=90, 1003.75pt x 431.6125pt>
+[7] <./Immagini/weanalogies2.png, id=94, 1003.75pt x 431.6125pt>
 File: ./Immagini/weanalogies2.png Graphic file (type png)
 
 <use ./Immagini/weanalogies2.png>
 Package pdftex.def Info: ./Immagini/weanalogies2.png used on input line 104.
 (pdftex.def)             Requested size: 284.52756pt x 122.34566pt.
 
-<./Immagini/englishchinese.png, id=91, 615.29875pt x 463.7325pt>
+<./Immagini/englishchinese.png, id=95, 615.29875pt x 463.7325pt>
 File: ./Immagini/englishchinese.png Graphic file (type png)
 
 <use ./Immagini/englishchinese.png>
@@ -966,28 +966,28 @@ Underfull \hbox (badness 10000) in paragraph at lines 100--117
 
 [8 <./Immagini/weanalogies.png (PNG copy)> <./Immagini/weanalogies2.png>]
 [9 <./Immagini/englishchinese.png>]
-<./Immagini/2w2v.jpg, id=100, 640.3925pt x 380.42125pt>
+<./Immagini/2w2v.jpg, id=105, 640.3925pt x 380.42125pt>
 File: ./Immagini/2w2v.jpg Graphic file (type jpg)
 
 <use ./Immagini/2w2v.jpg>
 Package pdftex.def Info: ./Immagini/2w2v.jpg used on input line 129.
 (pdftex.def)             Requested size: 284.52756pt x 169.0228pt.
 
-<./Immagini/3w2v.jpg, id=101, 640.3925pt x 360.34625pt>
+<./Immagini/3w2v.jpg, id=106, 640.3925pt x 360.34625pt>
 File: ./Immagini/3w2v.jpg Graphic file (type jpg)
 
 <use ./Immagini/3w2v.jpg>
 Package pdftex.def Info: ./Immagini/3w2v.jpg used on input line 137.
 (pdftex.def)             Requested size: 284.52756pt x 160.1034pt.
 
-<./Immagini/4w2v.jpg, id=102, 640.3925pt x 360.34625pt>
+<./Immagini/4w2v.jpg, id=107, 640.3925pt x 360.34625pt>
 File: ./Immagini/4w2v.jpg Graphic file (type jpg)
 
 <use ./Immagini/4w2v.jpg>
 Package pdftex.def Info: ./Immagini/4w2v.jpg used on input line 145.
 (pdftex.def)             Requested size: 284.52756pt x 160.1034pt.
 
-<./Immagini/5w2v.jpg, id=103, 346.29375pt x 259.97125pt>
+<./Immagini/5w2v.jpg, id=108, 346.29375pt x 259.97125pt>
 File: ./Immagini/5w2v.jpg Graphic file (type jpg)
 
 <use ./Immagini/5w2v.jpg>
@@ -1024,7 +1024,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 159--164
  []
 
 [10 <./Immagini/2w2v.jpg>] [11 <./Immagini/3w2v.jpg> <./Immagini/4w2v.jpg>]
-<./Immagini/randomwalkonedim.png, id=113, 722.7pt x 542.025pt>
+<./Immagini/randomwalkonedim.png, id=117, 722.7pt x 542.025pt>
 File: ./Immagini/randomwalkonedim.png Graphic file (type png)
 
 <use ./Immagini/randomwalkonedim.png>
@@ -1032,7 +1032,7 @@ Package pdftex.def Info: ./Immagini/randomwalkonedim.png used on input line 171
 .
 (pdftex.def)             Requested size: 284.52756pt x 213.39865pt.
 
-<./Immagini/randomwalktwodim.png, id=115, 674.52pt x 602.25pt>
+<./Immagini/randomwalktwodim.png, id=119, 674.52pt x 602.25pt>
 File: ./Immagini/randomwalktwodim.png Graphic file (type png)
 
 <use ./Immagini/randomwalktwodim.png>
@@ -1080,7 +1080,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 196--204
  []
 
 [14 <./Immagini/randomwalktwodim.png>] [15] [16]
-<./Immagini/linkages.jpg, id=135, 620.3175pt x 214.55156pt>
+<./Immagini/linkages.jpg, id=139, 620.3175pt x 214.55156pt>
 File: ./Immagini/linkages.jpg Graphic file (type jpg)
 
 <use ./Immagini/linkages.jpg>
@@ -1102,14 +1102,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 254--262
  []
 
 [17 <./Immagini/linkages.jpg>] [18]
-<./Immagini/betweenness.png, id=142, 783.92876pt x 466.74374pt>
+<./Immagini/betweenness.png, id=146, 783.92876pt x 466.74374pt>
 File: ./Immagini/betweenness.png Graphic file (type png)
 
 <use ./Immagini/betweenness.png>
 Package pdftex.def Info: ./Immagini/betweenness.png used on input line 273.
 (pdftex.def)             Requested size: 284.52756pt x 169.40927pt.
 
-<./Immagini/modularity.png, id=143, 845.559pt x 597.432pt>
+<./Immagini/modularity.png, id=147, 845.559pt x 597.432pt>
 File: ./Immagini/modularity.png Graphic file (type png)
 
 <use ./Immagini/modularity.png>
@@ -1131,7 +1131,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 279--292
  []
 
 [19 <./Immagini/betweenness.png>] [20 <./Immagini/modularity.png>]
-<./Immagini/voronoi.png, id=150, 642.4pt x 481.8pt>
+<./Immagini/voronoi.png, id=154, 642.4pt x 481.8pt>
 File: ./Immagini/voronoi.png Graphic file (type png)
 
 <use ./Immagini/voronoi.png>
@@ -1143,7 +1143,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 315--319
  []
 
 [22 <./Immagini/voronoi.png (PNG copy)>]
-<./Immagini/tdm.png, id=158, 714.67pt x 436.63126pt>
+<./Immagini/tdm.png, id=162, 714.67pt x 436.63126pt>
 File: ./Immagini/tdm.png Graphic file (type png)
  <use ./Immagini/tdm.png>
 Package pdftex.def Info: ./Immagini/tdm.png used on input line 325.
@@ -1154,7 +1154,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 335--340
 
  []
 
-[24] <./Immagini/datavisualization.png, id=165, 722.7pt x 542.025pt>
+[24] <./Immagini/datavisualization.png, id=169, 722.7pt x 542.025pt>
 File: ./Immagini/datavisualization.png Graphic file (type png)
 
 <use ./Immagini/datavisualization.png>
@@ -1180,7 +1180,7 @@ Overfull \hbox (2.40779pt too wide) in paragraph at lines 19--19
 []\OT1/cmr/bx/n/17.28 Web Cra-w-ling per l'e-stra-zio-ne dei da-ti 
  []
 
-<./Immagini/crawlerarch.png, id=176, 501.875pt x 383.4325pt>
+<./Immagini/crawlerarch.png, id=181, 501.875pt x 383.4325pt>
 File: ./Immagini/crawlerarch.png Graphic file (type png)
 
 <use ./Immagini/crawlerarch.png>
@@ -1207,7 +1207,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 44--57
  []
 
 [28] [29 <./Immagini/crawlerarch.png>]
-<./Immagini/breadthdepth.png, id=186, 313.17pt x 139.722pt>
+<./Immagini/breadthdepth.png, id=189, 313.17pt x 139.722pt>
 File: ./Immagini/breadthdepth.png Graphic file (type png)
 
 <use ./Immagini/breadthdepth.png>
@@ -1243,7 +1243,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 103--108
 
  []
 
-[33] <./Immagini/randomWalkongraph.png, id=201, 786.94pt x 578.16pt>
+[33] <./Immagini/randomWalkongraph.png, id=205, 786.94pt x 578.16pt>
 File: ./Immagini/randomWalkongraph.png Graphic file (type png)
 
 <use ./Immagini/randomWalkongraph.png>
@@ -1338,50 +1338,66 @@ Underfull \hbox (badness 10000) in paragraph at lines 75--89
 
  []
 
-[45] <./Immagini/graphpartitioning.png, id=242, 358.4592pt x 276.5532pt>
-File: ./Immagini/graphpartitioning.png Graphic file (type png)
-
-<use ./Immagini/graphpartitioning.png>
-Package pdftex.def Info: ./Immagini/graphpartitioning.png used on input line 98
-.
-(pdftex.def)             Requested size: 426.79134pt x 329.28806pt.
-
-Overfull \hbox (36.79134pt too wide) in paragraph at lines 98--99
- [][] 
- []
-
-[46] [47 <./Immagini/graphpartitioning.png (PNG copy)>] [48] [49]
-Overfull \hbox (11.68765pt too wide) in paragraph at lines 142--144
+[45] [46] [47]
+Overfull \hbox (11.68765pt too wide) in paragraph at lines 115--117
 []\OT1/cmr/m/it/12 i)\OT1/cmr/m/n/12 Tutti i pun-ti al-l'in-ter-no del clu-ster
  so-no mu-tual-men-te density-connected.
  []
 
-[50] [51] [52]) [53]
+[48] [49] <./Immagini/nc_groundtruth.png, id=258, 702.625pt x 770.88pt>
+File: ./Immagini/nc_groundtruth.png Graphic file (type png)
+
+<use ./Immagini/nc_groundtruth.png>
+Package pdftex.def Info: ./Immagini/nc_groundtruth.png used on input line 178.
+(pdftex.def)             Requested size: 398.33858pt x 437.04187pt.
+
+Overfull \hbox (8.33858pt too wide) in paragraph at lines 178--179
+ [][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 174--183
+
+ []
+
+[50] [51 <./Immagini/nc_groundtruth.png>]
+<./Immagini/lc_embedding_km.png, id=268, 2509.375pt x 903.375pt>
+File: ./Immagini/lc_embedding_km.png Graphic file (type png)
+
+<use ./Immagini/lc_embedding_km.png>
+Package pdftex.def Info: ./Immagini/lc_embedding_km.png used on input line 209.
+
+(pdftex.def)             Requested size: 369.88582pt x 133.15706pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[52] [53 <./Immagini/lc_embedding_km.png>]) [54]
 Capitolo 5.
 (./MaterialeInizialeFinale/Conclusioni.tex)
 
 Package Fancyhdr Warning: \fancyfoot's `E' option without twoside option is use
 less on input line 147.
 
-[54
+[55
 
-] (./Tesi.bbl [55]
+] (./Tesi.bbl [56]
 
 Package Fancyhdr Warning: \fancyfoot's `E' option without twoside option is use
 less on input line 45.
 
-[56
+[57
 
-] [57]) [58] (./Tesi.aux)
+] [58]) [59] (./Tesi.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 15210 strings out of 493304
- 293144 string characters out of 6139870
- 313740 words of memory out of 5000000
- 18347 multiletter control sequences out of 15000+600000
+ 15220 strings out of 493304
+ 293355 string characters out of 6139870
+ 313774 words of memory out of 5000000
+ 18356 multiletter control sequences out of 15000+600000
  13732 words of font info for 51 fonts, out of 8000000 for 9000
  958 hyphenation exceptions out of 8191
  39i,12n,45p,10418b,589s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1400,11 +1416,12 @@ b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share
 /texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texli
 ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/share/texlive/tex
-mf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on Tesi.pdf (67 pages, 2913790 bytes).
+mf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on Tesi.pdf (69 pages, 2959139 bytes).
 PDF statistics:
- 335 PDF objects out of 1000 (max. 8388607)
- 219 compressed objects within 3 object streams
+ 348 PDF objects out of 1000 (max. 8388607)
+ 226 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
- 101 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 106 words of extra memory for PDF output out of 10000 (max. 10000000)
 

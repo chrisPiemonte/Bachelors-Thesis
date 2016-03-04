@@ -22,5 +22,6 @@
 \contentsline {figure}{\numberline {2.3}{\ignorespaces Random walk sul grafo. \relax }}{34}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Partizionamento di un grafo.\relax }}{47}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Grafo del sito \texttt {cs.illinois.edu}, etichettato manualmente.\relax }}{51}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Rappresentazione del sito \texttt {cs.illinois.edu}, clusterizzato con K-Means.\relax }}{53}
 \addvspace {10\p@ }

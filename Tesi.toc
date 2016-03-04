@@ -61,13 +61,12 @@
 \contentsline {subsubsection}{edges.txt}{44}
 \contentsline {subsubsection}{sequencesIDs.txt}{45}
 \contentsline {subsubsection}{sequencesIDsFromHomepage.txt}{46}
-\contentsline {section}{\numberline {4.2}Metodologie confrontate}{46}
-\contentsline {subsection}{\numberline {4.2.1}Partizionamento del Grafo Web}{46}
-\contentsline {subsection}{\numberline {4.2.2}URL Embedding}{48}
-\contentsline {subsection}{\numberline {4.2.3}Text Mining}{48}
-\contentsline {subsection}{\numberline {4.2.4}Informazione combinata}{49}
-\contentsline {section}{\numberline {4.3}Algoritmi utilizzati}{49}
-\contentsline {section}{\numberline {4.4}Metriche}{51}
-\contentsline {paragraph}{Silhouette}{53}
-\contentsline {section}{\numberline {4.5}Risultati ottenuti}{53}
-\contentsline {chapter}{\numberline {5}Conclusioni e sviluppi futuri}{54}
+\contentsline {section}{\numberline {4.2}Algoritmi utilizzati}{46}
+\contentsline {section}{\numberline {4.3}Metriche}{48}
+\contentsline {paragraph}{Silhouette}{50}
+\contentsline {section}{\numberline {4.4}Metodologie confrontate}{50}
+\contentsline {subsection}{\numberline {4.4.1}Partizionamento del Grafo Web}{50}
+\contentsline {subsection}{\numberline {4.4.2}URL Embedding}{52}
+\contentsline {subsection}{\numberline {4.4.3}Text Mining}{53}
+\contentsline {subsection}{\numberline {4.4.4}Informazione combinata}{54}
+\contentsline {chapter}{\numberline {5}Conclusioni e sviluppi futuri}{55}

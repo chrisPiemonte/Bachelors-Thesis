@@ -87,33 +87,6 @@ Contiene le sequenze generate che partono da uno stesso nodo. La generazione di 
 . . .\\
 }
 
-\section{Metodologie confrontate}
-La sperimentazione si è svolta confrontando i risultati ottenuti attraverso l'applicazione di diversi algoritmi di clustering su dataset ottenuti da differenti rappresentazioni. In seguito verrano descritte le diverse rappresentazioni, i diversi algoritmi di clustering utilizzati e le metriche applicate per ottenere dei valori significativi alla valutazione.
-\subsection{Partizionamento del Grafo Web}
-Sono stati applicati metodologie derivanti dalla teoria dei grafi per l'estrazione di strutture connesse all'interno del grafo web. Questo può essere utile nella individuazione di comunità all'interno di grafi come ad esempio social network. La divisione del grafo in sotto-grafi può essere effettuata seguendo diversi approcci, inoltre il grafo costruito su di un normale sito web è caratterizzato solitamente da un numero elevato di collegamenti tra pagine che indirizzano all'utilizzo di alcune tipologie di partizionamento piuttosto che altre. Infatti misure come la betweenness (ovvero il valore dato ad un arco che rappresenta quante più volte questo è attraversato nel percorrere il cammino più breve fra due nodi qualsiasi) non hanno restituito risultati significativi.
-\\
-L'analisi del grafo considera unicamente le relazioni che intercorrono fra le pagine web e tralascia informazioni riguardanti il contenuto.
-\begin{figure}[htb]
-	\centering
-	\includegraphics[width = 150mm]{graphpartitioning.png}
-	\caption{Partizionamento di un grafo.}
-	\label{modularity}
-\end{figure}
-
-\subsection{URL Embedding}
-Considerando i random walk generati sul grafo come frasi, è possibile applicare algoritmi di word embedding per raggruppare le pagine sulla base del contesto in cui appaiono, ovvero le pagine che più verosimilmente appariranno insieme nelle sequenze di random walk. Anche questo approccio considera unicamente le relazioni fra le pagine, ma i percorsi casuali generati, considerati come frasi, raggruppano in cluster pagine che appariranno nello stesso random walk più volte, cosa che avverrà tanto più una pagina avrà collegamenti direzionati all'altra pagina. Apprendendo le rappresentazioni dai cammini invece che dal partizionamento del grafo si codificano le pagine in uno spazio vettoriale con i benefici che conseguono. La fase di URL embedding è stata effetuata l'algoritmo Word2vec.
-
-\subsection{Text Mining}
-Qui viene effettuata l'analisi testuale della pagina web, utilizzando tecniche derivanti dal Text Mining. I contenuti all'interno di uno stesso sito web avranno una struttura e termini comuni, differenziandosi al variare dell'argomento trattato. La struttura gerarchica di un sito web organizza solitamente le pagine in sezioni simili. Questa metodologia tuttavia, considera solo l'informazione testuale, assumendo che i termini all'interno del sito web siano indipendenti l'uno dall'altro (cosa che nei documenti che trattano argomenti specifici non  vero) così come i documenti, ignorando le relazioni interdipendenti tra questi. Il web si discosta dall'analisi classica dei documenti proprio per le relazioni che intercorrono tra le pagine, tuttavia l'analisi testuale rimane molto importante.
-\\
-Nella fase di sperimentazione è stata utilizzata una rappresentazione vettoriale della frequenza dei termini all'interno dell'insieme delle pagine web, calcolata con la tecnica della \textit{frequency–inverse document frequency} (tf-idf).
-
-\subsection{Informazione combinata}
-I risultati hanno evidenziato che l'analisi singola, sia della correlazione tra le pagine sia del contenuto testuale, non basta a codificare esaustivamente la conoscenza che una pagina web può offrire. Entrambe le informazioni sono rilevanti ed andrebbero processate combinatamente. Il vantaggio di associare le relazioni in uno spazio vettoriale offre il vantaggio usare la stessa rappresentazione e quindi di unire i vettori derivanti dagli algoritmi di word embedding con quelli derivanti dall'analisi di contenuto testuale. 
-\\
-Così facendo è possibile dare più importanza ad una tipologia di informazione piuttosto che ad un altra, andando a modificare il rapporto tra le dimensioni dei vettori.
-
-
 \section{Algoritmi utilizzati}
 Vengono riportati di seguito gli algoritmi di clustering testati sul dataset generato. L'obiettivo rimane comunque verificare se la soluzione proposta rappresenti un miglioramento ed un possibile alternativa alle soluzioni più usate e consolidate nell'ambito del clustering di pagine web.
 \begin{itemize}
@@ -190,8 +163,85 @@ Nelle metriche presentate, fatta eccezione per l'Adjusted Rand Index, $0.0$ rapp
 
 \paragraph{Silhouette}
 
-\section{Risultati ottenuti}
-tabellazze tabellazze tabellazze tabellazze tabellazze tabellazzetabellazze tabellazze tabellazze tabellazze tabellazze tabellazzetabellazze tabellazze tabellazze tabellazze tabellazze tabellazzetabellazze tabellazze tabellazze tabellazze tabellazze tabellazzetabellazze tabellazze tabellazze tabellazze tabellazze tabellazzetabellazze tabellazze tabellazze tabellazze tabellazze tabellazzetabellazze tabellazze tabellazze tabellazze tabellazze tabellazze
+\section{Metodologie confrontate}
+La sperimentazione si è svolta confrontando i risultati ottenuti attraverso l'applicazione di diversi algoritmi di clustering su dataset ottenuti da differenti rappresentazioni. L'algoritmo è stato testato effettuando il crawling di n siti web, che sono stati poi etichettati manualmente per ricavare le metriche necessarie alla valutazione della tesi proposta.
+\begin{itemize}
+\item Il sito web del dipartimento di Computer Science dell'università di Urbana, IL: \texttt{cs.illinois.edu}
+\item naltro
+\item naltro ancora
+\end{itemize}
+\subsection{Partizionamento del Grafo Web}
+Sono stati applicati metodologie derivanti dalla teoria dei grafi per l'estrazione di strutture connesse all'interno del grafo web. Questo può essere utile nella individuazione di comunità all'interno di grafi come ad esempio social network. La divisione del grafo in sotto-grafi può essere effettuata seguendo diversi approcci, inoltre la rete costruita su di un normale sito web è caratterizzata solitamente da un numero elevato di collegamenti tra pagine che indirizzano all'utilizzo di alcune tipologie di partizionamento piuttosto che altre. Infatti misure come la betweenness (ovvero il valore dato ad un arco che rappresenta quante più volte questo è attraversato nel percorrere il cammino più breve fra due nodi qualsiasi) non hanno restituito risultati significativi.
+\\\\
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width = 140mm]{nc_groundtruth.png}
+	\caption{Grafo del sito \texttt{cs.illinois.edu}, etichettato manualmente.}
+	\label{nc_graph}
+\end{figure}
+I grafi utilizzati rappresentano le due diverse operazioni di estrazione di collegamenti effettuate. La prima contiene tutti i collegamenti presenti all'interno di una pagina e mostrerà quindi più archi. La seconda estrae solamente gli hyperlink dalle liste.
+
+\begin{table}[H]
+	\begin{tabular}{| l | c | c | c | c | c |}
+	\hline
+	\textbf{Graph}  & \textbf{Homog} & \textbf{Compl} & \textbf{V-Measure}  & \textbf{ARI}  & \textbf{MI} \\ [3ex] \hline
+	\textbf{nc WalkTrap} & 0.6471 & 0.6585 & 0.6527 & 0.4363 & 0.6281\\ [3ex]
+	 \hline
+	\textbf{nc Fastgreedy} & 0.5518 & 0.8563 & 0.6711 & 0.5764 & 0.5354\\ [3ex]
+	 \hline	
+	\textbf{lc WalkTrap} & 0.5093 & 0.4892 & 0.4991 & 0.2762 & 0.4722\\ [3ex]
+	 \hline	
+	\textbf{lc Fastgreedy} & 0.5522 & 0.6035 & 0.5767 & 0.3656 & 0.5382\\ [3ex]
+	\hline
+	\end{tabular}
+	\caption{Risultati sperimentazione di partizionamento del grafo del sito \texttt{cs.illinois.edu}}
+	\label{metricheGraph}
+\end{table}
+
+L'analisi del grafo considera unicamente le relazioni che intercorrono fra le pagine web e tralascia informazioni riguardanti il contenuto. Il grafo in figura \ref{nc_graph} rappresenta il sito web etichettato manualmente. Dalle metriche rilevate risulta in tabella \ref{metricheGraph}, risulta che il partizionamento del grafo web non riesce a dividere al meglio i cluster.
+
+
+\subsection{URL Embedding}
+
+Considerando i random walk generati sul grafo come frasi, è possibile applicare algoritmi di word embedding per raggruppare le pagine sulla base del contesto in cui appaiono, ovvero le pagine che più verosimilmente appariranno insieme nelle sequenze di random walk. Anche questo approccio considera unicamente le relazioni fra le pagine, ma of Apprendendo le rappresentazioni dai cammini, invece che dal partizionamento del grafo, è possibile codificare le pagine in uno spazio vettoriale con i benefici che conseguono. La fase di URL embedding è stata effetuata utilizzando l'algoritmo Word2vec.
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width = 130mm]{lc_embedding_km.png}
+	\caption{Rappresentazione del sito \texttt{cs.illinois.edu}, clusterizzato con K-Means.}
+	\label{nc_embedding_km}
+\end{figure}
+\begin{table}[H]
+	\begin{tabular}{| l | c | c | c | c | c | c |}
+	\hline
+	\textbf{Embed}  & \textbf{Homog} & \textbf{Compl} & \textbf{V-Meas}  & \textbf{ARI}  & \textbf{MI}  & \textbf{Silh} \\ [3ex] \hline
+	\textbf{nc dbscan} & 0.5553 & 0.6579 & 0.6023 & 0.4487 & 0.5234 & 0.2588\\ [3ex]
+	 \hline 
+	\textbf{nc hdbscan} & 0.5759 & 0.6720 & 0.6203 & 0.5282 & 0.5525 & 0.2573\\ [3ex]
+	 \hline
+	\textbf{nc Kmeans} & 0.8238 & 0.7575 & 0.7892 & 0.7883 & 0.7423 & 0.3131\\ [3ex]
+	 \hline	
+	\textbf{lc dbscan} & 0.4163 & 0.5922 & 0.4889 & 0.2250 & 0.3935 & 0.1320\\ [3ex]
+	\hline
+	\textbf{lc hdbscan} & 0.4760 & 0.5067 & 0.4908 & 0.2275 & 0.4515 & 0.1054\\ [3ex]
+	\hline
+	
+	\textbf{lc Kmeans} & 0.8095 & 0.6593 & 0.7267 & 0.6189 & 0.6473 & 0.2281\\ [3ex]
+	\hline
+	\end{tabular}
+	\caption{Risultati sperimentazione di partizionamento del grafo del sito \texttt{cs.illinois.edu}}
+	\label{metricheEmbed}
+\end{table}
+
+\subsection{Text Mining}
+Qui viene effettuata l'analisi testuale della pagina web, utilizzando tecniche derivanti dal Text Mining. I contenuti all'interno di uno stesso sito web avranno una struttura e termini comuni, differenziandosi al variare dell'argomento trattato. La struttura gerarchica di un sito web organizza solitamente le pagine in sezioni simili. Questa metodologia tuttavia, considera solo l'informazione testuale, assumendo che i termini all'interno del sito web siano indipendenti l'uno dall'altro (cosa che nei documenti che trattano argomenti specifici non è vero) così come i documenti, ignorando le relazioni interdipendenti tra questi. Il web si discosta dall'analisi classica dei documenti proprio per le relazioni che intercorrono tra le pagine, tuttavia l'analisi testuale rimane molto importante.
+\\
+Nella fase di sperimentazione è stata utilizzata una rappresentazione vettoriale della frequenza dei termini all'interno dell'insieme delle pagine web, calcolata con la tecnica della \textit{frequency–inverse document frequency} (tf-idf).
+
+\subsection{Informazione combinata}
+I risultati hanno evidenziato che l'analisi singola, sia della correlazione tra le pagine sia del contenuto testuale, non basta a codificare esaustivamente la conoscenza che una pagina web può offrire. Entrambe le informazioni sono rilevanti ed andrebbero processate combinatamente. Il vantaggio di associare le relazioni in uno spazio vettoriale offre il vantaggio usare la stessa rappresentazione e quindi di unire i vettori derivanti dagli algoritmi di word embedding con quelli derivanti dall'analisi di contenuto testuale. 
+\\
+Così facendo è possibile dare più importanza ad una tipologia di informazione piuttosto che ad un altra, andando a modificare il rapporto tra le dimensioni dei vettori.
+
 
 
 
