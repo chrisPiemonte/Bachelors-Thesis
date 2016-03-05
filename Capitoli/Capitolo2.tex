@@ -186,10 +186,124 @@ Qui invece si può seguire uno dei due approcci precedenti, ma con il vincolo de
 \end{algorithmic}
 \end{algorithm}
 
+
+\subsection{esempio di dataset}
+Di seguito sono elencati file generati nel processo di crawling e di generazione delle sequenze. Gli esempi riportati di seguito sono stati ottenuti analizzando il sito del dipartimento di informatica di Urbana, IL: \texttt{www.cs.illinois.edu}
+
+\subsubsection{urlsMap.txt}
+Contiene la associazioni fra gli URL e il relativo codice identificativo. Questo è dovuto dalle ragioni spiegate in precedenza, ovvero ridurre i tempi di elaborazione e spazio di archiviazione. 
+\\\\
+\texttt{
+http://cs.illinois.edu,3\\
+http://cs.illinois.edu/prospective-students,4\\
+http://cs.illinois.edu/current-students,5\\
+http://cs.illinois.edu/courses,6\\
+http://cs.illinois.edu/alumni,7\\
+http://cs.illinois.edu/research,8\\
+http://cs.illinois.edu/news,9\\
+http://cs.illinois.edu/partners,10\\
+http://cs.illinois.edu/about-us,11\\
+. . .\\
+}
+\subsubsection{vertex.txt}
+Contiene il contenuto testuale di ogni pagina esplorata. Ogni riga è quindi formata da il codice identificativo di un URL e il relativo contenuto.
+\\\\
+\texttt{
+1	department of computer science at illinois engineering at ...\\
+2	prospective students department of computer science at ...\\
+3	current students department of computer science at ...\\
+4	courses department of computer science at illinois ...\\
+5	alumni department of computer science at illinois ...\\
+6	research department of computer science at illinois    ...\\
+7	news department of computer science illinois engineering ...\\
+8	partners department of computer science at illinois ...\\
+9	about us department of computer science at illinois ...\\
+. . .\\
+}
+\subsubsection{edges.txt}
+Questo è il file principale per la generazione delle sequenze, qui sono immagazzinate tutte le relazioni fra le pagine, ovvero gli archi che le collegano. 
+\\\\
+\texttt{
+1	1\\
+1	2\\
+1	3\\
+1	4\\
+1	5\\
+1	6\\
+1	7\\
+1	8\\
+1	9\\
+. . .\\
+}
+\subsubsection{sequencesIDs.txt}
+Contiene le sequenze generate. I codici relativi alle pagine web sono separati da '' -1 '' e la linea finisce con un '' -2 ''. Da notare che sono riportate le sequenze che partono da un nodo casuale del grafo.
+\\\\
+\texttt{
+137 -1 2 -1 27 -1 8 -1 52 -1 53 -1 8 -1 8 -1 10 -1 13 -1 -2\\
+506 -1 5 -1 14 -1 11 -1 6 -1 2 -1 27 -1 114 -1 111 -1 11 -1 -2\\
+424 -1 4 -1 12 -1 6 -1 8 -1 53 -1 4 -1 7 -1 12 -1 8 -1 -2\\
+616 -1 5 -1 6 -1 8 -1 8 -1 9 -1 1 -1 21 -1 6 -1 3 -1 -2\\
+51 -1 7 -1 7 -1 38 -1 38 -1 25 -1 103 -1 27 -1 113 -1 12 -1 -2\\
+429 -1 10 -1 3 -1 6 -1 4 -1 11 -1 8 -1 9 -1 9 -1 3 -1 -2\\
+783 -1 421 -1 5 -1 9 -1 7 -1 5 -1 2 -1 8 -1 2 -1 24 -1 -2\\
+506 -1 5 -1 8 -1 52 -1 53 -1 25 -1 40 -1 13 -1 11 -1 13 -1 -2\\
+638 -1 63 -1 153 -1 62 -1 63 -1 152 -1 63 -1 155 -1 13 -1 7 -1 -2\\
+. . .\\
+}
+\subsubsection{sequencesIDsFromHomepage.txt}
+Contiene le sequenze generate che partono da uno stesso nodo. La generazione di questo file avviene esplicitando il nodo di origine di ogni sequenza nella fase di generazione.
+\\\\
+\texttt{
+1 -1 8 -1 2 -1 14 -1 2 -1 2 -1 10 -1 14 -1 66 -1 3 -1 -2\\
+1 -1 18 -1 39 -1 8 -1 8 -1 24 -1 1 -1 4 -1 7 -1 25 -1 -2\\
+1 -1 23 -1 -2\\
+1 -1 16 -1 10 -1 3 -1 29 -1 29 -1 4 -1 25 -1 97 -1 108 -1 -2\\
+1 -1 20 -1 20 -1 1 -1 11 -1 3 -1 2 -1 9 -1 10 -1 13 -1 -2\\
+1 -1 25 -1 48 -1 48 -1 44 -1 42 -1 4 -1 7 -1 38 -1 38 -1 -2\\
+1 -1 25 -1 115 -1 4 -1 11 -1 11 -1 1 -1 2 -1 26 -1 13 -1 -2\\
+1 -1 24 -1 4 -1 9 -1 60 -1 56 -1 6 -1 25 -1 113 -1 116 -1 -2\\
+1 -1 21 -1 25 -1 135 -1 32 -1 13 -1 4 -1 25 -1 149 -1 59 -1 -2\\
+. . .\\
+}
+
 \section{Clustering delle pagine web}
 In questa sezione si parlerà della soluzione proposta come alternativa alle normali tecniche di clustering delle pagine web basate esclusivamente sul contenuto testuale. Infatti il fulcro del sistema è basato su metodologie nate nel campo del \textbf{Natural Language Processing} ma applicate nel contesto web, in modo da aggiungere ulteriore informazione utile. Qui sarà approfondita l'idea alla base del lavoro svolto e le diverse opzioni che l'algoritmo mette a disposizione. 
 L'algoritmo prende in input il grafo di un sito web ele sequenze di random walk generate restituisce rappresentazioni vettoriali per ogni pagina.
 La fase di sperimentazione vera e propria sarà approfondita nel capitolo successivo.
+
+\subsection{Algoritmi utilizzati}
+Vengono riportati di seguito gli algoritmi di clustering testati sul dataset generato. L'obiettivo della tesi comunque non è verificare la validità di questi ma verificare se la soluzione proposta rappresenti un miglioramento ed un possibile alternativa alle soluzioni più usate e consolidate nell'ambito del clustering di pagine web.
+\begin{itemize}
+\item \textbf{WalkTrap}
+È un approccio basato su Random Walk. L'idea generale è che se vengono generati dei Random Walk sul grafo, i percorsi rimarrano probabilmente all'interno della stessa comunità perchè ci sono meno archi che congiungono comunità diverse. 
+\\
+L'algoritmo esegue piccoli Random Walk (dipendente da un parametro in input) è usa i risultati per fondere comunità diverse in maniera bottom-up. Tagliando il dendrogramma risultante ad una certa altezza è possibile ricevere il numero di cluster desiderati.
+
+\item \textbf{Fastgreedy}
+È un approccio gerarchico bottom-up. Cerca di ottimizzare una funzione di modularità in maniera greedy, euristica attuata effettuando la scelta migliore con le informazioni in possesso ad ogni iterazione.
+Inizialmente ogni nodo è una comunità separata e ricorsivamente si procede ad unire i nodi in modo che la fusione porti al massimo aumento di modularità rispetto al valore corrente. 
+\\
+L'algoritmo finisce quando non è più possibile aumentare la modularità. È un metodo veloce, solitamente usato come primo approccio perchè non ha parametri da modificare.
+\item \textbf{K-Means}
+Divide il dataset in un numero prefissato $k$ di cluster. Inizialmente vengono scelti casualmente $k$ punti, non necessariamente facenti parte del dataset, chiamati centroidi. Si procede assegnando ogni data point al centroide più vicino e ricalcolando il centroide sulla media aritmetica dei punti contiene. 
+\\
+Questo processo di assegnazione dei data point e ricalcolo dei centroidi continua fino a quando non avvengono più assegnazioni. I $k$ cluster risultanti saranno quelli restituiti. Anche questo algoritmo rappresenta spesso il punto di partenza nell'analisi di un dataset, in quanto molto spesso porta a buoni risultati ma ha come svantaggio il dover sapere a priori il numero di cluster desiderati.
+
+\item \textbf{DBSCAN}
+Deriva da \textit{Density-Based Spatial Clustering of Applications with Noise} è un algortimo basato sulla densità, connettendo regioni di punti con densità sufficientemente alta. Fondamentalmente, un punto $q$  è direttamente raggiungibile da un punto $p$ se non viene superata una data distanza $\epsilon$ e se $p$ è circondato da un numero sufficiente di punti, allora $p$ e $q$ possono essere considerati parti di un cluster. 
+\\
+Si può affermare che $q$ è density-reachable da $p$ se c'è una sequenza $p_1, p_2,  \ldots, p_n$ di punti con $p_1 = p$ e $p_n = q$ dove ogni $p_{i+1}$ è density-reachable direttamente da $p_i$. Da notare che la relazione density-reachable non è simmetrica (dato che $q$ potrebbe situarsi su una periferia del cluster, avendo un numero insufficiente di vicini per considerarlo un elemento genuino del cluster). Di conseguenza la nozione density-connected diventa: due punti $p$ e $q$ sono density-connected se c'è un punto $o$ tale che sia $o$ e $p$ che $o$ e $q$ sono density-reachable.
+\\
+Un cluster, che è un sotto-insieme dei punti del database, soddisfa due proprietà:
+
+\textit{i)}Tutti i punti all'interno del cluster sono mutualmente density-connected.
+\textit{ii)}Se un punto è density-connected a un altro punto del cluster, anch'esso è parte del cluster.
+
+\item \textbf{HDBSCAN}
+Deriva da \textit{Hierarchical Density-Based Spatial Clustering of Applications with Noise}~\cite{Campello15}. Applica DBSCAN variando il valore dell $\epsilon$ ed integra i risultati restituendo cluster che stabilizzano meglio tale valore.
+\\
+Questo permette ad HDBSCAN di trovare cluster con densità diversa, principale svantaggio di DBSCAN.
+\end{itemize}
 
 \subsection{NLP nel web: URL embedding}
 I recenti algoritmi di word embedding, riescono a tenere in considerazione sempre più fattori e quindi restituire vettori sempre più accurati. In particolare vengono incluse informazioni riguardanti il contesto di una parola, ovvero le altre parole che sono contenute all'interno delle frasi in cui compare quella sotto esame. Questa informazione riesce ad estrarre correlazioni nascoste e raggruppare i termini in classi. Può sembrare banale ma diversamente dal text clustering tradizionale, dove le parole vengono considerate al livello di documento, qui vengono considerate a livello di frase. Un esempio può riguardare il controverso caso delle analogie. 

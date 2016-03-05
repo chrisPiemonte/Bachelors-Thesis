@@ -102,6 +102,13 @@ Anand Rajaraman and Jeffrey~David Ullman.
 \newblock {\em Mining of Massive Datasets}.
 \newblock Cambridge University Press, New York, NY, USA, 2011.
 
+\bibitem{gensim}
+Radim {\v R}eh{\r u}{\v r}ek and Petr Sojka.
+\newblock Software framework for topic modelling with large corpora.
+\newblock In {\em Proceedings of the LREC 2010 Workshop on New Challenges for
+  NLP Frameworks}, pages 45--50, Valletta, Malta, May 2010. ELRA.
+\newblock \url{http://is.muni.cz/publication/884893/en}.
+
 \bibitem{Shahabi97}
 C.~Shahabi, A.~M. Zarkesh, J.~Adibi, and V.~Shah.
 \newblock Knowledge discovery from users web-page navigation.

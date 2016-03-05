@@ -43,30 +43,39 @@
 \contentsline {subsubsection}{Random Walk}{34}
 \contentsline {subsubsection}{Random Walk con partenza fissa}{34}
 \contentsline {subsubsection}{Random Walk attraverso le Liste}{35}
-\contentsline {section}{\numberline {2.3}Clustering delle pagine web}{36}
-\contentsline {subsection}{\numberline {2.3.1}NLP nel web: URL embedding}{37}
-\contentsline {subsection}{\numberline {2.3.2}Differenza tra parole ed URL}{38}
-\contentsline {chapter}{\numberline {3}Related works}{39}
-\contentsline {subsubsection}{Semantica delle pagine web}{39}
-\contentsline {subsubsection}{Struttura interna delle pagine web}{40}
-\contentsline {subsubsection}{Struttura del grafo del web}{40}
-\contentsline {subsubsection}{Web usage clustering}{40}
-\contentsline {section}{\numberline {3.1}In-domain clustering}{41}
-\contentsline {section}{\numberline {3.2}Random walk come frasi}{41}
-\contentsline {section}{\numberline {3.3}Sviluppi recenti}{41}
-\contentsline {chapter}{\numberline {4}Sperimentazione}{43}
-\contentsline {section}{\numberline {4.1}Decrizione del dataset}{43}
-\contentsline {subsubsection}{urlsMap.txt}{43}
-\contentsline {subsubsection}{vertex.txt}{44}
-\contentsline {subsubsection}{edges.txt}{44}
-\contentsline {subsubsection}{sequencesIDs.txt}{45}
-\contentsline {subsubsection}{sequencesIDsFromHomepage.txt}{46}
-\contentsline {section}{\numberline {4.2}Algoritmi utilizzati}{46}
-\contentsline {section}{\numberline {4.3}Metriche}{48}
-\contentsline {paragraph}{Silhouette}{50}
-\contentsline {section}{\numberline {4.4}Metodologie confrontate}{50}
-\contentsline {subsection}{\numberline {4.4.1}Partizionamento del Grafo Web}{50}
-\contentsline {subsection}{\numberline {4.4.2}URL Embedding}{52}
-\contentsline {subsection}{\numberline {4.4.3}Text Mining}{53}
-\contentsline {subsection}{\numberline {4.4.4}Informazione combinata}{54}
-\contentsline {chapter}{\numberline {5}Conclusioni e sviluppi futuri}{55}
+\contentsline {subsection}{\numberline {2.2.2}esempio di dataset}{36}
+\contentsline {subsubsection}{urlsMap.txt}{36}
+\contentsline {subsubsection}{vertex.txt}{37}
+\contentsline {subsubsection}{edges.txt}{37}
+\contentsline {subsubsection}{sequencesIDs.txt}{38}
+\contentsline {subsubsection}{sequencesIDsFromHomepage.txt}{38}
+\contentsline {section}{\numberline {2.3}Clustering delle pagine web}{39}
+\contentsline {subsection}{\numberline {2.3.1}Algoritmi utilizzati}{39}
+\contentsline {subsection}{\numberline {2.3.2}NLP nel web: URL embedding}{41}
+\contentsline {subsection}{\numberline {2.3.3}Differenza tra parole ed URL}{42}
+\contentsline {chapter}{\numberline {3}Related works}{43}
+\contentsline {subsubsection}{Semantica delle pagine web}{43}
+\contentsline {subsubsection}{Struttura interna delle pagine web}{44}
+\contentsline {subsubsection}{Struttura del grafo del web}{44}
+\contentsline {subsubsection}{Web usage clustering}{44}
+\contentsline {section}{\numberline {3.1}In-domain clustering}{45}
+\contentsline {section}{\numberline {3.2}Random walk come frasi}{45}
+\contentsline {section}{\numberline {3.3}Sviluppi recenti}{45}
+\contentsline {chapter}{\numberline {4}Sperimentazione}{47}
+\contentsline {section}{\numberline {4.1}Decrizione del dataset}{47}
+\contentsline {paragraph}{\texttt {http://cs.illinois.edu/:}}{47}
+\contentsline {paragraph}{\texttt {http://uniba.it/:}}{47}
+\contentsline {paragraph}{\texttt {http://cs.stanford.edu/:}}{48}
+\contentsline {section}{\numberline {4.2}Configurazioni}{48}
+\contentsline {paragraph}{Graph}{48}
+\contentsline {paragraph}{Embedding}{49}
+\contentsline {paragraph}{Document}{49}
+\contentsline {paragraph}{Emb-Doc}{50}
+\contentsline {section}{\numberline {4.3}Metriche}{50}
+\contentsline {paragraph}{Silhouette}{52}
+\contentsline {section}{\numberline {4.4}Metodologie confrontate}{52}
+\contentsline {subsection}{\numberline {4.4.1}Partizionamento del Grafo Web}{53}
+\contentsline {subsection}{\numberline {4.4.2}URL Embedding}{54}
+\contentsline {subsection}{\numberline {4.4.3}Text Mining}{55}
+\contentsline {subsection}{\numberline {4.4.4}Informazione combinata}{56}
+\contentsline {chapter}{\numberline {5}Conclusioni e sviluppi futuri}{57}

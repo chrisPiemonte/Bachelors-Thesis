@@ -116,6 +116,7 @@ Un esempio può essere il word embedding di parole linguaggi diversi. Dato che p
 \end{figure}
 
 \subsection{Word2vec}
+\label{word2vec}
 Un algoritmo molto famoso di word embedding è il recente word2vec. L’algoritmo usa i documenti per far apprendere una rete neurale, massimizzando la probabilità condizionata del contesto data una parola, applicando il modello appreso ad ogni parola per ricavare il vettore corrispondente e calcolando il vettore della frase facendo la media dei vettori delle parole, costruisce la matrice di similarità delle frasi ed usa PageRank per classificare le frasi nel grafo.
 \begin{equation}
    arg\max_{\theta} \prod_{\left ( w, c \right ) \in D} p\left ( c|w; \theta \right )
