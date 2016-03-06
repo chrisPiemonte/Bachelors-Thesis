@@ -33,16 +33,31 @@ Sebbene questi algoritmi possano sembrare molto simili ai più famosi algoritmi 
 
 Quando si confronta il web mining con il data mining tradizionale, ci sono tre principali differenze da considerare:
 \begin{itemize}
-\item \textbf{Scalabilità}:\color{red}cos'è la scalabilità?? mettere una definizione, piu formale
-\color{black}
- Nel data mining tradizionale, processare un milione di record può essere considerato sopra la media, mentre nel web mining dieci milioni di pagine possono non essere abbastanza.
-\item \textbf{Accesso}: Quando si analizzano informazioni aziendali, i dati sono privati e spesso richiedono diritti di accesso per la lettura. Nel web mining i dati sono pubblici e non richiedono alcun tipo di permesso, anche se a volte il crawling deve essere effettuato secondo determinate politiche, cercando di non sovraccaricare il sito effettuando numerose richieste.
-\item \textbf{Struttura}: I tradizionali task di data mining estraggono informazioni da un database, che assicura un certo livello di strutturazione dei dati. Task di web mining invece elaborano dati non strutturati o semi-strutturati. Anche quando le informazioni provengono da un database, la struttura è spesso coperta da tag HTML.
-\end{itemize}
-\color{red}
-INSERIRE INFORMAZIONI CARATTERISTICHE DEL WEB (DIMENSIONE, DINAMICITA...SOCIETA VIRTUALE, PAG 5-7) IN MODO DA COLLEGARE IL CONCETTO DELL'ESISTENZA DI DATI STRUTTURATI E NON STRUTTURATI
-\color{black}
+\item \textbf{Dimensione}: 
+la mole di dati, in task di Web Mining, può aumentare considerevolmente. Diventa necessario l'utilizzo di tecniche scalabili, ossia la capacità di un sistema di ''crescere'' ed essere utilizzabile in funzione alla crescita dei dati. Nel data mining tradizionale, processare un milione di record può essere considerato sopra la media, mentre nel web mining dieci milioni di pagine possono non essere abbastanza. Il Web è il primo mezzo di informazione dove il numero di produttori di informazioni è uguale al numero dei consumatori.
+
+\item \textbf{Dinamicità}: 
+Ogni secondo migliaia sono create, distrutte e modificate migliaia di pagine Web. Questo rende il Web una rete di informazioni dinamica, dove la struttura e il contenuto dell'informazione cambiano frequentemente. Monitorare questi cambiamenti rimane un problema importante per molte applicazioni.
+
+\item \textbf{Eterogeneità}:
+L'eterogeneità del Web dipende sia dal formato delle pagine che dalla scrittura. Nel primo caso, l'eterogeneità è dovuta al fatto che nel Web non esiste uno standard di formato per le pagine Web che possono ricadere in tre categorie: \textit{i)}pagine non strutturate \textit{ii)} pagine strutturate \textit{iii)} pagine semi-strutturate.
 \\
+Le pagine \textit{non strutturate}, anche chiamate \textit{free-text pages}, sono scritte in linguaggio naturale e possono essere applicate tecniche con un certo grado di affidabilità.
+\\
+Le pagine \textit{strutturate} sono normalmente ottenute da sorgenti di dati strutturate (e.g. database). Le tecninche di estrazione sono applicate usando l'individuazione di regole sintattiche.
+Le pagine \textit{semi-strutturate} si posizionano al centro delle precedenti. Possiedono infatti un certo livello di struttura, nascosto nel testo. L'estrazione può avvenire cercando pattern nei tag HTML.
+\\
+In questo caso l'eterogeneità è dovuta al fatto che le pagine Web son create da milioni di persone aventi differente cultura, abilità, linguaggio, ecc. Questo significa che le pagine potrebbero contenere la stessa informazione, ma presentata in maniera completamente diversa. Questo rende il processo di estrazione dell'informazione una sfida.
+
+\item \textbf{Connessione}: Il web è generalmente rappresentato come una rete di informazioni dove i nodi sono le pagine e gli archi sono gli hyperlink. Gli hyperlink fra le pagine di uno stesso sito e quelli fra le pagine di siti diversi, hanno diverse caratteristiche e funzionalità. All'interno di un sito servono ad organizzare i contenuti, mentre fra siti diversi servono a trasportare autorità alla pagina di destinazione. In questo caso significa che come persone ci fidiamo del contenuto di queste pagine.
+
+\item \textbf{Rumore}: 
+Differentemente da altri mezzi di informazione, la pubblicazione di contenuti è libera e non richiede approvazione. Questo contribuisce all'aumentare del volume e della diversità dell'informazione, ma anche
+
+\item \textbf{Società virtuale}: Il web è generalmente rappresentato come una rete di informazioni dove i nodi sono le pagine e gli archi sono gli hyperlink. Gli hyperlink fra le pagine di uno stesso sito e quelli fra le pagine di siti diversi, hanno diverse caratteristiche e funzionalità. All'interno di un sito servono ad organizzare i contenuti, mentre fra siti diversi servono a trasportare autorità alla pagina di destinazione. In questo caso significa che come persone ci fidiamo del contenuto di queste pagine.
+
+\end{itemize}
+
 Enormi sforzi son stati fatti per combinare informazione strutturata e non strutturata presente all'interno di pagine web, al fine di estrarre, indicizzare e reperire nuova conoscenza. 
 La maggior parte delle soluzioni attuali trasformano il contenuto testuale delle pagine web in uno spazio vettoriale \cite{}\color{red}https://www.jair.org/media/2934/live-2934-4846-jair.pdf \color{black}. Modelli basati su spazi vettoriali sono fondamentali per task che coinvolgono il calcolo della similarità tra oggetti in cui oggetti simili sono caratterizzati da rappresentazioni vettoriali simili. Il modello vettoriale \textit{termini-documenti} rappresenta il più semplice e utilizzato modello di rappresentazione di documenti testuali nel contesto del Text Mining. In tale modello il valore dell'elemento $i$-esimo in un vettore documento rappresenta il numero di volte che il termine $i$ compare nel documento stesso.    
 Gli algoritmi basati su modelli di rappresentazione vettoriali si basano sull'assunzione di indipendenza tra i termini all'interno di un documento e tra i documenti stessi. Le pagine web violano come tutti i documenti testuali la prima assunzione, inoltre i collegamenti ipertestuali definendo relazioni di interdipendenza tra le pagine stesse comportano la violazione della seconda assunzione.

@@ -4,17 +4,19 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {4.1}{\ignorespaces Risultati sperimentazione di partizionamento del grafo del sito \texttt {cs.illinois.edu}\relax }}{59}
-\contentsline {table}{\numberline {4.2}{\ignorespaces Risultati sperimentazione di partizionamento del grafo del sito \texttt {cs.illinois.edu}\relax }}{60}
-\contentsline {table}{\numberline {4.3}{\ignorespaces Risultati sperimentazione di partizionamento del grafo del sito \texttt {cs.illinois.edu}\relax }}{60}
-\contentsline {table}{\numberline {4.4}{\ignorespaces Risultati sperimentazione di partizionamento del grafo del sito \texttt {cs.illinois.edu}\relax }}{61}
-\contentsline {table}{\numberline {4.5}{\ignorespaces Risultati sperimentazione di partizionamento del grafo del sito \texttt {cs.illinois.edu}\relax }}{61}
-\contentsline {table}{\numberline {4.6}{\ignorespaces Risultati sperimentazione di partizionamento del grafo del sito \texttt {cs.illinois.edu}\relax }}{62}
-\contentsline {table}{\numberline {4.7}{\ignorespaces Risultati sperimentazione di partizionamento del grafo del sito \texttt {cs.illinois.edu}\relax }}{62}
-\contentsline {table}{\numberline {4.8}{\ignorespaces Risultati sperimentazione di partizionamento del grafo del sito \texttt {cs.illinois.edu}\relax }}{63}
-\contentsline {table}{\numberline {4.9}{\ignorespaces Risultati sperimentazione di partizionamento del grafo del sito \texttt {cs.illinois.edu}\relax }}{63}
-\contentsline {table}{\numberline {4.10}{\ignorespaces Risultati sperimentazione di partizionamento del grafo del sito \texttt {cs.illinois.edu}\relax }}{64}
-\contentsline {table}{\numberline {4.11}{\ignorespaces Risultati sperimentazione di partizionamento del grafo del sito \texttt {cs.illinois.edu}\relax }}{64}
-\contentsline {table}{\numberline {4.12}{\ignorespaces Risultati sperimentazione di partizionamento del grafo del sito \texttt {cs.illinois.edu}\relax }}{65}
-\contentsline {table}{\numberline {4.13}{\ignorespaces Risultati sperimentazione di partizionamento del grafo del sito \texttt {cs.illinois.edu}\relax }}{65}
+\contentsline {table}{\numberline {4.1}{\ignorespaces Risultati sperimentazione di partizionamento del grafo del sito \texttt {cs.illinois.edu}\relax }}{55}
+\contentsline {table}{\numberline {4.2}{\ignorespaces Risultati sperimentazione di partizionamento del grafo del sito \texttt {cs.stanford.edu}\relax }}{56}
+\contentsline {table}{\numberline {4.3}{\ignorespaces Risultati sperimentazione di partizionamento del grafo del sito \texttt {eecs.mit.edu}\relax }}{56}
+\contentsline {table}{\numberline {4.4}{\ignorespaces Risultati sperimentazione di URL embedding del sito \texttt {cs.illinois.edu}\relax }}{58}
+\contentsline {table}{\numberline {4.5}{\ignorespaces Risultati sperimentazione di URL embedding del sito \texttt {cs.stanford.edu}\relax }}{59}
+\contentsline {table}{\numberline {4.6}{\ignorespaces Risultati sperimentazione di URL embedding del sito \texttt {eecs.mit.edu}\relax }}{60}
+\contentsline {table}{\numberline {4.7}{\ignorespaces Risultati sperimentazione di Text Mining del sito \texttt {cs.illinois.edu}\relax }}{62}
+\contentsline {table}{\numberline {4.8}{\ignorespaces Risultati sperimentazione di Text Mining del sito \texttt {cs.stanford.edu}\relax }}{63}
+\contentsline {table}{\numberline {4.9}{\ignorespaces Risultati sperimentazione di Text Mining del sito \texttt {eecs.mit.edu}\relax }}{64}
+\contentsline {table}{\numberline {4.10}{\ignorespaces Risultati sperimentazione di Text-Embedding del sito \texttt {cs.illinois.edu}\relax }}{65}
+\contentsline {table}{\numberline {4.11}{\ignorespaces Risultati sperimentazione di Text-Embedding del sito \texttt {cs.stanford.edu}\relax }}{65}
+\contentsline {table}{\numberline {4.12}{\ignorespaces Risultati sperimentazione di Text-Embedding del sito \texttt {eecs.mit.edu}\relax }}{66}
+\contentsline {table}{\numberline {4.13}{\ignorespaces Risultati sperimentazione raggruppati per algoritmo K-Means sul sito \texttt {cs.illinois.edu}\relax }}{66}
+\contentsline {table}{\numberline {4.14}{\ignorespaces Risultati sperimentazione raggruppati per algoritmo K-Means sul sito \texttt {ecs.mit.edu}\relax }}{67}
+\contentsline {table}{\numberline {4.15}{\ignorespaces Risultati sperimentazione raggruppati per algoritmo K-Means sul sito \texttt {ecs.mit.edu}\relax }}{67}
 \addvspace {10\p@ }
