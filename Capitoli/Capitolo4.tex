@@ -6,13 +6,24 @@
 %************************************************
 
 %************************************************
-In questo capitolo si descriverà l'esecuzione della sperimentazione. QUesta si è svolta confrontando i risultati ottenuti attraverso l'applicazione di diversi algoritmi di clustering su dataset ottenuti da differenti rappresentazioni. L'algoritmo è stato testato effettuando il crawling di $3$ siti web, che sono stati poi etichettati manualmente per ricavare le metriche necessarie alla valutazione della tesi proposta.
+In questo capitolo si descriverà la progettazione e l’esecuzione della sperimentazione. 
+
+Obiettivo di questo capitolo è quello di valutare l’efficacia dell'approccio realizzato al fine di comprendere se e come i dati strutturati, di cui un sito web si compone,  possano essere combinati con dati non strutturati, come quelli testuali, al fine di migliorare il processo di clustering e valutare in dettaglio le cause di un eventuale successo o insuccesso delle tecniche utilizzate. Questa tesi rappresenta quindi un lavoro preliminare utile a comprendere la bontà della soluzione proposta e quindi decidere se proseguire gli studi in questa direzione o definire strategie alternative.
+
+A tal fine si è deciso di valutare la qualità dell'approccio proposto confrontando le prestazioni di alcuni algoritmi di clustering basati su due differenti tipi di rappresentazione: rappresentazione a grafo e rappresentazione vettoriale.
+
+La sperimentazione è stata effettuata sfruttando i dati provenienti da siti web appartenenti a tre importanti dipartimenti di Computer Science:
+%i risultati ottenuti attraverso l'applicazione di diversi algoritmi di clustering su dataset ottenuti da differenti rappresentazioni. L'algoritmo è stato testato effettuando il crawling di $3$ siti web, che sono stati poi etichettati manualmente per ricavare le metriche necessarie alla valutazione della tesi proposta.
 \begin{itemize}
-\item Il sito web del dipartimento di Computer Science dell'università di Urbana, IL: \texttt{cs.illinois.edu}
-\item Il sito web del dipartimento di Computer Science dell'università di Stanford, CA: \texttt{cs.stanford.edu}
-\item Il sito web del dipartimento di Computer Science del  Massachusetts Institute of Technology a Cambridge, MA: \texttt{eecs.mit.edu}
+\item Dipartimento di Computer Science dell'università di Urbana, IL:\\
+\texttt{www.cs.illinois.edu}. \color{red}Il grafo web estratto si compone di $X$ pagine web e $Y$ hyperlink. Inoltre per ogni pagina sono stati estratti $W$ termini.\color{black}
+\item Dipartimento di Computer Science dell'università di Stanford, CA: \texttt{cs.stanford.edu}
+\item Dipartimento di Computer Science del  Massachusetts Institute of Technology a Cambridge, MA: \texttt{eecs.mit.edu}
 \end{itemize}
-Si partirà pertanto dai dati su cui quest'ultima è stata effettuata, proseguendo con la scelta delle modalità di esecuzione più interessanti e concludendo con una serie di tabelle e grafici contenenti i risultati ottenuti. 
+
+La scelta dei precedenti siti è dovuta a ragioni di confidenza con il dominio applicativo. Infatti la valutazione dei risultati sperimentali ha richiesto, oltre che il crawling dei siti web sopracitati anche una fase di etichettatura delle pagine web al fine di generare una ground truth.
+
+Si descrivono di seguito le metriche utilizzate per valutare la qualità dei cluster estratti, la scelta delle modalità di esecuzione più interessanti e si mostreranno una serie di tabelle e grafici contenenti i risultati ottenuti. 
 
 
 \section{Metriche}
