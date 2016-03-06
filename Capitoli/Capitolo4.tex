@@ -27,62 +27,72 @@ Si descrivono di seguito le metriche utilizzate per valutare la qualità dei clu
 
 
 \section{Metriche}
-Valutare le performance di un algoritmo di clustering non è banale come contare il numero di errori o calcolare metriche quali la precision e la recall di un algoritmo di apprendimento supervisionato. In particolare, le metriche di valutazione non dovrebbero prendere in considerazione gli specifici valori delle label. Piuttosto dovrebbero considerare se il raggruppamento generato dall'algortimo definisce una separazione dei dati similmente a quanto fornito nella \textit{ground truth}, ovvero il vero valore delle label, o soddisfare qualche assunzione, come ad esempio che membri dello stesso cluster siano più simili rispetto a quelli di cluster differenti, utilizzando una data funzione di similarità.
+Valutare le performance di un algoritmo di clustering non è semplice come contare il numero di errori o calcolare metriche quali $Precision$ e $Recall$ di un algoritmo di apprendimento supervisionato. In particolare, le metriche di valutazione non dovrebbero prendere in considerazione gli specifici valori delle label. Queste dovrebbero piuttosto considerare se il raggruppamento generato dall'algortimo definisce una separazione dei dati similmente a quanto fornito nella \textit{ground truth}, ovvero il vero valore delle label, o soddisfare qualche assunzione, come ad esempio che membri dello stesso cluster siano più simili rispetto a quelli di cluster differenti, utilizzando una data funzione di similarità. Di seguito si elencano le metriche utilizzate per valutare la qualità dei cluster prodotti.
 
 \begin{itemize}
-\item \textbf{Homogeneity}
-Nota la ground truth, questo valore rappresenta quanto ogni cluster restituito dall'apprendimento sia omogeneo, ovvero che contiene solo membri di una classe. 
+\item \textbf{Omogeneità}: nota la ground truth (ossia l'insieme dei cluster ideali), questo valore rappresenta quanto ogni cluster appreso sia omogeneo,
+ossia quanto gli elementi dello stesso cluster appartengono alla setssa classe.
+Formalmente l'omogeneità può essere definita come segue:
 \begin{equation}
-h = 1 - \frac{H(C|K)}{H(C)}
+h = 1 - \frac{H(C|K)}{H(C)};
 \end{equation}
-Dove $H(C|K)$ è l'entropia condizionale delle classi date le assegnazioni dei cluster:
+dove $H(C|K)$ è l'entropia condizionata delle classi date le assegnazioni dei cluster e $H(C)$ è l'entropia delle classi, ossia:
 \begin{equation}
 H(C|K) = - \sum\limits_{c=1}^{|C|} \sum\limits_{k=1}^{|K|} \frac{n_{c,k}{n}} \cdot \log \left( \frac{n_{c,k}}{n_k}\right)
 \end{equation}
 \label{hck}
-e $H(C)$ è l'entropia delle classi:
+
 \begin{equation}
 H(C) = \sum\limits_{c=1}^{|C|} \frac{n_c}{n} \cdot \log \left( \frac{n_{c}}{n}\right)
 \end{equation}
 \label{hc}
-con $n$ il numero totale delle pagine, e $n_c$ ed $n_k$ il numero delle pagine appartenenti alla classe $c$ o al cluster $k$, ed infine $n_c,k$ le pagine della classe $c$ assegnate al cluster $k$.
-\item \textbf{Completeness}
-Note la ground truth, indica se tutti i membri di una sono stati assegnati allo stesso cluster. Da notare che se ad esempio tutte le pagine fossero asegnate ad un unico grande cluster, la \textit{Completeness} sarebbe massima.
+con $n$ il numero totale delle pagine, e $n_c$ ed $n_k$ il numero delle pagine appartenenti alla classe $c$ o al cluster $k$, ed infine $n_{c,k}$ sono le pagine della classe $c$ assegnate al cluster $k$. In una situazione ideale l'omogeneità assume valore 1.  \color{red}
+cita: V-Measure: A conditional entropy-based external cluster evaluation
+measure 
+\color{black}
+\item \textbf{Completezza}: è una misura simmetrica all'Omogeneità. In modo da soddisfare i criteri di completezza un algoritmo di clustering deve assegnare tutti gli elementi di una data classe ad un unico cluster. Per valutare la completezza è necessario esaminare la distribuzione degli assegnamenti di ogni classe. In particolare in una soluzione perfetta ogni distribuzione di classe dovrebbe convergere in un cluster.
+%nota la ground truth, indica se tutti i membri di una classe sono stati assegnati allo stesso cluster. Da notare che se ad esempio tutte le pagine fossero assegnate ad un unico grande cluster, la \textit{Completezza} sarebbe massima.
+Formalmente la \textit{Completezza} può essere così formulata:
 \begin{equation}
 c = 1 - \frac{H(C|K)}{H(K)}
 \end{equation}
-Dove $H(C|K)$ è la \ref{hck} e $H(K)$ è l'entropia dei cluster.
-\item \textbf{V-Measure} rappresenta la media armonica fra l'\textit{homogeneity score} e il \textit{completeness score}.
+dove $H(C|K)$ è definita nell'equazione \ref{hck} e $H(K)$ è l'entropia dei cluster. Come nel caso dell'Omogeneità la Completezza di una soluzione ideale assume valore 1.
+\item \textbf{V-Measure} è una misura basata sull'entropia che esplicitamente calcola quanto i criteri di omogeneità e completezza sono stati soddifatti. Essa è computata come la media armonica fra Omogeneità e Completezza, così come Precisione e Richiamo sono combinati nel calcolo del F-Measure:
 \begin{equation}
 v = 2 \cdot \frac{h \cdot c}{h + c}
 \end{equation}
 
-\item \textbf{Adjusted Rand Index (ARI)}
-Nota la ground truth, ovvero le classi reali, e le assegnazioni di un algritmo di apprendimento, viene calcolata una funzione che misura la similarità delle due informazioni, ignorandole permutazioni. I valori che può assumere vanno da $-1$ a $1$. Vicino allo $0$ rappresentano una assegnazione casuale delle etichette.
-\\
-Sia $C$ è gli assegnamenti della ground truth e $K$ le label predette, allora:
-\\
-$a$ è il numero di coppie di elementi che si trovano sia in $c$ che in $K$
-\\
-$b$ è il numero di coppie di elementi che si trovano in insiemi diversi in $C$ e in insiemi diversi in $K$.
-Il \textbf{Random Index} è dato da:
+\item \textbf{Adjusted Rand Index (ARI)}: nota la ground truth e gli assegnamenti restituiti da un algoritmo di clustering, l'ARI calcola la similarità tra i due insiemi ignorando le permutazioni. 
+
+Da un punto di vista matematico l'ARI misura l'accuratezza del clustering, ossia la percentuale di coppie di oggetti per i quali due algoritmi di clustering concordano sull'assegnazione. 
+In particolare, dato $C$ l'insieme degli assegmaneti ideali (ground truth) e $K$ l'insieme delle label predette, allora è possibile calcolare il \textbf{Random Index}:
+%Il \textbf{Random Index} è dato da:
 \begin{equation}
 RI = \frac{a + b}{C_2^n}
 \end{equation}
-Dove $C_2^n$ è il numero totale di tutte le possibili coppie nel dataset. 
+Dove:
 \\
-Il $RI$ non garantisce comunque che le assegnazioni casuali avranno valori prossimi allo $0$.
-\\ Viene definito L'Adjusted Random Index:
+- $a$ è il numero di coppie di elementi che si trovano sia in $c$ che in $K$
+\\
+- $b$ è il numero di coppie di elementi che si trovano in insiemi diversi in $C$ e in insiemi diversi in $K$.
+\\
+- $C_2^n$ è il numero totale di tutte le possibili coppie nel dataset. 
+\\
+%Il $RI$ non garantisce che le assegnazioni casuali abbiano valori prossimi allo $0$.
+
+Un problema del $RI$ è che cluster cumputati in modo casuale non assumono un indice costante (per esempio 0).
+\\ A tal fine è definito l'Adjusted Random Index:
 \begin{equation}
 ARI = \frac{RI - E[RI]}{\max (RI) - E[RI]}
 \end{equation}
+Questa misura garantisce che cluster generati in modo casuale abbiano un valore ARI prossimi allo 0.
+Differentemente dalle precedenti misure l'ARI assume valori tra $-1$ e $1$. %Risultati prossimi allo $0$ rappresentano una assegnazione casuale delle etichette.
 
-\item \textbf{Mutual Information (MI)}
-Nota la ground truth e le asseganzioni dell'algoritmo di clustering, la \textit{Mutual Information} è una funzione che misura la corrispondenza delle due informazioni, ignorando le permutazioni. 
+\item \textbf{Mutual Information (MI)}: nota la ground truth e le asseganzioni dell'algoritmo di clustering, la \textit{Mutual Information} è una funzione che misura la corrispondenza delle due informazioni, ignorando le permutazioni. 
 \\
-Anche qui, una assegnazione uniforme (o casuale) dei cluster avrà valori prossimi allo $0.0$, evidenziando l'indipendenza delle due informazioni, mentre valori prossimi a $1.0$ indicano una corrispondenza significativa.
+Anche qui, una assegnazione uniforme (o casuale) dei cluster avrà valori prossimi allo $0$, evidenziando l'indipendenza delle due informazioni, mentre valori prossimi a $1$ indicano una corrispondenza significativa.
 \\
-Dati due assegnamenti di pari lunghezza, $U$ e $V$, la loro entropia è la quantità di incertezza per una partizione , definita da:
+Dati due assegnamenti di pari lunghezza, $U$ e $V$, la loro entropia è la quantità di incertezza per una partizione, definita da:
 \begin{equation}
 H(U) = \sum\limits_{i=1}^{|U|} P(i)\log (P(i))
 \end{equation}
@@ -97,25 +107,29 @@ MI(U,V) = \sum\limits_{i=1}^{|U|}\sum\limits_{j=1}^{|V|} P(i,j)\log \left( \frac
 
 \end{itemize}
 
-
-Nelle metriche presentate, fatta eccezione per l'Adjusted Rand Index, $0.0$ rappresenta il valore peggiore, mentre $1.0$ il perfect score. Questi valori offrono una interpretazione intuitiva e può aiutare alla scoperta degli errori commessi nella assegnazione. Fra i vantaggi è degno di nota che nessuna assunzione viene fatta sulla struttura dei cluster, quindi possono essere utilizzate con algoritmi che identificano cluster di forma diversa.
-
-\paragraph{Silhouette}
-Se la Ground Truth non è nota, può essere usata la Silhouette usando il modello stesso. Ad un alto valore corrispondono modelli con cluster ben definiti. Si compone di due valore
-\begin{itemize}
-\item $a$ : la distanza media tra un vettore e tutti gli altri nella stessa classe
-\item $b$ : la distanza media tra un vettore e tutti gli altri nella classe più vicina
-\end{itemize}
-
-Il coefficiente di \textit{Silhouette} è dato quindi da:
+Essendo una misura probabilistica i valori possibili spaziano nell'intervallo $(0,1)$. 
+%Nelle metriche presentate, fatta eccezione per l'Adjusted Rand Index, $0.0$ rappresenta il valore peggiore, mentre $1.0$ il perfect score. Questi valori offrono una interpretazione intuitiva e può aiutare alla scoperta degli errori commessi nella assegnazione. Fra i vantaggi è degno di nota che nessuna assunzione viene fatta sulla struttura dei cluster, quindi possono essere utilizzate con algoritmi che identificano cluster di forma diversa.
+\color{red} Fra i vantaggi è degno di nota che nessuna assunzione viene fatta sulla struttura dei cluster, quindi possono essere utilizzate con algoritmi che identificano cluster di forma diversa. NON SI CAPISCE BENE PERCHE QUESTO E' UN VANTAGGIO SOLO PER L MI
+\color{black}
+\paragraph{Silhouette} misura la forza di ogni cluster. Essa può essere usata per calcolare la qualità dei cluster anche quando la Ground Truth non è nota.
+Formalmente la Silhouette può essere così definita:
 \begin{equation}
 s = \frac{b - a}{\max (a,b)}
 \end{equation}
-
-Il valore può variare da $-1$, per cluster non definiti, a $1$ per cluster densamente connessi. Intorno allo $0$ indica cluster sovrapposti. Tende comunque ad essere maggiore per cluster convessi, o con alta densità, come quelli ottenuti con DBSCAN.
+dove:
+\color{controlla semantica di questo elenco}
+\begin{itemize}
+\item $a$ = la distanza media tra un vettore e tutti gli altri nella stessa classe
+\item $b$ = la distanza media tra un vettore e tutti gli altri nella classe più vicina
+\end{itemize}
+\color{black}
+La Silhouette può variare da $-1$, per cluster non definiti, a $1$ per cluster densamente connessi. Un valore intorno allo $0$ indica cluster sovrapposti. In generale cluster convessi o molto densi come quelli ottenuti con DBSCAN, assumono alti valori.
+%Tende comunque ad essere maggiore per cluster convessi, o con alta densità, come quelli ottenuti con DBSCAN.
 
 
 \section{Decrizione del dataset}
+\color{red} incorpora questa sezione nell'elenco puntato ad inizio capitolo
+\color{black}
 I dataset utilizzati per la sperimentazione sono stati creati eseguendo il processo di crawling e generazione delle sequenze sui seguenti siti:
 
 
@@ -132,7 +146,7 @@ Il crawling è stato lanciato con profondità massima $10$, e immagazzinando un 
 \section{Configurazioni}
 Dalla scelta di apprendere le rappresentazioni vettoriali delle relazioni invece di utilizzare algoritmi di Community Detection del grafo, sono derivati dei vantaggi. Innanzitutto gli algoritmi di partizionamento dei grafi hanno complessità NP-completa, ovvero necessitano di un tempo superpolinomiale nella dimensione dell'input. Nel contesto del Web Mining la dimensione del dataset può crescere enormemente ed avere soluzioni più efficienti costituisce senz'altro una priorità. 
 \\
-In tutti i casi di seguito riportati sono stati generati grafi sia in modalità classica, che attraverso l'estrazione delle liste. Nel primo caso i dataset saranno chiamati \textbf{''nc''} (no-costraint, senza vincoli), mentre nel secondo caso \textbf{''lc''} (list-costraint, con il vincolo delle liste. Dove omessa, la configurazione è rimasta invariata.
+In tutti i casi di seguito riportati sono stati generati grafi sia in modalità classica, che attraverso l'estrazione delle liste. Nel primo caso i dataset saranno chiamati \textbf{''nc''} (no-costraint, senza vincoli), mentre nel secondo caso \textbf{''lc''} (list-costraint, con il vincolo delle liste\color{red}...mettere riferimento alla sezione in cui parli delle liste o alla definizione di liste).\color{black}Dove omessa, la configurazione è rimasta invariata.
 
 \subsection{Community Detection}
 Sono state applicate metodologie derivanti dalla teoria dei grafi per l'estrazione di strutture connesse all'interno del grafo web. Questo può essere utile nella individuazione di community all'interno di grafi come ad esempio social network. La divisione del grafo in community può essere effettuata seguendo diversi approcci, inoltre la rete costruita su di un tipico sito web è caratterizzata solitamente da un numero elevato di collegamenti tra pagine che suggeriscono l'utilizzo di alcune tipologie piuttosto che altre. Infatti misure come la betweenness non hanno restituito risultati significativi.
