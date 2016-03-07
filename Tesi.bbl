@@ -109,6 +109,26 @@ Radim {\v R}eh{\r u}{\v r}ek and Petr Sojka.
   NLP Frameworks}, pages 45--50, Valletta, Malta, May 2010. ELRA.
 \newblock \url{http://is.muni.cz/publication/884893/en}.
 
+\bibitem{Rosenberg07}
+Andrew Rosenberg and Julia Hirschberg.
+\newblock V-measure: A conditional entropy-based external cluster evaluation
+  measure.
+\newblock In {\em EMNLP-CoNLL}, volume~7, pages 410--420, 2007.
+
+\bibitem{Rousseeuw87}
+Peter Rousseeuw.
+\newblock Silhouettes: A graphical aid to the interpretation and validation of
+  cluster analysis.
+\newblock {\em J. Comput. Appl. Math.}, 20(1):53--65, November 1987.
+
+\bibitem{Santos09}
+Jorge~M. Santos and Mark Embrechts.
+\newblock On the use of the adjusted rand index as a metric for evaluating
+  supervised classification.
+\newblock In {\em Proceedings of the 19th International Conference on
+  Artificial Neural Networks: Part II}, ICANN '09, pages 175--184, Berlin,
+  Heidelberg, 2009. Springer-Verlag.
+
 \bibitem{Shahabi97}
 C.~Shahabi, A.~M. Zarkesh, J.~Adibi, and V.~Shah.
 \newblock Knowledge discovery from users web-page navigation.
@@ -132,6 +152,11 @@ Joseph Turian, Lev Ratinov, and Yoshua Bengio.
 \newblock In {\em Proceedings of the 48th Annual Meeting of the Association for
   Computational Linguistics}, ACL '10, pages 384--394, Stroudsburg, PA, USA,
   2010. Association for Computational Linguistics.
+
+\bibitem{Turney10}
+Peter~D. Turney and Patrick Pantel.
+\newblock From frequency to meaning: Vector space models of semantics.
+\newblock {\em J. Artif. Int. Res.}, 37(1):141--188, January 2010.
 
 \bibitem{Zou13}
 Will~Y. Zou, Richard Socher, Daniel~M. Cer, and Christopher~D. Manning.

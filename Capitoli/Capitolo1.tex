@@ -59,7 +59,7 @@ Differentemente da altri mezzi di informazione, la pubblicazione di contenuti è
 \end{itemize}
 
 Enormi sforzi son stati fatti per combinare informazione strutturata e non strutturata presente all'interno di pagine web, al fine di estrarre, indicizzare e reperire nuova conoscenza. 
-La maggior parte delle soluzioni attuali trasformano il contenuto testuale delle pagine web in uno spazio vettoriale \cite{}\color{red}https://www.jair.org/media/2934/live-2934-4846-jair.pdf \color{black}. Modelli basati su spazi vettoriali sono fondamentali per task che coinvolgono il calcolo della similarità tra oggetti in cui oggetti simili sono caratterizzati da rappresentazioni vettoriali simili. Il modello vettoriale \textit{termini-documenti} rappresenta il più semplice e utilizzato modello di rappresentazione di documenti testuali nel contesto del Text Mining. In tale modello il valore dell'elemento $i$-esimo in un vettore documento rappresenta il numero di volte che il termine $i$ compare nel documento stesso.    
+La maggior parte delle soluzioni attuali trasformano il contenuto testuale delle pagine web in uno spazio vettoriale \cite{Turney10}. Modelli basati su spazi vettoriali sono fondamentali per task che coinvolgono il calcolo della similarità tra oggetti in cui oggetti simili sono caratterizzati da rappresentazioni vettoriali simili. Il modello vettoriale \textit{termini-documenti} rappresenta il più semplice e utilizzato modello di rappresentazione di documenti testuali nel contesto del Text Mining. In tale modello il valore dell'elemento $i$-esimo in un vettore documento rappresenta il numero di volte che il termine $i$ compare nel documento stesso.    
 Gli algoritmi basati su modelli di rappresentazione vettoriali si basano sull'assunzione di indipendenza tra i termini all'interno di un documento e tra i documenti stessi. Le pagine web violano come tutti i documenti testuali la prima assunzione, inoltre i collegamenti ipertestuali definendo relazioni di interdipendenza tra le pagine stesse comportano la violazione della seconda assunzione.
 
 Di conseguenza gli algoritmi di Web Mining devono tener conto delle informazioni relative alla struttura del sito web a cui appartengono al fine di estrarre informazioni più accurate.
@@ -84,12 +84,12 @@ Il Web Structure Mining può essere diviso in due tipi:
 Tra i più importanti algoritmi di web structure mining troviamo Page Rank\cite{} e HITS\cite{}, i quali sfruttano la struttura ad hyperlink del Web per estrarre rank di pagine web.
 
 \section{Rappresentazioni vettoriali di pagine Web}
-Poichè 
-La carenza di struttura delle pagine web obbliga all'effettuare dei passaggi preliminari per rendere processabili i dati disponibili. Metodi efficaci consistono nel rappresentare le pagine web come vettori, motivato dal fatto che task di machine learning richiedono input che sono matematicamente e computazionalmente convenienti da elaborare, considerando solo un sottoinsieme significativo dei dati in modo da astrarre ed eliminare informazioni ritenute non pertinenti al risultato finale. Questa fase è probabilmente la più importante in quanto algoritmi di apprendimento tanto bene quanto meglio i vettori ricavati rappresentano bene i dati di partenza. È necessario quindi estrarre rappresentazioni utili dai dati grezzi. Esistono molti modi per ricavare questa correlazione, come reti neurali, matrici di co-occorrenza, dimensionality reduction o rappresentazioni del contesto in cui appare la parola. L'alternativa proposta in questa tesi consiste nell'utilizzare tecniche di word embedding per apprendere rappresentazioni utili.
-Il word embedding è il nome di un insieme di tecniche per il language modeling e per il feature learning nel campo del Natural language processing (NLP)\cite{Bengio03}. Utilizzate  in collezioni di documenti dove ad ogni parola viene associato un vettore, detto feature vector. 
+La carenza di struttura delle pagine web obbliga all'effettuare dei passaggi preliminari per rendere processabili i dati disponibili. Metodi efficaci consistono nel rappresentare le pagine web come vettori, motivato dal fatto che task di machine learning richiedono input che sono matematicamente e computazionalmente convenienti da elaborare, considerando solo un sottoinsieme significativo dei dati in modo da astrarre ed eliminare informazioni ritenute non pertinenti al risultato finale. Questa fase è probabilmente la più importante in quanto algoritmi di apprendimento tanto bene quanto meglio i vettori ricavati rappresentano bene i dati di partenza. È necessario quindi estrarre rappresentazioni utili dai dati grezzi. Esistono molti modi per ricavare questa correlazione, come reti neurali, matrici di co-occorrenza, dimensionality reduction o rappresentazioni del contesto in cui appare la parola. 
 \\\\
-\color{red}come sei arrivato da rappresentazione vettoriale a word embedding?\color{black}
-Il word embedding può essere visto come una funzione parametrizzata 
+L'alternativa proposta in questa tesi consiste nell'utilizzare tecniche di Word Embedding per apprendere rappresentazioni vettoriali dei vertici all'interno del grafo.
+Il Word Embedding è il nome di un insieme di tecniche per il language modeling e per il Feature Learning nel campo del Natural Language Processing (NLP)\cite{Bengio03}, utilizzate  in collezioni di documenti, dove ad ogni parola viene associato un vettore detto \textit{Feature Vector}. 
+\\\\
+Il Word Embedding può essere visto come una funzione parametrizzata 
 \begin{equation}
   W : words \to \mathbb{R^n}
 \end{equation}
@@ -109,7 +109,7 @@ Questo non significa solo poter scambiare una parola con un sinonimo, ma anche d
 
 Da questo potrebbe sembrare necessario osservare esempi relativi ad ogni parola per permetterci di generalizzarla. Comprendi tutte le parole che hai già visto, ma non hai già visto tutte le frasi che riesci a capire. Questo è l’approccio delle reti neurali.
 
-\paragraph{Analogie}Il word embedding mostra un altra proprietà interessante anche se molto controversa: le analogie. Le analogie tra parole sembrano essere nascoste nella differenza dei loro rispettivi vettori \cite{Mikolov13}. 
+\paragraph{Analogie}Il Word Embedding mostra un altra proprietà interessante anche se molto controversa: le analogie. Le analogie tra parole sembrano essere nascoste nella differenza dei loro rispettivi vettori \cite{Mikolov13}. 
 \begin{equation}
   W\left ( "woman" \right ) -  W\left ( "man" \right ) \simeq W\left ( "aunt" \right ) -  W\left ( "uncle" \right )
 \end{equation}
@@ -120,15 +120,16 @@ Da questo si evince che c’è una correlazione tra delle parole e le rispettive
 	\caption{Alcuni esempi di analogie}
 	\label{analogies}
 \end{figure}
-Queste proprietà possono essere considerate effetti collaterali. Non si è cercato di far apprendere il modello in modo da avere parole simili vicine fra loro. Questo sembra essere un punto di forza delle reti neurali nell’apprendere features che rappresentano bene i dati in modo automatico. invece di apprendere un rappresentazione dei dati specifica ed usarla per diversi task, è possibile apprendere un metodo per associare diversi tipi di dati in una singola rappresentazione. Queste tecniche sono note come transfer learning, metodi per applicare la conoscenza già appresa in contesti simili.
+Queste proprietà possono essere considerate effetti collaterali. Non si è cercato di far apprendere il modello in modo da avere parole simili vicine fra loro. Questo sembra essere un punto di forza delle reti neurali nell’apprendere features che rappresentano bene i dati in modo automatico. invece di apprendere un rappresentazione dei dati specifica ed usarla per diversi task, è possibile apprendere un metodo per associare diversi tipi di dati in una singola rappresentazione. Queste tecniche sono note come Transfer Learning, metodi per applicare la conoscenza già appresa in contesti simili.
 \\\\
-Un esempio può essere il word embedding di parole linguaggi diversi. Dato che parole simili saranno associate a vettori simili, parole con significato simile in una lingua e nell’altra finiranno vicine tra loro, così come i loro sinonimi. È possibile notare che anche parole di cui non si conosceva la traduzione o che avessero significati simili, sono finite vicine tra loro \cite{Zou13}.
+Un esempio può essere il Word Embedding di parole linguaggi diversi. Dato che parole simili saranno associate a vettori simili, parole con significato simile in una lingua e nell’altra finiranno vicine tra loro, così come i loro sinonimi. È possibile notare che anche parole di cui non si conosceva la traduzione o che avessero significati simili, sono finite vicine tra loro \cite{Zou13}.
 \begin{figure}[htb]
 	\centering
 	\includegraphics[width = 100mm]{englishchinese.png}
-	\caption{Visualizzazione con t-SNE di un word embedding bilingua. }
+	\caption{Visualizzazione con t-SNE di un Word Embedding bilingua. }
 	\label{englishchinese}
 \end{figure}
+
 
 \subsection{Word2vec}
 \label{word2vec}

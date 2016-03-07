@@ -6,45 +6,45 @@ Database file #1: Bibliografia.bib
 A bad cross reference---entry "Zou13"
 refers to entry "conf/emnlp/2013", which doesn't exist
 Warning--I didn't find a database entry for "conf/emnlp/2013"
-You've used 21 entries,
+You've used 25 entries,
             2118 wiz_defined-function locations,
-            660 strings with 8768 characters,
-and the built_in function-call counts, 8520 in all, are:
-= -- 887
-> -- 374
-< -- 9
-+ -- 150
-- -- 126
-* -- 597
-:= -- 1340
-add.period$ -- 75
-call.type$ -- 21
-change.case$ -- 124
+            694 strings with 9570 characters,
+and the built_in function-call counts, 10066 in all, are:
+= -- 1054
+> -- 420
+< -- 12
++ -- 168
+- -- 140
+* -- 701
+:= -- 1570
+add.period$ -- 88
+call.type$ -- 25
+change.case$ -- 143
 chr.to.int$ -- 0
-cite$ -- 21
-duplicate$ -- 341
-empty$ -- 664
-format.name$ -- 126
-if$ -- 1857
+cite$ -- 25
+duplicate$ -- 409
+empty$ -- 796
+format.name$ -- 140
+if$ -- 2201
 int.to.chr$ -- 0
-int.to.str$ -- 21
-missing$ -- 22
-newline$ -- 109
-num.names$ -- 42
-pop$ -- 133
+int.to.str$ -- 25
+missing$ -- 26
+newline$ -- 129
+num.names$ -- 50
+pop$ -- 150
 preamble$ -- 1
-purify$ -- 105
+purify$ -- 120
 quote$ -- 0
-skip$ -- 250
+skip$ -- 307
 stack$ -- 0
-substring$ -- 571
-swap$ -- 103
-text.length$ -- 9
+substring$ -- 699
+swap$ -- 127
+text.length$ -- 12
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 80
+type$ -- 96
 warning$ -- 0
-while$ -- 82
-width$ -- 23
-write$ -- 257
+while$ -- 100
+width$ -- 27
+write$ -- 305
 (There was 1 error message)

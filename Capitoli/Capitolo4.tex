@@ -14,11 +14,17 @@ A tal fine si è deciso di valutare la qualità dell'approccio proposto confront
 
 La sperimentazione è stata effettuata sfruttando i dati provenienti da siti web appartenenti a tre importanti dipartimenti di Computer Science:
 %i risultati ottenuti attraverso l'applicazione di diversi algoritmi di clustering su dataset ottenuti da differenti rappresentazioni. L'algoritmo è stato testato effettuando il crawling di $3$ siti web, che sono stati poi etichettati manualmente per ricavare le metriche necessarie alla valutazione della tesi proposta.
+
 \begin{itemize}
+
 \item Dipartimento di Computer Science dell'università di Urbana, IL:\\
-\texttt{www.cs.illinois.edu}. \color{red}Il grafo web estratto si compone di $X$ pagine web e $Y$ hyperlink. Inoltre per ogni pagina sono stati estratti $W$ termini.\color{black}
-\item Dipartimento di Computer Science dell'università di Stanford, CA: \texttt{cs.stanford.edu}
-\item Dipartimento di Computer Science del  Massachusetts Institute of Technology a Cambridge, MA: \texttt{eecs.mit.edu}
+\texttt{www.cs.illinois.edu}\\
+Il crawling è stato lanciato con profondità massima $10$, e immagazzinando un massimo di $10.000$ termini per ogni pagina esplorata. Il grafo web estratto si compone di $728$ pagine web e $16993$ hyperlink. Dal grafo sono state poi generate $10.000$ sequenze di lunghezza massima $10$. Sono state collezionate $728$ pagine web.
+
+\item Dipartimento di Computer Science dell'università di Stanford, CA: \texttt{cs.stanford.edu} \\Il crawling è stato effettuato con profondità massima $10$, e immagazzinando un massimo di $10.000$ termini per ogni pagina esplorata. Il grafo web estratto si compone di $1458$ pagine web e $99686$ hyperlink. Dal grafo sono state poi generate $10.000$ sequenze di lunghezza massima $10$. Il processo ha collezionato $1458$ pagine web.
+
+\item Dipartimento di Computer Science del  Massachusetts Institute of Technology a Cambridge, MA: \texttt{eecs.mit.edu} \\ Il crawling è stato lanciato con profondità massima $10$, e immagazzinando un massimo di $10.000$ termini per ogni pagina esplorata. Il grafo web estratto si compone di $1745$ pagine web e $63937$ hyperlink. Dal grafo sono state poi generate $10.000$ sequenze di lunghezza massima $10$. Sono state collezionate $1745$ pagine web.
+
 \end{itemize}
 
 La scelta dei precedenti siti è dovuta a ragioni di confidenza con il dominio applicativo. Infatti la valutazione dei risultati sperimentali ha richiesto, oltre che il crawling dei siti web sopracitati anche una fase di etichettatura delle pagine web al fine di generare una ground truth.
@@ -46,10 +52,7 @@ H(C|K) = - \sum\limits_{c=1}^{|C|} \sum\limits_{k=1}^{|K|} \frac{n_{c,k}{n}} \cd
 H(C) = \sum\limits_{c=1}^{|C|} \frac{n_c}{n} \cdot \log \left( \frac{n_{c}}{n}\right)
 \end{equation}
 \label{hc}
-con $n$ il numero totale delle pagine, e $n_c$ ed $n_k$ il numero delle pagine appartenenti alla classe $c$ o al cluster $k$, ed infine $n_{c,k}$ sono le pagine della classe $c$ assegnate al cluster $k$. In una situazione ideale l'omogeneità assume valore 1.  \color{red}
-cita: V-Measure: A conditional entropy-based external cluster evaluation
-measure 
-\color{black}
+con $n$ il numero totale delle pagine, e $n_c$ ed $n_k$ il numero delle pagine appartenenti alla classe $c$ o al cluster $k$, ed infine $n_{c,k}$ sono le pagine della classe $c$ assegnate al cluster $k$. In una situazione ideale l'omogeneità assume valore 1.  \cite{Rosenberg07}
 \item \textbf{Completezza}: è una misura simmetrica all'Omogeneità. In modo da soddisfare i criteri di completezza un algoritmo di clustering deve assegnare tutti gli elementi di una data classe ad un unico cluster. Per valutare la completezza è necessario esaminare la distribuzione degli assegnamenti di ogni classe. In particolare in una soluzione perfetta ogni distribuzione di classe dovrebbe convergere in un cluster.
 %nota la ground truth, indica se tutti i membri di una classe sono stati assegnati allo stesso cluster. Da notare che se ad esempio tutte le pagine fossero assegnate ad un unico grande cluster, la \textit{Completezza} sarebbe massima.
 Formalmente la \textit{Completezza} può essere così formulata:
@@ -62,7 +65,7 @@ dove $H(C|K)$ è definita nell'equazione \ref{hck} e $H(K)$ è l'entropia dei cl
 v = 2 \cdot \frac{h \cdot c}{h + c}
 \end{equation}
 
-\item \textbf{Adjusted Rand Index (ARI)}: nota la ground truth e gli assegnamenti restituiti da un algoritmo di clustering, l'ARI calcola la similarità tra i due insiemi ignorando le permutazioni. 
+\item \textbf{Adjusted Rand Index (ARI)}: nota la ground truth e gli assegnamenti restituiti da un algoritmo di clustering, l'ARI calcola la similarità tra i due insiemi ignorando le permutazioni \cite{Santos09}. 
 
 Da un punto di vista matematico l'ARI misura l'accuratezza del clustering, ossia la percentuale di coppie di oggetti per i quali due algoritmi di clustering concordano sull'assegnazione. 
 In particolare, dato $C$ l'insieme degli assegmaneti ideali (ground truth) e $K$ l'insieme delle label predette, allora è possibile calcolare il \textbf{Random Index}:
@@ -107,46 +110,31 @@ MI(U,V) = \sum\limits_{i=1}^{|U|}\sum\limits_{j=1}^{|V|} P(i,j)\log \left( \frac
 
 \end{itemize}
 
-Essendo una misura probabilistica i valori possibili spaziano nell'intervallo $(0,1)$. 
+Per le metriche riportate è degno di nota che nessuna assunzione viene fatta sulla struttura dei cluster, quindi possono essere utilizzate con algoritmi che identificano cluster di forma diversa.
+\\
+Queste, ad eccezione dell'ARI, essendo misure probabilistiche i valori possibili spaziano nell'intervallo $(0,1)$. 
 %Nelle metriche presentate, fatta eccezione per l'Adjusted Rand Index, $0.0$ rappresenta il valore peggiore, mentre $1.0$ il perfect score. Questi valori offrono una interpretazione intuitiva e può aiutare alla scoperta degli errori commessi nella assegnazione. Fra i vantaggi è degno di nota che nessuna assunzione viene fatta sulla struttura dei cluster, quindi possono essere utilizzate con algoritmi che identificano cluster di forma diversa.
-\color{red} Fra i vantaggi è degno di nota che nessuna assunzione viene fatta sulla struttura dei cluster, quindi possono essere utilizzate con algoritmi che identificano cluster di forma diversa. NON SI CAPISCE BENE PERCHE QUESTO E' UN VANTAGGIO SOLO PER L MI
-\color{black}
-\paragraph{Silhouette} misura la forza di ogni cluster. Essa può essere usata per calcolare la qualità dei cluster anche quando la Ground Truth non è nota.
+
+
+\paragraph{Silhouette} misura la forza di ogni cluster~\cite{Rousseeuw87}. Essa può essere usata per calcolare la qualità dei cluster anche quando la Ground Truth non è nota.
 Formalmente la Silhouette può essere così definita:
 \begin{equation}
 s = \frac{b - a}{\max (a,b)}
 \end{equation}
 dove:
-\color{controlla semantica di questo elenco}
-\begin{itemize}
-\item $a$ = la distanza media tra un vettore e tutti gli altri nella stessa classe
-\item $b$ = la distanza media tra un vettore e tutti gli altri nella classe più vicina
-\end{itemize}
-\color{black}
+\\
+- $a$ = la distanza media tra un vettore e tutti gli altri nella stessa classe
+\\
+- $b$ = la distanza media tra un vettore e tutti gli altri nella classe più vicina
+
 La Silhouette può variare da $-1$, per cluster non definiti, a $1$ per cluster densamente connessi. Un valore intorno allo $0$ indica cluster sovrapposti. In generale cluster convessi o molto densi come quelli ottenuti con DBSCAN, assumono alti valori.
 %Tende comunque ad essere maggiore per cluster convessi, o con alta densità, come quelli ottenuti con DBSCAN.
 
 
-\section{Decrizione del dataset}
-\color{red} incorpora questa sezione nell'elenco puntato ad inizio capitolo
-\color{black}
-I dataset utilizzati per la sperimentazione sono stati creati eseguendo il processo di crawling e generazione delle sequenze sui seguenti siti:
-
-
-\paragraph{\texttt{http://cs.illinois.edu/:}}
-Il crawling è stato lanciato con profondità massima $10$, e immagazzinando un massimo di $10.000$ termini per ogni pagina esplorata. Dal grafo sono state poi generate $10.000$ sequenze di lunghezza massima $10$. Sono state collezionate $728$ pagine web.
-
-
-\paragraph{\texttt{http://cs.stanford.edu/:}}
- Il crawling è stato effettuato con profondità massima $10$, e immagazzinando un massimo di $10.000$ termini per ogni pagina esplorata. Dal grafo sono state poi generate $10.000$ sequenze di lunghezza massima $10$. Il processo ha collezionato $1458$ pagine web.
-
-\paragraph{\texttt{http://eecs.mit.edu/:}}
-Il crawling è stato lanciato con profondità massima $10$, e immagazzinando un massimo di $10.000$ termini per ogni pagina esplorata. Dal grafo sono state poi generate $10.000$ sequenze di lunghezza massima $10$. Sono state collezionate $1745$ pagine web.
-
 \section{Configurazioni}
 Dalla scelta di apprendere le rappresentazioni vettoriali delle relazioni invece di utilizzare algoritmi di Community Detection del grafo, sono derivati dei vantaggi. Innanzitutto gli algoritmi di partizionamento dei grafi hanno complessità NP-completa, ovvero necessitano di un tempo superpolinomiale nella dimensione dell'input. Nel contesto del Web Mining la dimensione del dataset può crescere enormemente ed avere soluzioni più efficienti costituisce senz'altro una priorità. 
 \\
-In tutti i casi di seguito riportati sono stati generati grafi sia in modalità classica, che attraverso l'estrazione delle liste. Nel primo caso i dataset saranno chiamati \textbf{''nc''} (no-costraint, senza vincoli), mentre nel secondo caso \textbf{''lc''} (list-costraint, con il vincolo delle liste\color{red}...mettere riferimento alla sezione in cui parli delle liste o alla definizione di liste).\color{black}Dove omessa, la configurazione è rimasta invariata.
+In tutti i casi di seguito riportati sono stati generati grafi sia in modalità classica, che attraverso l'estrazione delle liste. Nel primo caso i dataset saranno chiamati \textbf{''nc''} (no-costraint, senza vincoli), mentre nel secondo caso \textbf{''lc''} (list-costraint, con il vincolo delle liste (vedere \ref{liste}). Dove omessa, la configurazione è rimasta invariata.
 
 \subsection{Community Detection}
 Sono state applicate metodologie derivanti dalla teoria dei grafi per l'estrazione di strutture connesse all'interno del grafo web. Questo può essere utile nella individuazione di community all'interno di grafi come ad esempio social network. La divisione del grafo in community può essere effettuata seguendo diversi approcci, inoltre la rete costruita su di un tipico sito web è caratterizzata solitamente da un numero elevato di collegamenti tra pagine che suggeriscono l'utilizzo di alcune tipologie piuttosto che altre. Infatti misure come la betweenness non hanno restituito risultati significativi.
@@ -157,6 +145,13 @@ I grafi utilizzati rappresentano le due diverse operazioni di estrazione di coll
 
 L'analisi del grafo considera unicamente le relazioni che intercorrono fra le pagine web e tralascia informazioni riguardanti il contenuto. Dalle metriche rilevate risulta in tabella \ref{metricheGraphIll}, risulta che il partizionamento del grafo web non riesce a dividere al meglio i cluster.
  
+\begin{figure}[htb]
+	\centering
+	\includegraphics[width = 100mm]{nc_groundtruth.png}
+	\caption{Grafo del sito \texttt{cs.illinois.edu} etichettato manualmente.}
+	\label{nc_groundtruth}
+\end{figure}
+
 \paragraph{\texttt{cs.illinois.edu}} Il grafo del sito presenta $728$ nodi e $16993$ archi. L'algoritmo \textit{Fastgreedy} non richiede parametri specifici ma è stato tagliato il dendrogramma ad altezza $15$, il numero di cluster nella operazione di raggruppamento manuale. Ugualmente per \textit{WalkTrap}, che però necessitava della lunghezza dei Random Walk da effettuare. I risultati migliori sono stati osservati con percorsi di lunghezza $3$.
 \begin{table}[H]
 	\begin{tabular}{| l | c | c | c | c | c |}
