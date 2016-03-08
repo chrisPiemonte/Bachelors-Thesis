@@ -2,26 +2,26 @@
 \select@language {italian}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {1.1}{\ignorespaces Parole con vettori simili\relax }}{9}
-\contentsline {figure}{\numberline {1.2}{\ignorespaces Alcuni esempi di analogie\relax }}{9}
-\contentsline {figure}{\numberline {1.3}{\ignorespaces Visualizzazione con t-SNE di un Word Embedding bilingua. \relax }}{10}
-\contentsline {figure}{\numberline {1.4}{\ignorespaces Vettori corrispondenti alle parole\relax }}{11}
+\contentsline {figure}{\numberline {1.2}{\ignorespaces Alcuni esempi di analogie\relax }}{10}
+\contentsline {figure}{\numberline {1.3}{\ignorespaces Visualizzazione con t-SNE di un Word Embedding bilingua. \relax }}{11}
+\contentsline {figure}{\numberline {1.4}{\ignorespaces Vettori corrispondenti alle parole\relax }}{12}
 \contentsline {figure}{\numberline {1.5}{\ignorespaces Vettori corrispondenti alle frasi\relax }}{12}
-\contentsline {figure}{\numberline {1.6}{\ignorespaces Matrice di similarit\IeC {\`a}\relax }}{12}
-\contentsline {figure}{\numberline {1.7}{\ignorespaces Assegna uno "score" utilizzando Pagerank\relax }}{13}
-\contentsline {figure}{\numberline {1.8}{\ignorespaces La visualizzazione dei dati \IeC {\`e} un passo fondamentale nell'analisi dei dati.\relax }}{14}
+\contentsline {figure}{\numberline {1.6}{\ignorespaces Matrice di similarit\IeC {\`a}\relax }}{13}
+\contentsline {figure}{\numberline {1.7}{\ignorespaces Assegna uno "score" utilizzando Pagerank\relax }}{14}
+\contentsline {figure}{\numberline {1.8}{\ignorespaces La visualizzazione dei dati \IeC {\`e} un passo fondamentale nell'analisi dei dati.\relax }}{15}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Architettura di un web crawler\relax }}{16}
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Differenze tra ricerca in ampiezza e ricerca in profondit\IeC {\`a}\relax }}{19}
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Rappresentazione visuale di 8 random walk monodimensionali. \relax }}{22}
-\contentsline {figure}{\numberline {2.4}{\ignorespaces Rappresentazione visuale di un random walk di 25.000 passi su due dimensioni. \relax }}{23}
-\contentsline {figure}{\numberline {2.5}{\ignorespaces Random walk sul grafo. \relax }}{27}
-\contentsline {figure}{\numberline {2.6}{\ignorespaces Differenze fra i vari tipi di funzioni distanza\relax }}{32}
-\contentsline {figure}{\numberline {2.7}{\ignorespaces Betweenneess centrality score\relax }}{34}
-\contentsline {figure}{\numberline {2.8}{\ignorespaces Modularity score\relax }}{35}
-\contentsline {figure}{\numberline {2.9}{\ignorespaces Diagramma di Voronoi\relax }}{37}
-\contentsline {figure}{\numberline {2.10}{\ignorespaces Matrice termini-documenti. Ogni riga rappresenta un singolo termine ed ogni colonna rappresenta un singolo documento\relax }}{38}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Architettura di un web crawler\relax }}{18}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Differenze tra ricerca in ampiezza e ricerca in profondit\IeC {\`a}\relax }}{21}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Rappresentazione visuale di 8 random walk monodimensionali. \relax }}{24}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Rappresentazione visuale di un random walk di 25.000 passi su due dimensioni. \relax }}{25}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Random walk sul grafo. \relax }}{28}
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Differenze fra i vari tipi di funzioni distanza\relax }}{34}
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Betweenneess centrality score\relax }}{36}
+\contentsline {figure}{\numberline {2.8}{\ignorespaces Modularity score\relax }}{37}
+\contentsline {figure}{\numberline {2.9}{\ignorespaces Diagramma di Voronoi\relax }}{39}
+\contentsline {figure}{\numberline {2.10}{\ignorespaces Matrice termini-documenti. Ogni riga rappresenta un singolo termine ed ogni colonna rappresenta un singolo documento\relax }}{40}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Grafo del sito \texttt {cs.illinois.edu} etichettato manualmente.\relax }}{56}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Rappresentazione del sito \texttt {cs.illinois.edu}, clusterizzato con K-Means.\relax }}{58}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Grafo del sito \texttt {cs.illinois.edu} etichettato manualmente.\relax }}{57}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Rappresentazione del sito \texttt {cs.illinois.edu}, clusterizzato con K-Means.\relax }}{59}
 \addvspace {10\p@ }

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.12.22)  7 MAR 2016 01:33
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.12.22)  8 MAR 2016 18:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -684,6 +684,18 @@ Package: subfigure 2002/03/15 v2.1.5 subfigure package
 \WF@box=\box56
 \WF@everypar=\toks32
 Package: wrapfig 2003/01/31  v 3.6
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amscls/amsthm.sty
+Package: amsthm 2004/08/06 v2.20
+\thm@style=\toks33
+\thm@bodyfont=\toks34
+\thm@headfont=\toks35
+\thm@notefont=\toks36
+\thm@headpunct=\toks37
+\thm@preskip=\skip79
+\thm@postskip=\skip80
+\thm@headsep=\skip81
+\dth@everypar=\toks38
 ) (./Tesi.aux
 
 LaTeX Warning: Label `englishchinese' multiply defined.
@@ -697,18 +709,18 @@ LaTeX Warning: Label `englishchinese' multiply defined.
 )
 \openout1 = `Tesi.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
  (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count171
@@ -716,12 +728,12 @@ LaTeX Font Info:    ... okay on input line 52.
 \scratchbox=\box57
 \nofMPsegments=\count172
 \nofMParguments=\count173
-\everyMPshowfont=\toks33
+\everyMPshowfont=\toks39
 \MPscratchCnt=\count174
 \MPscratchDim=\dimen172
 \MPnumerator=\count175
 \makeMPintoPDFobject=\count176
-\everyMPtoPDFconversion=\toks34
+\everyMPtoPDFconversion=\toks40
 ) (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
 )
@@ -771,8 +783,8 @@ Package caption Info: float package is loaded.
 Package caption Info: subfigure package is loaded.
 Package caption Info: wrapfig package is loaded.
 Package caption Info: End \AtBeginDocument code.
-LaTeX Info: Redefining \it@ocap on input line 52.
-LaTeX Info: Redefining \it@ccap on input line 52.
+LaTeX Info: Redefining \it@ocap on input line 53.
+LaTeX Info: Redefining \it@ccap on input line 53.
 
 
 File italian.ldf warning: 
@@ -780,7 +792,7 @@ italian.ldf    With OT1 encoding guillemets are poorly faked
 italian.ldf    Use T1 encoding
 italian.ldf    or specify a font with command \CaporaliFrom
 italian.ldf    See the documentation concerning the babel-italian typesetting 
-italian.ldf    on input line 52.
+italian.ldf    on input line 53.
 
 (/usr/share/texlive/texmf-dist/tex/latex/ucs/ucsencs.def
 File: ucsencs.def 2011/01/21 Fixes to fontencodings LGR, T3
@@ -796,11 +808,11 @@ fg
 File: siunitx-abbreviations.cfg 2013/07/31 v2.5s siunitx: Abbreviated units
 )
 \c__siunitx_mathsf_int=\count177
-LaTeX Font Info:    Try loading font information for U+msa on input line 52.
+LaTeX Font Info:    Try loading font information for U+msa on input line 53.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 52.
+LaTeX Font Info:    Try loading font information for U+msb on input line 53.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -810,7 +822,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 <Tesi-frn.pdf, id=1, 597.50829pt x 845.0471pt>
 File: Tesi-frn.pdf Graphic file (type pdf)
  <use Tesi-frn.pdf>
-Package pdftex.def Info: Tesi-frn.pdf used on input line 55.
+Package pdftex.def Info: Tesi-frn.pdf used on input line 56.
 (pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
  [1
 
@@ -925,70 +937,64 @@ less on input line 121.
 
 Capitolo 1.
 (./Capitoli/Capitolo1.tex
-Underfull \hbox (badness 10000) in paragraph at lines 10--13
-
- []
-
 
 Package Fancyhdr Warning: \fancyfoot's `E' option without twoside option is use
-less on input line 17.
+less on input line 21.
 
 [1
 
 
 
-]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 18.
- (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
+] (/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-32.def
+File: uni-32.def 2013/05/13 UCS: Unicode data U+2000..U+20FF
+)
+Underfull \hbox (badness 10000) in paragraph at lines 25--30
+
+ []
+
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 31.
+(/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 18.
-
-(/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-32.def
-File: uni-32.def 2013/05/13 UCS: Unicode data U+2000..U+20FF
-)
-Underfull \hbox (badness 10000) in paragraph at lines 22--26
-
- []
-
-[2] [3] [4]
-Underfull \hbox (badness 10000) in paragraph at lines 69--80
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 31.
+ [2] [3] [4] [5]
+Underfull \hbox (badness 10000) in paragraph at lines 82--93
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 69--80
+Underfull \hbox (badness 10000) in paragraph at lines 82--93
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 69--80
+Underfull \hbox (badness 10000) in paragraph at lines 82--93
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 69--80
+Underfull \hbox (badness 10000) in paragraph at lines 82--93
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 69--80
+Underfull \hbox (badness 10000) in paragraph at lines 82--93
 
  []
 
-[5] [6]
-Overfull \hbox (34.07776pt too wide) in paragraph at lines 86--86
+[6]
+Overfull \hbox (34.07776pt too wide) in paragraph at lines 101--101
 []\OT1/cmr/bx/n/17.28 Rappresentazioni vet-to-ria-li di pa-gi-ne Web 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 87--93
+Underfull \hbox (badness 10000) in paragraph at lines 102--108
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 87--93
+Underfull \hbox (badness 10000) in paragraph at lines 102--108
 
  []
 
@@ -999,10 +1005,10 @@ File: uni-33.def 2013/05/13 UCS: Unicode data U+2100..U+21FF
 File: ./Immagini/weanalogies.png Graphic file (type png)
 
 <use ./Immagini/weanalogies.png>
-Package pdftex.def Info: ./Immagini/weanalogies.png used on input line 105.
+Package pdftex.def Info: ./Immagini/weanalogies.png used on input line 120.
 (pdftex.def)             Requested size: 284.52756pt x 100.26938pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 99--109
+Underfull \hbox (badness 10000) in paragraph at lines 114--124
 
  []
 
@@ -1010,246 +1016,248 @@ Underfull \hbox (badness 10000) in paragraph at lines 99--109
 File: ./Immagini/weanalogies2.png Graphic file (type png)
 
 <use ./Immagini/weanalogies2.png>
-Package pdftex.def Info: ./Immagini/weanalogies2.png used on input line 119.
+Package pdftex.def Info: ./Immagini/weanalogies2.png used on input line 134.
 (pdftex.def)             Requested size: 284.52756pt x 122.34566pt.
 
 <./Immagini/englishchinese.png, id=98, 615.29875pt x 463.7325pt>
 File: ./Immagini/englishchinese.png Graphic file (type png)
 
 <use ./Immagini/englishchinese.png>
-Package pdftex.def Info: ./Immagini/englishchinese.png used on input line 128.
+Package pdftex.def Info: ./Immagini/englishchinese.png used on input line 143.
 (pdftex.def)             Requested size: 284.52756pt x 214.44461pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 115--132
+Underfull \hbox (badness 10000) in paragraph at lines 130--147
 
  []
 
-[9 <./Immagini/weanalogies.png (PNG copy)> <./Immagini/weanalogies2.png>]
-[10 <./Immagini/englishchinese.png>]
+[9 <./Immagini/weanalogies.png (PNG copy)>] [10 <./Immagini/weanalogies2.png>]
 <./Immagini/2w2v.jpg, id=108, 640.3925pt x 380.42125pt>
 File: ./Immagini/2w2v.jpg Graphic file (type jpg)
 
 <use ./Immagini/2w2v.jpg>
-Package pdftex.def Info: ./Immagini/2w2v.jpg used on input line 146.
+Package pdftex.def Info: ./Immagini/2w2v.jpg used on input line 161.
 (pdftex.def)             Requested size: 284.52756pt x 169.0228pt.
 
 <./Immagini/3w2v.jpg, id=109, 640.3925pt x 360.34625pt>
 File: ./Immagini/3w2v.jpg Graphic file (type jpg)
 
 <use ./Immagini/3w2v.jpg>
-Package pdftex.def Info: ./Immagini/3w2v.jpg used on input line 154.
+Package pdftex.def Info: ./Immagini/3w2v.jpg used on input line 169.
 (pdftex.def)             Requested size: 284.52756pt x 160.1034pt.
 
 <./Immagini/4w2v.jpg, id=110, 640.3925pt x 360.34625pt>
 File: ./Immagini/4w2v.jpg Graphic file (type jpg)
 
 <use ./Immagini/4w2v.jpg>
-Package pdftex.def Info: ./Immagini/4w2v.jpg used on input line 162.
+Package pdftex.def Info: ./Immagini/4w2v.jpg used on input line 177.
 (pdftex.def)             Requested size: 284.52756pt x 160.1034pt.
 
 <./Immagini/5w2v.jpg, id=111, 346.29375pt x 259.97125pt>
 File: ./Immagini/5w2v.jpg Graphic file (type jpg)
 
 <use ./Immagini/5w2v.jpg>
-Package pdftex.def Info: ./Immagini/5w2v.jpg used on input line 171.
+Package pdftex.def Info: ./Immagini/5w2v.jpg used on input line 186.
 (pdftex.def)             Requested size: 284.52756pt x 213.60622pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 139--175
+Underfull \hbox (badness 10000) in paragraph at lines 154--190
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 139--175
+Underfull \hbox (badness 10000) in paragraph at lines 154--190
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 139--175
+Underfull \hbox (badness 10000) in paragraph at lines 154--190
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 139--175
+Underfull \hbox (badness 10000) in paragraph at lines 154--190
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 176--181
+Underfull \hbox (badness 10000) in paragraph at lines 191--196
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 176--181
+Underfull \hbox (badness 10000) in paragraph at lines 191--196
 
  []
 
-[11 <./Immagini/2w2v.jpg>] [12 <./Immagini/3w2v.jpg> <./Immagini/4w2v.jpg>]
-<./Immagini/datavisualization.png, id=120, 722.7pt x 542.025pt>
+[11 <./Immagini/englishchinese.png>] [12 <./Immagini/2w2v.jpg> <./Immagini/3w2v
+.jpg>] <./Immagini/datavisualization.png, id=120, 722.7pt x 542.025pt>
 File: ./Immagini/datavisualization.png Graphic file (type png)
 
 <use ./Immagini/datavisualization.png>
-Package pdftex.def Info: ./Immagini/datavisualization.png used on input line 19
-0.
+Package pdftex.def Info: ./Immagini/datavisualization.png used on input line 20
+5.
 (pdftex.def)             Requested size: 284.52756pt x 213.39865pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 185--194
+Underfull \hbox (badness 10000) in paragraph at lines 200--209
 
  []
 
-[13 <./Immagini/5w2v.jpg>]) [14 <./Immagini/datavisualization.png>]
+[13 <./Immagini/4w2v.jpg>]) [14 <./Immagini/5w2v.jpg>] [15 <./Immagini/datavisu
+alization.png>]
 Capitolo 2.
 (./Capitoli/Capitolo2.tex
-Underfull \hbox (badness 10000) in paragraph at lines 9--19
+Overfull \hbox (9.87488pt too wide) in paragraph at lines 15--16
+[]$\OT1/cmtt/m/n/12 https : / / www . ideals . illinois . edu / bitstream / han
+dle / 2142 / 45402 /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 18--29
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 18--29
 
  []
 
 
 Package Fancyhdr Warning: \fancyfoot's `E' option without twoside option is use
-less on input line 22.
+less on input line 29.
 
-[15
+[16
 
 ]
-Overfull \hbox (2.40779pt too wide) in paragraph at lines 27--27
+Overfull \hbox (2.40779pt too wide) in paragraph at lines 42--42
 []\OT1/cmr/bx/n/17.28 Web Cra-w-ling per l'e-stra-zio-ne dei da-ti 
  []
 
-<./Immagini/crawlerarch.png, id=133, 501.875pt x 383.4325pt>
+<./Immagini/crawlerarch.png, id=136, 501.875pt x 383.4325pt>
 File: ./Immagini/crawlerarch.png Graphic file (type png)
 
 <use ./Immagini/crawlerarch.png>
-Package pdftex.def Info: ./Immagini/crawlerarch.png used on input line 33.
+Package pdftex.def Info: ./Immagini/crawlerarch.png used on input line 48.
 (pdftex.def)             Requested size: 284.52756pt x 217.38866pt.
- [16 <./Immagini/crawlerarch.png>] [17]
-Underfull \hbox (badness 10000) in paragraph at lines 87--100
+ [17] [18 <./Immagini/crawlerarch.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 102--115
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 87--100
+Underfull \hbox (badness 10000) in paragraph at lines 102--115
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 87--100
+Underfull \hbox (badness 10000) in paragraph at lines 102--115
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 87--100
+Underfull \hbox (badness 10000) in paragraph at lines 102--115
 
  []
 
-[18] <./Immagini/breadthdepth.png, id=144, 313.17pt x 139.722pt>
+[19] [20] <./Immagini/breadthdepth.png, id=150, 313.17pt x 139.722pt>
 File: ./Immagini/breadthdepth.png Graphic file (type png)
 
 <use ./Immagini/breadthdepth.png>
-Package pdftex.def Info: ./Immagini/breadthdepth.png used on input line 111.
+Package pdftex.def Info: ./Immagini/breadthdepth.png used on input line 126.
 (pdftex.def)             Requested size: 284.52756pt x 126.9468pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 116--119
-
- []
-
-[19 <./Immagini/breadthdepth.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 121--127
+Underfull \hbox (badness 10000) in paragraph at lines 131--134
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 121--127
+Underfull \hbox (badness 10000) in paragraph at lines 136--142
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 130--139
+Underfull \hbox (badness 10000) in paragraph at lines 136--142
 
  []
 
-[20] [21] <./Immagini/randomwalkonedim.png, id=156, 722.7pt x 542.025pt>
+[21 <./Immagini/breadthdepth.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 145--154
+
+ []
+
+[22] <./Immagini/randomwalkonedim.png, id=159, 722.7pt x 542.025pt>
 File: ./Immagini/randomwalkonedim.png Graphic file (type png)
 
 <use ./Immagini/randomwalkonedim.png>
-Package pdftex.def Info: ./Immagini/randomwalkonedim.png used on input line 152
+Package pdftex.def Info: ./Immagini/randomwalkonedim.png used on input line 167
 .
 (pdftex.def)             Requested size: 284.52756pt x 213.39865pt.
 
-<./Immagini/randomwalktwodim.png, id=157, 674.52pt x 602.25pt>
+<./Immagini/randomwalktwodim.png, id=160, 674.52pt x 602.25pt>
 File: ./Immagini/randomwalktwodim.png Graphic file (type png)
 
 <use ./Immagini/randomwalktwodim.png>
-Package pdftex.def Info: ./Immagini/randomwalktwodim.png used on input line 160
+Package pdftex.def Info: ./Immagini/randomwalktwodim.png used on input line 175
 .
 (pdftex.def)             Requested size: 284.52756pt x 254.04602pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 147--170
+Underfull \hbox (badness 10000) in paragraph at lines 162--185
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 147--170
+Underfull \hbox (badness 10000) in paragraph at lines 162--185
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 147--170
+Underfull \hbox (badness 10000) in paragraph at lines 162--185
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 147--170
+Underfull \hbox (badness 10000) in paragraph at lines 162--185
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 147--170
+Underfull \hbox (badness 10000) in paragraph at lines 162--185
 
  []
 
-[22 <./Immagini/randomwalkonedim.png>] [23 <./Immagini/randomwalktwodim.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 177--183
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 177--183
+[23] [24 <./Immagini/randomwalkonedim.png>] [25 <./Immagini/randomwalktwodim.pn
+g>]
+Underfull \hbox (badness 10000) in paragraph at lines 192--198
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 186--191
+Underfull \hbox (badness 10000) in paragraph at lines 192--198
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 186--191
+Underfull \hbox (badness 10000) in paragraph at lines 201--206
 
  []
 
-[24] [25] <./Immagini/randomWalkongraph.png, id=172, 786.94pt x 578.16pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 201--206
+
+ []
+
+[26] <./Immagini/randomWalkongraph.png, id=175, 786.94pt x 578.16pt>
 File: ./Immagini/randomWalkongraph.png Graphic file (type png)
 
 <use ./Immagini/randomWalkongraph.png>
-Package pdftex.def Info: ./Immagini/randomWalkongraph.png used on input line 23
-0.
+Package pdftex.def Info: ./Immagini/randomWalkongraph.png used on input line 24
+5.
 (pdftex.def)             Requested size: 284.52756pt x 209.03728pt.
- [26]
-Overfull \hbox (21.52371pt too wide) in paragraph at lines 241--242
+ [27]
+Overfull \hbox (21.52371pt too wide) in paragraph at lines 256--257
 \OT1/cmr/m/n/12 il si-to del di-par-ti-men-to di in-for-ma-ti-ca di Ur-ba-na, I
 L: \OT1/cmtt/m/n/12 www.cs.illinois.edu 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 244--258
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 244--258
-
- []
-
-[27 <./Immagini/randomWalkongraph.png>]
+[28 <./Immagini/randomWalkongraph.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 259--273
 
  []
@@ -1269,128 +1277,137 @@ Underfull \hbox (badness 10000) in paragraph at lines 274--288
 
  []
 
-[28]
+[29]
 Underfull \hbox (badness 10000) in paragraph at lines 289--303
 
  []
 
 
-Overfull \hbox (11.3752pt too wide) in paragraph at lines 289--303
+Underfull \hbox (badness 10000) in paragraph at lines 289--303
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 304--318
+
+ []
+
+
+Overfull \hbox (11.3752pt too wide) in paragraph at lines 304--318
 \OT1/cmtt/m/n/12 638 -1 63 -1 153 -1 62 -1 63 -1 152 -1 63 -1 155 -1 13 -1 7 -1
  -2 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 289--303
-
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 304--318
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 304--318
+[30]
+Underfull \hbox (badness 10000) in paragraph at lines 319--333
 
  []
 
-[29] [30] [31] <./Immagini/linkages.jpg, id=195, 620.3175pt x 214.55156pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 319--333
+
+ []
+
+[31] [32] <./Immagini/linkages.jpg, id=198, 620.3175pt x 214.55156pt>
 File: ./Immagini/linkages.jpg Graphic file (type jpg)
 
 <use ./Immagini/linkages.jpg>
-Package pdftex.def Info: ./Immagini/linkages.jpg used on input line 361.
+Package pdftex.def Info: ./Immagini/linkages.jpg used on input line 376.
 (pdftex.def)             Requested size: 284.52756pt x 98.41008pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 367--375
+Underfull \hbox (badness 10000) in paragraph at lines 382--390
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 367--375
+Underfull \hbox (badness 10000) in paragraph at lines 382--390
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 367--375
+Underfull \hbox (badness 10000) in paragraph at lines 382--390
 
  []
 
-[32 <./Immagini/linkages.jpg>] [33]
-<./Immagini/betweenness.png, id=204, 783.92876pt x 466.74374pt>
+[33] [34 <./Immagini/linkages.jpg>]
+<./Immagini/betweenness.png, id=207, 783.92876pt x 466.74374pt>
 File: ./Immagini/betweenness.png Graphic file (type png)
 
 <use ./Immagini/betweenness.png>
-Package pdftex.def Info: ./Immagini/betweenness.png used on input line 386.
+Package pdftex.def Info: ./Immagini/betweenness.png used on input line 401.
 (pdftex.def)             Requested size: 284.52756pt x 169.40927pt.
 
-<./Immagini/modularity.png, id=205, 845.559pt x 597.432pt>
+<./Immagini/modularity.png, id=208, 845.559pt x 597.432pt>
 File: ./Immagini/modularity.png Graphic file (type png)
 
 <use ./Immagini/modularity.png>
-Package pdftex.def Info: ./Immagini/modularity.png used on input line 401.
+Package pdftex.def Info: ./Immagini/modularity.png used on input line 416.
 (pdftex.def)             Requested size: 284.52756pt x 201.0366pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 392--405
+Underfull \hbox (badness 10000) in paragraph at lines 407--420
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 392--405
+Underfull \hbox (badness 10000) in paragraph at lines 407--420
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 392--405
+Underfull \hbox (badness 10000) in paragraph at lines 407--420
 
  []
 
-[34 <./Immagini/betweenness.png>] [35 <./Immagini/modularity.png>]
-<./Immagini/voronoi.png, id=212, 642.4pt x 481.8pt>
+[35] [36 <./Immagini/betweenness.png>] [37 <./Immagini/modularity.png>]
+<./Immagini/voronoi.png, id=218, 642.4pt x 481.8pt>
 File: ./Immagini/voronoi.png Graphic file (type png)
 
 <use ./Immagini/voronoi.png>
-Package pdftex.def Info: ./Immagini/voronoi.png used on input line 421.
+Package pdftex.def Info: ./Immagini/voronoi.png used on input line 436.
 (pdftex.def)             Requested size: 369.88582pt x 277.42249pt.
- [36]
-Underfull \hbox (badness 10000) in paragraph at lines 428--432
+
+Underfull \hbox (badness 10000) in paragraph at lines 443--447
 
  []
 
-[37 <./Immagini/voronoi.png (PNG copy)>]
-<./Immagini/tdm.png, id=219, 714.67pt x 436.63126pt>
+[38] <./Immagini/tdm.png, id=222, 714.67pt x 436.63126pt>
 File: ./Immagini/tdm.png Graphic file (type png)
- <use ./Immagini/tdm.png>
-Package pdftex.def Info: ./Immagini/tdm.png used on input line 438.
-(pdftex.def)             Requested size: 284.52756pt x 173.82993pt.
 
-[38 <./Immagini/tdm.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 448--453
+<use ./Immagini/tdm.png>
+Package pdftex.def Info: ./Immagini/tdm.png used on input line 453.
+(pdftex.def)             Requested size: 284.52756pt x 173.82993pt.
+ [39 <./Immagini/voronoi.png (PNG copy)>] [40 <./Immagini/tdm.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 463--468
 
  []
 
-[39] [40] [41]
-Overfull \hbox (11.68765pt too wide) in paragraph at lines 492--494
+[41] [42] [43]
+Overfull \hbox (11.68765pt too wide) in paragraph at lines 507--509
 []\OT1/cmr/m/it/12 i)\OT1/cmr/m/n/12 Tutti i pun-ti al-l'in-ter-no del clu-ster
  so-no mu-tual-men-te density-connected.
  []
 
-[42]
-Underfull \hbox (badness 10000) in paragraph at lines 502--510
+
+Underfull \hbox (badness 10000) in paragraph at lines 517--525
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 502--510
+Underfull \hbox (badness 10000) in paragraph at lines 517--525
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 502--510
+Underfull \hbox (badness 10000) in paragraph at lines 517--525
 
  []
 
-[43]) [44]
+[44]) [45]
 Capitolo 3.
 (./Capitoli/Capitolo3.tex
 Underfull \hbox (badness 10000) in paragraph at lines 10--13
@@ -1401,23 +1418,23 @@ Underfull \hbox (badness 10000) in paragraph at lines 10--13
 Package Fancyhdr Warning: \fancyfoot's `E' option without twoside option is use
 less on input line 19.
 
-[45
+[46
 
-] [46]) [47] [48]
+] [47]) [48] [49]
 Capitolo 4.
 (./Capitoli/Capitolo4.tex
 
 Package Fancyhdr Warning: \fancyfoot's `E' option without twoside option is use
 less on input line 23.
 
-[49
+[50
 
-] [50] [51]
+] [51] [52]
 Underfull \hbox (badness 10000) in paragraph at lines 75--85
 
  []
 
-[52] [53] [54] <./Immagini/nc_groundtruth.png, id=274, 702.625pt x 770.88pt>
+[53] [54] [55] <./Immagini/nc_groundtruth.png, id=277, 702.625pt x 770.88pt>
 File: ./Immagini/nc_groundtruth.png Graphic file (type png)
 
 <use ./Immagini/nc_groundtruth.png>
@@ -1425,31 +1442,31 @@ Package pdftex.def Info: ./Immagini/nc_groundtruth.png used on input line 150.
 (pdftex.def)             Requested size: 284.52756pt x 312.1694pt.
 LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <12> not available
 (Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 155.
- [55] [56 <./Immagini/nc_groundtruth.png>]
-[57] <./Immagini/lc_embedding_km.png, id=287, 2509.375pt x 903.375pt>
+ [56] [57 <./Immagini/nc_groundtruth.png>]
+[58] <./Immagini/lc_embedding_km.png, id=290, 2509.375pt x 903.375pt>
 File: ./Immagini/lc_embedding_km.png Graphic file (type png)
 
 <use ./Immagini/lc_embedding_km.png>
 Package pdftex.def Info: ./Immagini/lc_embedding_km.png used on input line 219.
 
 (pdftex.def)             Requested size: 369.88582pt x 133.15706pt.
- [58 <./Immagini/lc_embedding_km.png>]
+ [59 <./Immagini/lc_embedding_km.png>]
 Overfull \hbox (3.42181pt too wide) in paragraph at lines 232--233
 []\OT1/cmr/bx/n/12 sg \OT1/cmr/m/n/12 de-fi-ni-sce l'al-go-rit-mo di ap-pren-di
 -men-to, di de-fault vie-ne usa-to \OT1/cmr/m/it/12 CBOW\OT1/cmr/m/n/12 ,
  []
 
-[59] [60] [61] [62] [63] [64] [65] [66]
+[60] [61] [62] [63] [64] [65] [66] [67]
 Overfull \hbox (4.35732pt too wide) in paragraph at lines 423--436
 [][] 
  []
 
-[67]
+[68]
 Underfull \hbox (badness 10000) in paragraph at lines 462--465
 
  []
 
-[68]
+[69]
 Underfull \hbox (badness 10000) in paragraph at lines 520--530
 
  []
@@ -1459,7 +1476,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 520--530
 
  []
 
-[69]) [70]
+[70]) [71]
 Capitolo 5.
 (./MaterialeInizialeFinale/Conclusioni.tex)
 Underfull \hbox (badness 10000) in paragraph at lines 9--146
@@ -1471,25 +1488,25 @@ Underfull \hbox (badness 10000) in paragraph at lines 9--146
 Package Fancyhdr Warning: \fancyfoot's `E' option without twoside option is use
 less on input line 1.
 
-[71
+[72
 
 ]
 
 Package Fancyhdr Warning: \fancyfoot's `E' option without twoside option is use
 less on input line 45.
 
-[72
+[73
 
-] [73] [74]) [75] (./Tesi.aux)
+] [74] [75]) [76] (./Tesi.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 15299 strings out of 493304
- 294491 string characters out of 6139870
- 315284 words of memory out of 5000000
- 18431 multiletter control sequences out of 15000+600000
+ 15367 strings out of 493304
+ 295322 string characters out of 6139870
+ 316499 words of memory out of 5000000
+ 18495 multiletter control sequences out of 15000+600000
  13732 words of font info for 51 fonts, out of 8000000 for 9000
  958 hyphenation exceptions out of 8191
  39i,12n,45p,10418b,589s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1510,10 +1527,10 @@ r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share
 ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/share/texlive/tex
 mf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/share/texlive/texmf-dist
 /fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on Tesi.pdf (85 pages, 2998212 bytes).
+Output written on Tesi.pdf (86 pages, 3000029 bytes).
 PDF statistics:
- 400 PDF objects out of 1000 (max. 8388607)
- 262 compressed objects within 3 object streams
+ 403 PDF objects out of 1000 (max. 8388607)
+ 264 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
  106 words of extra memory for PDF output out of 10000 (max. 10000000)
 

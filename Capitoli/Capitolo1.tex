@@ -15,44 +15,22 @@ Sebbene a prima vista il Web possa sembrare un insieme disordinato e non struttu
 
 %Anche se a prima vista il Web sembra un insieme disordinato di pagine senza nessuna correlazione logica nella struttura, sia interna che nelle relazioni tra queste, in realtà possono essere trovate numerose correlazioni  nascoste. 
 Riuscire ad estrarre tali correlazioni e pattern, analizzando la struttura ad hyperlink di cui il Web si compone, permetterebbe di migliorare diverse applicazioni esistenti.
-% da questa enorme mole di dati può rivelare pattern molto specifici ed utilizzabili in numerose attività per produrre vantaggi competitivi. Recenti sviluppi nell'ambito di svariate aree dell'informatica hanno portato negli ultimi anni alla creazione di sempre più nuove ed efficaci tecniche. 
-\\\\
-\color{red}
-Sistema il seguente capoverso in modo da legarlo con 
-la sezione del data mining:
 
-\color{black}
-Di seguito sarà introdotto il \color{red}contesto in cui si sviluppa la tesi... del sistema, le varie aree in cui si colloca \color{black} e da cui attinge le metodologie ed il bagaglio di conoscenza utile alla sintesi di nuovi algoritmi di estrazione di conoscenza dal Web.
+Il problema rimane l'individuazione del procedimento adatto al compito prefissato. Tecniche e metodologie per l'estrazione di conoscenza da grandi quantità di dati sono già state sviluppate nell'area del Data Mining. Trasferire questo sapere nel Web, tuttavia, può non essere semplice e immediato, date la caratteristiche che lo contraddistinguono. 
+Di seguito sarà introdotto il contesto in cui si sviluppa la tesi, le varie aree in cui si colloca e da cui attinge le metodologie ed il bagaglio di conoscenza utile alla sintesi di nuovi algoritmi di estrazione di conoscenza dal Web.
+
 \section{Data Mining nel Web}
 Il Data Mining è l'insieme di tecniche e metodologie che hanno per oggetto estrazione di informazione utile, di un sapere o di una conoscenza a partire da grandi quantità di dati.
-\\
-Tra le fasi più soggette a cambiamento al variare del dominio applicativo:
-\begin{itemize}
-\item estrazione di informazione implicita e nascosta da dati strutturati per renderla disponibile e direttamente utilizzabile; 
-\item esplorazione ed analisi, eseguita in modo automatico o semiautomatico, su grandi quantità di dati allo scopo di scoprire pattern significativi.
-\end{itemize}
-\color{red} MIGLIORA QUESTA PARTE; POCO CHIARA
-In entrambi i casi i concetti di informazione e di significato sono legati strettamente al contesto in cui si esegue un task di Data Mining, \color{black} in altre parole un dato può essere interessante o trascurabile a seconda del tipo di applicazione in cui si vuole operare.
+
+Il concetto di informazione è strettamente legato al contesto in cui si esegue un task di apprendimento, in altre parole un dato può essere interessante o trascurabile a seconda del tipo di applicazione in cui si vuole operare. La fase di estrazione di informazione dai dati per renderla direttamente utilizzabile può variare enormemente dal dominio applicativo. Le differenze sono tali da dover suddividere tali procedimenti in aree diverse, dipendenti dal tipo di dati da cui parte il processo di estrazione. Principalmente le grandi moli di dati possono variare da grandi collezioni di documenti, database, pagine Web ecc, differenziandosi molto nella struttura e nel contenuto,.
 \\\\
 Il \textbf{Web Mining} è l’applicazione delle tecniche di Data Mining per la scoperta e l’estrazione di conoscenza o di pattern dal World Wide Web.
-Il web mining può essere diviso in tre principali categorie:
-\begin{itemize}
-\item \textit{Web Usage Mining}, è l’applicazione di tecniche di Data Mining per la scoperta di pattern e informazioni utili attraverso l'analisi di log immagazzinati dai web server e contenenti click stream. 
-Obiettivo di questo campo è l'apprendimento dell'identità, origine e comportamenti degli utenti che navigano i siti web al fine di comprendere i loro bisogni e ad offrire loro servizi migliori attraverso una personalizzazione dell'esperienza web.
-\item \textit{Web Structure Mining}, consiste nell'estrazione di relazioni sconosciute o nascoste tra pagine web attraverso l'analisi della struttura ad hyperlink di un sito web (anche chiamato ``grafo web''). Questo task verrà analizzato in dettaglio nella Sezione \ref{subsec:webstructure}.
-\item \textit{Web Content Mining}, consiste nell'estrazione ed integrazione di informazione utile e precedentemente sconosciuta dal contenuto delle pagine web. Ricadono in questo campo due principali tipologie di algoritmi: \textit{i)} algoritmi capaci di raggruppare e classificare pagine web in funzione del loro contenuto testuale o del topic descritto; \textit{ii)} algoritmi per estrarre pattern strutturati contenuti nelle pagine web (per esempio liste di prodotti commerciali, professori, etc.).  
-Sebbene questi algoritmi possano sembrare molto simili ai più famosi algoritmi di Data Mining e Text Mining, le pagine web hanno delle proprietà e peculiarità che rendono tali algoritmi non direttamente applicabili. Un'importante branca del Web Content Mining è rappresentato dal Web Information Extraction, il cui obiettivo è quello di estrarre dati strutturati da pagine web e integrarli in tabelle relazionali. In questo contesto il Web Content Mining può essere visto quindi come reperimento e immagazzinamento di informazioni.
-\end{itemize}
-
-Quando si confrontano i task di Web Mining con i più tradizionali task di Data Mining,
-\color{red}
-SISTEMA
- ci sono tre principali differenze da considerare:
+\\
+Le proprietà che caratterizzano il Web e che lo differenziano da altre sorgenti di dati sono:
 \begin{itemize}
 \item \textbf{Dimensione}: 
 
-NON SI CAPISCE QUELLO CHE VUOI DIRE
-la mole di dati, in task di Web Mining, può aumentare considerevolmente. Diventa necessario l'utilizzo di tecniche scalabili, ossia la capacità di un sistema di ''crescere'' ed essere utilizzabile in funzione alla crescita dei dati. Nel data mining tradizionale, processare un milione di record può essere considerato sopra la media, mentre nel web mining dieci milioni di pagine possono non essere abbastanza. Il Web è il primo mezzo di informazione dove il numero di produttori di informazioni è uguale al numero dei consumatori.
+Il Web è il primo mezzo di informazione dove il numero di produttori di informazioni è uguale al numero dei consumatori. La quantità dei dati da processare può essere più grande di svariati ordini di grandezza rispetto a tradizionali task di Data Mining. Diventa necessario l'utilizzo di tecniche scalabili, ossia la capacità di un sistema di ''crescere'' ed essere utilizzabile in funzione della crescita dei dati. Nel Data Mining tradizionale, processare un milione di record può essere considerato sopra la media, mentre nel Web Mining dieci milioni di pagine possono non essere abbastanza. 
 
 \item \textbf{Dinamicità}: 
 Ogni secondo migliaia sono create, distrutte e modificate migliaia di pagine Web. Questo rende il Web una rete di informazioni dinamica, dove la struttura e il contenuto dell'informazione cambiano frequentemente. Monitorare questi cambiamenti rimane un problema importante per molte applicazioni.
@@ -75,7 +53,20 @@ Differentemente da altri mezzi di informazione, la pubblicazione di contenuti è
 \item \textbf{Società virtuale}: Il web è generalmente rappresentato come una rete di informazioni dove i nodi sono le pagine e gli archi sono gli hyperlink. Gli hyperlink fra le pagine di uno stesso sito e quelli fra le pagine di siti diversi, hanno diverse caratteristiche e funzionalità. All'interno di un sito servono ad organizzare i contenuti, mentre fra siti diversi servono a trasportare autorità alla pagina di destinazione. In questo caso significa che come persone ci fidiamo del contenuto di queste pagine.
 
 \end{itemize}
+
+Sulla base di queste, task di Web Mining possono utilizzare tecniche diverse ed essere finalizzate alla scoperta di informazioni differenti. Si possono distinguere principalmente tre categorie:
+\begin{itemize}
+\item \textit{Web Usage Mining}, è l’applicazione di tecniche di Data Mining per la scoperta di pattern e informazioni utili attraverso l'analisi di log immagazzinati dai web server e contenenti click stream. 
+Obiettivo di questo campo è l'apprendimento dell'identità, origine e comportamenti degli utenti che navigano i siti web al fine di comprendere i loro bisogni e ad offrire loro servizi migliori attraverso una personalizzazione dell'esperienza web.
+\item \textit{Web Structure Mining}, consiste nell'estrazione di relazioni sconosciute o nascoste tra pagine web attraverso l'analisi della struttura ad hyperlink di un sito web (anche chiamato ``grafo web''). Questo task verrà analizzato in dettaglio nella Sezione \ref{subsec:webstructure}.
+\item \textit{Web Content Mining}, consiste nell'estrazione ed integrazione di informazione utile e precedentemente sconosciuta dal contenuto delle pagine web. Ricadono in questo campo due principali tipologie di algoritmi: \textit{i)} algoritmi capaci di raggruppare e classificare pagine web in funzione del loro contenuto testuale o del topic descritto; \textit{ii)} algoritmi per estrarre pattern strutturati contenuti nelle pagine web (per esempio liste di prodotti commerciali, professori, etc.).  
+Sebbene questi algoritmi possano sembrare molto simili ai più famosi algoritmi di Data Mining e Text Mining, le pagine web hanno delle proprietà e peculiarità che rendono tali algoritmi non direttamente applicabili. Un'importante branca del Web Content Mining è rappresentato dal Web Information Extraction, il cui obiettivo è quello di estrarre dati strutturati da pagine web e integrarli in tabelle relazionali. In questo contesto il Web Content Mining può essere visto quindi come reperimento e immagazzinamento di informazioni.
+\end{itemize}
+
+
+
 \color{black}
+
 STAI PARLANDO DI 3 COSA DIVERSE E LE STAI METTENDO NELLO STESSO CALDERONE (DIFFERENZE DATA MINING E WEB MINING, CARATTERISTICHE DEL WEB, PRESENZA DI DATI STRUTTURATI E NON STRUTTURATI)
 SISTEMALI IN MODO CHE ESCA UN DISCORSO OMOGENEO E FLUENTE
 \color{red}
