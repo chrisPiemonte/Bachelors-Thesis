@@ -8,13 +8,28 @@
 %************************************************
 Il sistema Url2vec si propone come alternativa alle metodologie di clustering di siti web basate sul contenuto testuale delle pagine~\cite{Rajaraman11}. 
 \\
+\color{red}
+QUI PROPONI E DESCRIVI UNA METODOLOGIA, QUESTO CAPITOLO NON E' UN MANUALE D'USO, SPECIAMENTE SE INSERISCI INFORMAZIONI SUL TURNING DEI PARAMETRI AD INIZIO CAPITOLO:
+Guarda i seguenti link:
+\begin{itemize}
+\item \url{https://www.ideals.illinois.edu/bitstream/handle/2142/45402/Timothy_Weninger.pdf?sequence=1}
+\item The parallel path framework for entity discovery on the web (te lo mando per mail)
+\end{itemize}
 Infatti è possibile eseguire il clustering facendo variare i parametri di esecuzione, in modo da considerare o solo la struttura del grafo o solo il contenuto testuale, oppure una combinazione delle due informazioni, definendone la proporzione.
+\color{black}
 \\
 A dispetto della diversità delle pagine web nella rete, quelle che risiedono all'interno di una particolare organizzazione, spesso, condividono una certa struttura.
+\color{red}
+La frase precedente non ha alcuna correlazione con la frase successiva
 Ad esempio, il sito web di un dipartimento di informatica conterrà pagine riguardante il personale, gli studenti, i corsi, la ricerca che saranno catalogate secondo determinati criteri. 
+\color{black}
 \\\\
 Saper sfruttare tale struttura può agevolare notevolmente i task di Web Mining. Esso infatti aggiunge ulteriore informazione, in modo da estrarre conoscenza strutturata e facilmente processabile.
 \\
+
+\color{red}
+A paerire da questo punto stai per descrivere il COME hai realizzato il tuo sistema, peccato che manca il COSA, ossia cosa fa il tuo sistema, cosa hai fatto di interessante, in che modo il tuo sistema è capace di superare delle open challenges, ect.
+\color{black}
 In questa tesi sono state realizzate tre macro componenti.
 \begin{itemize}
 \item \textit{Crawling delle pagine Web}. Questo è regolato da alcuni parametri che rendono il processo flessibile e altamente modificabile.
@@ -22,7 +37,7 @@ In questa tesi sono state realizzate tre macro componenti.
 \item \textit{Clustering delle pagine Web} attraverso la combinazione dell'analisi del contenuto testuale e delle relazioni tra le pagine.
 \end{itemize}
 
-Nelle sottosezioni che seguono si descrive il sistema esistente, le tecniche e gli algoritmi utilizzati per la realizzazione degli obiettivi preposti.
+Nelle sottosezioni che seguono si descrive il sistema realizzato, oltre che le tecniche e gli algoritmi utilizzati per la realizzazione degli obiettivi preposti.
 
 \section{Web Crawling per l'estrazione dei dati}
 \label{crawling}
