@@ -3,48 +3,52 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: Tesi.aux
 The style file: plain.bst
 Database file #1: Bibliografia.bib
+Repeated entry---line 490 of file Bibliografia.bib
+ : @article{Kleinberg99
+ :                     ,
+I'm skipping whatever remains of this entry
 A bad cross reference---entry "Zou13"
 refers to entry "conf/emnlp/2013", which doesn't exist
 Warning--I didn't find a database entry for "conf/emnlp/2013"
-You've used 25 entries,
+You've used 28 entries,
             2118 wiz_defined-function locations,
-            694 strings with 9570 characters,
-and the built_in function-call counts, 10066 in all, are:
-= -- 1054
-> -- 420
-< -- 12
-+ -- 168
-- -- 140
-* -- 701
-:= -- 1570
-add.period$ -- 88
-call.type$ -- 25
-change.case$ -- 143
+            713 strings with 10024 characters,
+and the built_in function-call counts, 10997 in all, are:
+= -- 1147
+> -- 463
+< -- 13
++ -- 186
+- -- 154
+* -- 767
+:= -- 1734
+add.period$ -- 98
+call.type$ -- 28
+change.case$ -- 159
 chr.to.int$ -- 0
-cite$ -- 25
-duplicate$ -- 409
-empty$ -- 796
-format.name$ -- 140
-if$ -- 2201
+cite$ -- 28
+duplicate$ -- 440
+empty$ -- 865
+format.name$ -- 154
+if$ -- 2391
 int.to.chr$ -- 0
-int.to.str$ -- 25
-missing$ -- 26
-newline$ -- 129
-num.names$ -- 50
-pop$ -- 150
+int.to.str$ -- 28
+missing$ -- 28
+newline$ -- 145
+num.names$ -- 56
+pop$ -- 160
 preamble$ -- 1
-purify$ -- 120
+purify$ -- 133
 quote$ -- 0
-skip$ -- 307
+skip$ -- 327
 stack$ -- 0
-substring$ -- 699
-swap$ -- 127
-text.length$ -- 12
+substring$ -- 763
+swap$ -- 130
+text.length$ -- 13
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 96
+type$ -- 108
 warning$ -- 0
-while$ -- 100
-width$ -- 27
-write$ -- 305
-(There was 1 error message)
+while$ -- 108
+width$ -- 30
+write$ -- 340
+(There were 2 error messages)

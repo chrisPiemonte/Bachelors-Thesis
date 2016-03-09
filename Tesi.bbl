@@ -90,6 +90,17 @@ Tomas Mikolov, Wen tau Yih, and Geoffrey Zweig.
   Technologies (NAACL-HLT-2013)}. Association for Computational Linguistics,
   May 2013.
 
+\bibitem{pagerank}
+Lawrence Page, Sergey Brin, Rajeev Motwani, and Terry Winograd.
+\newblock The pagerank citation ranking: Bringing order to the web.
+\newblock Technical Report 1999-66, Stanford InfoLab, November 1999.
+\newblock Previous number = SIDL-WP-1999-0120.
+
+\bibitem{PCA}
+K.~Pearson.
+\newblock On lines and planes of closest fit to systems of points in space.
+\newblock {\em Philosophical Magazine}, 2:559--572, 1901.
+
 \bibitem{Perozzi14}
 Bryan Perozzi, Rami Al-Rfou, and Steven Skiena.
 \newblock Deepwalk: Online learning of social representations.
@@ -157,6 +168,11 @@ Joseph Turian, Lev Ratinov, and Yoshua Bengio.
 Peter~D. Turney and Patrick Pantel.
 \newblock From frequency to meaning: Vector space models of semantics.
 \newblock {\em J. Artif. Int. Res.}, 37(1):141--188, January 2010.
+
+\bibitem{vandermaaten08}
+Laurens van~der Maaten and Geoffrey~E. Hinton.
+\newblock Visualizing high-dimensional data using t-sne.
+\newblock {\em Journal of Machine Learning Research}, 9:2579--2605, 2008.
 
 \bibitem{Zou13}
 Will~Y. Zou, Richard Socher, Daniel~M. Cer, and Christopher~D. Manning.

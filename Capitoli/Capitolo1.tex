@@ -64,25 +64,12 @@ Sebbene questi algoritmi possano sembrare molto simili ai più famosi algoritmi 
 \end{itemize}
 
 
-
-\color{black}
-
-STAI PARLANDO DI 3 COSA DIVERSE E LE STAI METTENDO NELLO STESSO CALDERONE (DIFFERENZE DATA MINING E WEB MINING, CARATTERISTICHE DEL WEB, PRESENZA DI DATI STRUTTURATI E NON STRUTTURATI)
-SISTEMALI IN MODO CHE ESCA UN DISCORSO OMOGENEO E FLUENTE
-\color{red}
-
-Enormi sforzi son stati fatti per combinare informazione strutturata e non strutturata presente all'interno di pagine web, al fine di estrarre, indicizzare e reperire nuova conoscenza. 
-La maggior parte delle soluzioni attuali trasformano il contenuto testuale delle pagine web in uno spazio vettoriale \cite{Turney10}. Modelli basati su spazi vettoriali sono fondamentali per task che coinvolgono il calcolo della similarità tra oggetti in cui oggetti simili sono caratterizzati da rappresentazioni vettoriali simili. Il modello vettoriale \textit{termini-documenti} rappresenta il più semplice e utilizzato modello di rappresentazione di documenti testuali nel contesto del Text Mining. In tale modello il valore dell'elemento $i$-esimo in un vettore documento rappresenta il numero di volte che il termine $i$ compare nel documento stesso.    
-Gli algoritmi basati su modelli di rappresentazione vettoriali si basano sull'assunzione di indipendenza tra i termini all'interno di un documento e tra i documenti stessi. Le pagine web violano come tutti i documenti testuali la prima assunzione, inoltre i collegamenti ipertestuali definendo relazioni di interdipendenza tra le pagine stesse comportano la violazione della seconda assunzione.
-
-Di conseguenza gli algoritmi di Web Mining devono tener conto delle informazioni relative alla struttura del sito web a cui appartengono al fine di estrarre informazioni più accurate.
-\color{black}
 \section{Web Structure mining}
 \label{subsec:webstructure}
 Un enorme quantità di informazioni dal web sono rappresentati come dati semi-strutturati, ossia come combinazione di testo non strutturato e dati strutturati. I dati strutturati contenuti nelle pagine web sono tipicamente dati generati dinamicamente dalla struttura sottostante, come un database relazionale, o da un template statico.
-\\\\
+
 Estrarre questi dati è utile in molti domini applicativi perchè permette di ottenere ed integrare dati da diverse fonti, producendo così servizi migliori, informazioni personalizzate, meta-ricerche. Con sempre più aziende ed organizzazioni che disseminano informazioni in rete, l’abilità di estrarre questi dati dalle pagine web sta diventando estremamente importante.
-\\\\
+
 Differentemente dai documenti testuali tradizionali, i dati strutturati nelle pagine web sono arricchiti da hyperlink che dividono l’informazione in molteplici ed interdipendenti pagine web. Questi hyperlink possono essere usati per identificare le entità provenienti dal mondo reale (e.g. pagine di professori, corsi, prodotti) e le relazioni che intercorrono fra di esse. Dato che i documenti web non sono nè strutturati come un database nè completamente non-strutturati come documenti testuali, le tecniche tradizionali di data mining o text mining non possono essere applicate direttamente. 
 \\\\
 Nel primo caso, le tecniche di data mining si basano sul presupposto che i dati usati per apprendere un modello condividono uno schema comune, avente delle tabelle ben definite con attributi, colonne, tuple e vincoli. Le pagine web non hanno questo presupposto perchè contengono dati eterogenei e gli hyperlink definiscono relazioni il cui significato può variare profondamente. Inoltre le pagine web sono codificate in HTML che, differentemente da altri linguaggi di markup, è stato progettato solo per la renderizzazione dei dati. Per questa ragione, il web può essere considerato un moderno legacy system, in quanto una grande quantità di dati non è facilmente accessibile e manipolabile direttamente. 
@@ -94,15 +81,26 @@ Il Web Structure Mining può essere diviso in due tipi:
 \item Estrazione di dati strutturati tra pagine web attraverso l'analisi del sito web. In questo caso un sito web è rappresentato come un grafo $G = (V, E)$ dove $V$ è l'insieme delle pagine web e $E$ è l'insieme degli hyperlink.
 \item Estrazione di dati strutturati contenuti in una pagina web, analizzandone la struttura ad albero basata su tag HTML ed XML.
 \end{itemize}
-Tra i più importanti algoritmi di web structure mining troviamo Page Rank\cite{} e HITS\cite{}, i quali sfruttano la struttura ad hyperlink del Web per estrarre rank di pagine web.
-\color{red}
-SCRIVI UN CAPOVERSO QUI IN NODO DA UNIRTI CON LA SEZIONE SUCCESSIVA
-\color{black}
+Tra i più importanti algoritmi di web structure mining troviamo Page Rank\cite{pagerank} e HITS\cite{Kleinberg99}, i quali sfruttano la struttura ad hyperlink del Web per estrarre rank di pagine web.
+
+La struttura 
+La sfida più grande in tutte le categorie che sono finalizzate all'estrazione di informazione dal Web rimane la mancanza di struttura, ovvero l'eterogeneità dei dati. 
+
+\section{Dati strutturati nel Web}
+La carenza di struttura delle pagine web obbliga all'effettuare dei passaggi preliminari per rendere processabili i dati disponibili. Metodi efficaci consistono nel rappresentare le pagine web come vettori, motivato dal fatto che task di Machine Learning richiedono input che sono matematicamente e computazionalmente convenienti da elaborare, considerando solo un sottoinsieme significativo dei dati in modo da astrarre ed eliminare informazioni ritenute non pertinenti al risultato finale. I dati reperibili nel Web sono privi di uno standard, e possono presentarsi in forma completamente differente anche all'interno di uno stesso sito o se rappresentano la stessa entità. Enormi sforzi son stati fatti per combinare informazione strutturata e non strutturata presente all'interno di pagine web, al fine di estrarre, indicizzare e reperire nuova conoscenza. 
+
+La maggior parte delle soluzioni attuali trasformano il contenuto testuale delle pagine Web in uno spazio vettoriale \cite{Turney10}. Modelli basati su spazi vettoriali sono fondamentali per task che coinvolgono il calcolo della similarità in quanto oggetti simili sono caratterizzati da rappresentazioni vettoriali simili. Il modello vettoriale \textit{termini-documenti} rappresenta uno dei più utilizzati modelli di rappresentazione di documenti testuali nel contesto del Text Mining. In tale modello il valore dell'elemento $i$-esimo in un vettore documento rappresenta il numero di volte che il termine $i$ compare nel documento stesso.
+
+Questi modelli si basano sull'assunzione di indipendenza tra i termini all'interno di un documento e tra i documenti stessi. Le pagine web violano, come tutti i documenti testuali, la prima assunzione, inoltre i collegamenti ipertestuali definendo relazioni di interdipendenza tra le pagine stesse comportano la violazione della seconda assunzione. Può accadere che pagine prive di testo, completamente vuote o ridotte al solo template base del sito, (e.g. con contenuti grafici) vengano raggruppate nello stesso cluster. Inoltre pagine relative dello stesso tipo (ad esempio pagine di docenti) possono essere state create da persone diverse e presentare una distribuzione dei termini notevolmente differente. 
+
+Di conseguenza tener conto di informazioni relative alla struttura del sito Web può arricchire di informazioni utili, linearmente indipendenti a quelle derivanti dal contenuto testuale.
+
+
 \section{Rappresentazioni vettoriali di pagine Web}
-La carenza di struttura delle pagine web obbliga all'effettuare dei passaggi preliminari per rendere processabili i dati disponibili. Metodi efficaci consistono nel rappresentare le pagine web come vettori, motivato dal fatto che task di machine learning richiedono input che sono matematicamente e computazionalmente convenienti da elaborare, considerando solo un sottoinsieme significativo dei dati in modo da astrarre ed eliminare informazioni ritenute non pertinenti al risultato finale. Questa fase è probabilmente la più importante in quanto algoritmi di apprendimento tanto bene quanto meglio i vettori ricavati rappresentano bene i dati di partenza. È necessario quindi estrarre rappresentazioni utili dai dati grezzi. Esistono molti modi per ricavare questa correlazione, come reti neurali, matrici di co-occorrenza, dimensionality reduction o rappresentazioni del contesto in cui appare la parola. 
+Gli algoritmi di apprendimento lavorano tanto bene quanto meglio i vettori ricavati rappresentino bene i dati di partenza. È necessario quindi estrarre rappresentazioni utili dai dati grezzi. Esistono molti modi per ricavare questa correlazione, come reti neurali, matrici di co-occorrenza, dimensionality reduction o rappresentazioni del contesto in cui appare la parola. 
 \\\\
-L'alternativa proposta in questa tesi consiste nell'utilizzare tecniche di Word Embedding per apprendere rappresentazioni vettoriali dei vertici all'interno del grafo.
-Il Word Embedding è il nome di un insieme di tecniche per il language modeling e per il Feature Learning nel campo del Natural Language Processing (NLP)\cite{Bengio03}, utilizzate  in collezioni di documenti, dove ad ogni parola viene associato un vettore detto \textit{Feature Vector}. 
+L'alternativa proposta in questa tesi consiste nell'utilizzare tecniche di Word Embedding per apprendere rappresentazioni vettoriali dei vertici all'interno del grafo, utilizzati congiuntamente ai vettori del contenuto delle pagine Web.
+Il Word Embedding è il nome di un insieme di tecniche per il language modeling e per il Feature Learning nel campo del Natural Language Processing (NLP)\cite{Bengio03}, utilizzate  in collezioni di documenti, dove ad ogni parola viene associato un vettore anche chiamato \textit{Feature Vector}. 
 \\\\
 Il Word Embedding può essere visto come una funzione parametrizzata 
 \begin{equation}
@@ -194,16 +192,21 @@ Dati abbastanza dati, utilizzo e contesti, word2vec può apprendere rappresentaz
 \\\\
 Word2vec può apprendere rappresentazioni principalemente in due modi, o usando il contesto per predire la parola data (metodo conosciuto come “continous bag of word”, o \textbf{CBOW}), o usando una parola per predire il contesto (\textbf{skip-gram}).
 
-
-
 \section{Data Visualization}
-Un nota sulla visualizzazione dei dati, campo in crescita data la corrispondente crescita su economie basate sull’informazione e sulla crescita dei dati generati (big data) portata avanti anche da campi relativamente nuovi nel campo dell’analisi dei dati, come Business Analytics, Business Intelligence, Data Science etc.
-\\\\
-Tale disciplina è indirizzata a comunicare informazioni in modo chiaro e comprensibile, attraverso grafici, tabelle, diagrammi ecc. La visualizzazione può spesso aiutare ad analizzare e ragionare sui dati, rendendo dati complessi molto più accessibili ed usabili.
-\begin{figure}[htb]
+\begin{figure}[h!]
 	\centering
-	\includegraphics[width = 100mm]{datavisualization.png}
+	\includegraphics[width = 90mm]{datavisualization.png}
 	\caption{La visualizzazione dei dati è un passo fondamentale nell'analisi dei dati.}
 	\label{datavisualization}
 \end{figure}
+Un nota sulla visualizzazione dei dati, campo in crescita data la corrispondente crescita su economie basate sull’informazione e sulla crescita dei dati generati (big data) portata avanti anche da campi relativamente nuovi nel campo dell’analisi dei dati, come Business Analytics, Business Intelligence, Data Science etc.
 
+Tale disciplina è indirizzata a comunicare informazioni in modo chiaro e comprensibile, attraverso grafici, tabelle, diagrammi ecc. La visualizzazione può spesso aiutare ad analizzare e ragionare sui dati, rendendo dati complessi molto più accessibili ed usabili.
+
+Immaginare rappresentazioni di dati in spazi multidimensionali non è intuitivo. Un modo efficace per raggiungere tale scopo può essere effettuato tramite \textit{dimensionality reduction}. Queste consistono nel ridurre la dimensione dei vettori un uno spazio a due o tre dimensioni per poterle rappresentare in modo comprensibile all'occhio umano, che possono avvenire attraverso trasformazioni lineari~\cite{PCA} o non lineari~\cite{vandermaaten08}.
+\begin{figure}[htb]
+	\centering
+	\includegraphics[width = 90mm]{dimred.jpg}
+	\caption{Riduzione da tre a due dimensioni.}
+	\label{datavisualization}
+\end{figure}

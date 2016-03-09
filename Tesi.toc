@@ -2,84 +2,85 @@
 \select@language {italian}
 \contentsline {chapter}{\numberline {1}Informazioni latenti nel Web}{1}
 \contentsline {section}{\numberline {1.1}Data Mining nel Web}{2}
-\contentsline {section}{\numberline {1.2}Web Structure mining}{6}
-\contentsline {section}{\numberline {1.3}Rappresentazioni vettoriali di pagine Web}{8}
-\contentsline {paragraph}{Analogie}{9}
-\contentsline {subsection}{\numberline {1.3.1}Word2vec}{10}
-\contentsline {section}{\numberline {1.4}Data Visualization}{13}
+\contentsline {section}{\numberline {1.2}Web Structure mining}{5}
+\contentsline {section}{\numberline {1.3}Dati strutturati nel Web}{7}
+\contentsline {section}{\numberline {1.4}Rappresentazioni vettoriali di pagine Web}{8}
+\contentsline {paragraph}{Analogie}{10}
+\contentsline {subsection}{\numberline {1.4.1}Word2vec}{11}
+\contentsline {section}{\numberline {1.5}Data Visualization}{14}
 \contentsline {chapter}{\numberline {2}Il Sistema Url2vec}{16}
-\contentsline {section}{\numberline {2.1}Web Crawling per l'estrazione dei dati}{17}
-\contentsline {subsection}{\numberline {2.1.1}Propriet\IeC {\`a} del web crawler}{19}
-\contentsline {subsubsection}{Normalizzazione degli URL}{19}
-\contentsline {subsubsection}{Ricerca all'interno dello stesso dominio}{20}
-\contentsline {subsubsection}{Dimensione della ricerca}{21}
-\contentsline {subsubsection}{Restrizione dell'esplorazione}{21}
-\contentsline {subsection}{\numberline {2.1.2}Estrazione delle liste}{22}
-\contentsline {section}{\numberline {2.2}Costruzione del Dataset}{23}
-\contentsline {subsection}{\numberline {2.2.1}Random Walk}{23}
-\contentsline {subsection}{\numberline {2.2.2}Generazione delle sequenze}{26}
-\contentsline {subsubsection}{Random Walk standard}{27}
-\contentsline {subsubsection}{Random Walk con partenza fissa}{28}
-\contentsline {subsubsection}{Random Walk attraverso le Liste}{28}
-\contentsline {subsection}{\numberline {2.2.3}Esempio di Dataset}{29}
-\contentsline {subsubsection}{urlsMap.txt}{29}
-\contentsline {subsubsection}{vertex.txt}{29}
-\contentsline {subsubsection}{edges.txt}{30}
-\contentsline {subsubsection}{sequencesIDs.txt}{30}
-\contentsline {subsubsection}{sequencesIDsFromHomepage.txt}{31}
-\contentsline {section}{\numberline {2.3}Clustering}{32}
-\contentsline {subsubsection}{Partizionale}{32}
-\contentsline {subsubsection}{Gerarchico}{32}
-\contentsline {paragraph}{Single-link proximity}{33}
-\contentsline {paragraph}{Average-link proximity}{33}
-\contentsline {paragraph}{Complete-link proximity}{33}
-\contentsline {paragraph}{Distanza tra centroidi}{33}
-\contentsline {subsection}{\numberline {2.3.1}Graph Clustering}{34}
-\contentsline {subsubsection}{Minimum-cut method}{35}
-\contentsline {subsubsection}{Hierachical-clustering}{35}
-\contentsline {subsubsection}{Girvan-newman algorithm}{35}
-\contentsline {subsubsection}{Modularity maximization}{36}
-\contentsline {subsubsection}{Clique-based methods}{37}
-\contentsline {subsection}{\numberline {2.3.2}Vector Clustering}{37}
-\contentsline {subsubsection}{Hierarchical Clustering}{38}
-\contentsline {subsubsection}{Centroid-based clustering}{38}
-\contentsline {subsubsection}{Distribution-based clustering}{39}
-\contentsline {subsubsection}{Document Clustering}{40}
-\contentsline {paragraph}{Term-Frequency (TF)}{40}
-\contentsline {paragraph}{Inverse-Document-Frequency (IDF)}{40}
-\contentsline {paragraph}{LSI}{41}
-\contentsline {paragraph}{Coseno similarit\IeC {\`a}}{41}
-\contentsline {subsection}{\numberline {2.3.3}Clustering delle pagine Web}{42}
-\contentsline {subsection}{\numberline {2.3.4}Algoritmi utilizzati}{42}
-\contentsline {subsection}{\numberline {2.3.5}NLP nel Web: URL Embedding}{44}
-\contentsline {subsection}{\numberline {2.3.6}Differenza tra parole ed URL}{45}
-\contentsline {chapter}{\numberline {3}Related works}{46}
-\contentsline {subsubsection}{Semantica delle pagine web}{46}
-\contentsline {subsubsection}{Struttura interna delle pagine web}{47}
-\contentsline {subsubsection}{Struttura del grafo del web}{47}
-\contentsline {subsubsection}{Web usage clustering}{47}
-\contentsline {section}{\numberline {3.1}In-domain clustering}{48}
-\contentsline {section}{\numberline {3.2}Random walk come frasi}{48}
-\contentsline {section}{\numberline {3.3}Sviluppi recenti}{48}
-\contentsline {chapter}{\numberline {4}Sperimentazione}{50}
-\contentsline {section}{\numberline {4.1}Metriche}{51}
-\contentsline {paragraph}{Silhouette}{55}
-\contentsline {section}{\numberline {4.2}Configurazioni}{55}
-\contentsline {subsection}{\numberline {4.2.1}Community Detection}{56}
-\contentsline {paragraph}{\texttt {cs.illinois.edu}}{57}
-\contentsline {paragraph}{\texttt {cs.stanford.edu}}{58}
-\contentsline {paragraph}{\texttt {eecs.mit.edu}}{58}
-\contentsline {subsection}{\numberline {4.2.2}URL Embedding}{59}
-\contentsline {paragraph}{\texttt {cs.illinois.edu}}{60}
-\contentsline {paragraph}{\texttt {cs.stanford.edu}}{61}
-\contentsline {paragraph}{\texttt {eecs.mit.edu}}{62}
-\contentsline {subsection}{\numberline {4.2.3}Text Mining}{63}
-\contentsline {paragraph}{\texttt {cs.illinois.edu}}{64}
-\contentsline {paragraph}{\texttt {cs.stanford.edu}}{65}
-\contentsline {paragraph}{\texttt {eecs.mit.edu}}{66}
-\contentsline {subsection}{\numberline {4.2.4}Embedding e Text Mining}{67}
-\contentsline {paragraph}{\texttt {cs.illinois.edu}}{67}
-\contentsline {paragraph}{\texttt {cs.stanford.edu}}{68}
-\contentsline {paragraph}{\texttt {eecs.mit.edu}}{68}
-\contentsline {subsection}{\numberline {4.2.5}Analisi dei risultati}{69}
-\contentsline {chapter}{\numberline {5}Conclusioni e sviluppi futuri}{72}
+\contentsline {section}{\numberline {2.1}Web Crawling per l'estrazione dei dati}{18}
+\contentsline {subsection}{\numberline {2.1.1}Propriet\IeC {\`a} del web crawler}{20}
+\contentsline {subsubsection}{Normalizzazione degli URL}{20}
+\contentsline {subsubsection}{Ricerca all'interno dello stesso dominio}{21}
+\contentsline {subsubsection}{Dimensione della ricerca}{22}
+\contentsline {subsubsection}{Restrizione dell'esplorazione}{22}
+\contentsline {subsection}{\numberline {2.1.2}Estrazione delle liste}{23}
+\contentsline {section}{\numberline {2.2}Costruzione del Dataset}{24}
+\contentsline {subsection}{\numberline {2.2.1}Random Walk}{24}
+\contentsline {subsection}{\numberline {2.2.2}Generazione delle sequenze}{27}
+\contentsline {subsubsection}{Random Walk standard}{28}
+\contentsline {subsubsection}{Random Walk con partenza fissa}{29}
+\contentsline {subsubsection}{Random Walk attraverso le Liste}{29}
+\contentsline {subsection}{\numberline {2.2.3}Esempio di Dataset}{30}
+\contentsline {subsubsection}{urlsMap.txt}{30}
+\contentsline {subsubsection}{vertex.txt}{30}
+\contentsline {subsubsection}{edges.txt}{31}
+\contentsline {subsubsection}{sequencesIDs.txt}{31}
+\contentsline {subsubsection}{sequencesIDsFromHomepage.txt}{32}
+\contentsline {section}{\numberline {2.3}Clustering}{33}
+\contentsline {subsubsection}{Partizionale}{33}
+\contentsline {subsubsection}{Gerarchico}{33}
+\contentsline {paragraph}{Single-link proximity}{34}
+\contentsline {paragraph}{Average-link proximity}{34}
+\contentsline {paragraph}{Complete-link proximity}{34}
+\contentsline {paragraph}{Distanza tra centroidi}{34}
+\contentsline {subsection}{\numberline {2.3.1}Graph Clustering}{35}
+\contentsline {subsubsection}{Minimum-cut method}{36}
+\contentsline {subsubsection}{Hierachical-clustering}{36}
+\contentsline {subsubsection}{Girvan-newman algorithm}{36}
+\contentsline {subsubsection}{Modularity maximization}{37}
+\contentsline {subsubsection}{Clique-based methods}{38}
+\contentsline {subsection}{\numberline {2.3.2}Vector Clustering}{38}
+\contentsline {subsubsection}{Hierarchical Clustering}{39}
+\contentsline {subsubsection}{Centroid-based clustering}{39}
+\contentsline {subsubsection}{Distribution-based clustering}{40}
+\contentsline {subsubsection}{Document Clustering}{41}
+\contentsline {paragraph}{Term-Frequency (TF)}{41}
+\contentsline {paragraph}{Inverse-Document-Frequency (IDF)}{41}
+\contentsline {paragraph}{LSI}{42}
+\contentsline {paragraph}{Coseno similarit\IeC {\`a}}{42}
+\contentsline {subsection}{\numberline {2.3.3}Clustering delle pagine Web}{43}
+\contentsline {subsection}{\numberline {2.3.4}Algoritmi utilizzati}{43}
+\contentsline {subsection}{\numberline {2.3.5}NLP nel Web: URL Embedding}{45}
+\contentsline {subsection}{\numberline {2.3.6}Differenza tra parole ed URL}{46}
+\contentsline {chapter}{\numberline {3}Related works}{47}
+\contentsline {subsubsection}{Semantica delle pagine web}{47}
+\contentsline {subsubsection}{Struttura interna delle pagine web}{48}
+\contentsline {subsubsection}{Struttura del grafo del web}{48}
+\contentsline {subsubsection}{Web usage clustering}{48}
+\contentsline {section}{\numberline {3.1}In-domain clustering}{49}
+\contentsline {section}{\numberline {3.2}Random walk come frasi}{49}
+\contentsline {section}{\numberline {3.3}Sviluppi recenti}{49}
+\contentsline {chapter}{\numberline {4}Sperimentazione}{51}
+\contentsline {section}{\numberline {4.1}Metriche}{52}
+\contentsline {paragraph}{Silhouette}{56}
+\contentsline {section}{\numberline {4.2}Configurazioni}{56}
+\contentsline {subsection}{\numberline {4.2.1}Community Detection}{57}
+\contentsline {paragraph}{\texttt {cs.illinois.edu}}{58}
+\contentsline {paragraph}{\texttt {cs.stanford.edu}}{59}
+\contentsline {paragraph}{\texttt {eecs.mit.edu}}{59}
+\contentsline {subsection}{\numberline {4.2.2}URL Embedding}{60}
+\contentsline {paragraph}{\texttt {cs.illinois.edu}}{61}
+\contentsline {paragraph}{\texttt {cs.stanford.edu}}{62}
+\contentsline {paragraph}{\texttt {eecs.mit.edu}}{63}
+\contentsline {subsection}{\numberline {4.2.3}Text Mining}{64}
+\contentsline {paragraph}{\texttt {cs.illinois.edu}}{65}
+\contentsline {paragraph}{\texttt {cs.stanford.edu}}{66}
+\contentsline {paragraph}{\texttt {eecs.mit.edu}}{67}
+\contentsline {subsection}{\numberline {4.2.4}Embedding e Text Mining}{68}
+\contentsline {paragraph}{\texttt {cs.illinois.edu}}{68}
+\contentsline {paragraph}{\texttt {cs.stanford.edu}}{69}
+\contentsline {paragraph}{\texttt {eecs.mit.edu}}{69}
+\contentsline {subsection}{\numberline {4.2.5}Analisi dei risultati}{70}
+\contentsline {chapter}{\numberline {5}Conclusioni e sviluppi futuri}{73}
