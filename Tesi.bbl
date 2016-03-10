@@ -36,6 +36,12 @@ Daniel Crabtree, Peter Andreae, and Xiaoying Gao.
   on Web Intelligence}, WI '06, pages 202--210, Washington, DC, USA, 2006. IEEE
   Computer Society.
 
+\bibitem{Garey}
+Michael~R. Garey and David~S. Johnson.
+\newblock {\em Computers and Intractability; A Guide to the Theory of
+  NP-Completeness}.
+\newblock W. H. Freeman \& Co., New York, NY, USA, 1990.
+
 \bibitem{He13}
 Yeye He, Dong Xin, Venkatesh Ganti, Sriram Rajaraman, and Nirav Shah.
 \newblock Crawling deep web entity pages.
@@ -107,11 +113,6 @@ Bryan Perozzi, Rami Al-Rfou, and Steven Skiena.
 \newblock In {\em Proceedings of the 20th ACM SIGKDD International Conference
   on Knowledge Discovery and Data Mining}, KDD '14, pages 701--710, New York,
   NY, USA, 2014. ACM.
-
-\bibitem{Rajaraman11}
-Anand Rajaraman and Jeffrey~David Ullman.
-\newblock {\em Mining of Massive Datasets}.
-\newblock Cambridge University Press, New York, NY, USA, 2011.
 
 \bibitem{gensim}
 Radim {\v R}eh{\r u}{\v r}ek and Petr Sojka.

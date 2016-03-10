@@ -6,63 +6,37 @@
 %************************************************
 
 %************************************************
-Il sistema Url2vec si propone come alternativa alle metodologie di clustering di siti web basate sul contenuto testuale delle pagine~\cite{Rajaraman11}. 
-\\
-Graphs are all around us. They can be made to model countless real-world phenomena ranging
-from the social to the scientific including information, media, biology, chemistry, medical systems,
-and e-commerce systems. These graphs are called information networks because they represent
-bits of information and their relationships. In my thesis, I investigate the principles and methodologies for discovering roles and types
-in large information networks by exploring hierarchies inherent within the networks.I focus on
-the Web-information network, as well as specialized sub-networks like Wikipedia, where I aim to
-determine the type of a Web page. The goal of this thesis is to determine a vertex’s type as well as its position in the type-hierarchy
-as well as their relationships with one another. For example, professor, student, and course-types
-exists within an academic department within an academic college at a university. This new type
-information can then used to answer expressive queries on the network and allows for the exploration
-of additional properties about the network that were previously unknown. As the number of online resources and Web documents continues to increase, the need for better
-organizational structures that guide readers towards the information they seek increases. However, many real world networks contain many different types
-of objects. For example, an academic department’s Web site contains Web pages of professors,
-students, courses, research groups, staff, news highlights, and so on. Recent advances in network
-science has found innovative and powerful ways to analyze these typed-information networks; however,
-most networks, especially Web-information networks, do not record type-semantics in any
-meaningful way. If the object-types could be recovered from these networks, then the resulting
-typed-information networks is likely to represent a more meaningful view of the data.most networks do not have well defined types/classes. For example, in an academic department
-Web site no explicit indication is provided determining which Web page represents a professor,
-student, or course. Due to the absence of type/class training data it is not available to generate a
-classification model. So, different thinking is needed to solve this problem.
+%Il sistema Url2vec si propone come alternativa alle metodologie di clustering di siti web basate sul contenuto testuale delle pagine~\cite{Rajaraman11}. 
+I grafi possono essere utilizzati per modellare innumerevoli fenomeni reali, da quelli scientifici a quelli sociali. Questi rappresentano le entità non come singole unità descritte appieno dalle loro caratteristiche, ma piuttosto dai collegamenti che intercorrono tra di esse. Queste ''relazioni'' codificano la maggior parte delle informazioni latenti in un grafo, caratterizzandolo in maniera univoca.
+
+In questa tesi si approfondiscono tecniche e metodologie per le estrazione di queste informazioni dal grafo del Web, più precisamente di un sito Web, indirizzate alla divisione delle pagine in cluster omogenei. Le pagine Web tuttavia non sono divisibili in classi ben definite, non ci sono informazioni esplicite che rappresentano univocamente i professori, gli studenti o i corsi. Data questa assenza, non è possibile generare un modello accurato di classificazione. Si è rivelato necessario risolvere il problema con un latro approccio.
+
+A dispetto della diversità delle pagine Web nella rete, quelle che risiedono all'interno di una particolare organizzazione, spesso, condividono una certa struttura. Questa può essere appresa attraverso l'analisi del peso, della densità o della direzione degli hyperlink presenti nelle pagine Web, ovvero gli archi del grafo costruito su di esse. Ad esempio, il sito Web di un dipartimento di informatica conterrà pagine riguardanti i docenti, gli studenti, i corsi, la ricerca che saranno accessibili attraverso determinati \textit{percorsi} del grafo. L'analisi dei grafi comporta anche degli svantaggi, gli algoritmi della teoria dei grafi sono NP-completi \cite{Garey}, e questo non può essere trascurato considerando le dimensioni del Web. Nella metodologia presentata viene proposta l'alternativa di apprendere rappresentazioni vettoriali dei vertici all'interno del grafo, utilizzandole insieme alle informazioni estratte dal contenuto di una pagina Web, così da processare vettori linearmente indipendenti. Queste rappresentazioni vettoriali sono apprese attraverso la generazione di percorsi attraverso gli archi del grafo, creando delle sequenze di vertici che saranno trattate come frasi, dove le parole sono pagine Web. 
 
 
+\subsection{NLP nel Web: URL Embedding}
+In questo modo è possibile sfruttare i recenti sviluppi nel campo del Word Embedding. Questi algoritmi riescono a considerare sempre più fattori e restituire vettori sempre più accurati. Vengono incluse informazioni riguardanti il contesto di una parola, ovvero gli altri termini contenuti nella frase in cui compare la parola analizzata. Nel Web questo implica considerare le pagine ''più vicine'', ovvero le pagine che puntano o sono puntate direttamente dalla pagina in esame, privilegiando quelle che hanno più collegamenti con questa. Questa informazione riesce ad estrarre le informazioni latenti nella struttura del sito, ed a raggruppare le pagine similmente ad un algoritmo di partizionamento di un grafo. Queste informazioni hanno rivelato proprietà peculiari quando applicate su grandi testi. Il caso più noto e controverso è quello delle analogie. 
 
-
-\color{red}
-QUI PROPONI E DESCRIVI UNA METODOLOGIA, QUESTO CAPITOLO NON E' UN MANUALE D'USO, SPECIAMENTE SE INSERISCI INFORMAZIONI SUL TURNING DEI PARAMETRI AD INIZIO CAPITOLO:
-Guarda i seguenti link:
-\begin{itemize}
-\item \url{https://www.ideals.illinois.edu/bitstream/handle/2142/45402/Timothy_Weninger.pdf?sequence=1}
-\item The parallel path framework for entity discovery on the web (te lo mando per mail)
-\end{itemize}
-Infatti è possibile eseguire il clustering facendo variare i parametri di esecuzione, in modo da considerare o solo la struttura del grafo o solo il contenuto testuale, oppure una combinazione delle due informazioni, definendone la proporzione.
-\color{black}
-\\
-A dispetto della diversità delle pagine web nella rete, quelle che risiedono all'interno di una particolare organizzazione, spesso, condividono una certa struttura.
-\color{red}
-La frase precedente non ha alcuna correlazione con la frase successiva
-Ad esempio, il sito web di un dipartimento di informatica conterrà pagine riguardante il personale, gli studenti, i corsi, la ricerca che saranno catalogate secondo determinati criteri. 
-\color{black}
+È stato osservato che correlazioni nascoste possono trovarsi nella differenza tra coppie di vettori~\cite{Mikolov13}, come nel caso di parole simili ma con leggere differenze come il genere o il numero, infatti esse appaiono in frasi tendenzialmente simili, ma con delle piccole differenze. In questo caso l'informazione può essere interpretata come il genere o il numero.
 \\\\
-Saper sfruttare tale struttura può agevolare notevolmente i task di Web Mining. Esso infatti aggiunge ulteriore informazione, in modo da estrarre conoscenza strutturata e facilmente processabile.
-\\
+Informazioni simili possono essere trovate anche nel campo del Web. È ormai consolidata la questione dell'autorità di alcune pagine~\cite{Kleinberg99} e di come queste abbiano un maggior numero di link in entrata. Alcune pagine tuttavia saranno accessibili prevalentemente attraverso alcuni percorsi e si troveranno quindi in un contesto con elementi simili. Il problema resta dare un senso a queste correlazioni ed un significato utilizzabile. Nello sviluppo di Url2vec, tuttavia, sono emerse corrispondenze abbastanza naturali, come le pagine dei professori con i relativi corsi insegnati o i laboratori di afferenza. 
 
-\color{red}
-A paerire da questo punto stai per descrivere il COME hai realizzato il tuo sistema, peccato che manca il COSA, ossia cosa fa il tuo sistema, cosa hai fatto di interessante, in che modo il tuo sistema è capace di superare delle open challenges, ect.
-\color{black}
-In questa tesi sono state realizzate tre macro componenti.
+Queste relazioni sono dovute al fatto che il grafo di un sito Web è fortemente connesso, ma la maggior parte delle volte in cui appare un determinato corso di studio appare anche il relativo docente e viceversa. 
+
+\subsection{Differenza tra parole ed URL}
+La sola analisi delle sequenze comunque può risultare limitata. Le pagine Web non sono parole, ad esse è associata un ulteriore informazione, ovvero il contenuto testuale. Questa proprietà si è rivelata molto utile, infatti combinando le informazioni ricavate dall'esame di tutti e due gli aspetti, il grado di accuratezza del processo di clustering è salito in modo significativo. Il contenuto di una pagina infatti fornisce informazioni fondamentali su di essa, ma queste possono variare significativamente anche tra pagine considerate dello stesso tipo, presentando ad esempio una diversa distribuzione dei termini. Analizzando la struttura connessa delle pagine Web, si è cercato costruire delle rappresentazioni più significative.
+%https://www.ideals.illinois.edu/bitstream/handle/2142/45402/Timothy_Weninger.pdf?sequence=1}
+%The parallel path framework for entity discovery on the Web
+Saper sfruttare tale struttura può agevolare notevolmente i task di Web Mining. Esso infatti estrae conoscenza strutturata e facilmente processabile.
+
+%A partire da questo punto stai per descrivere il COME hai realizzato il tuo sistema, peccato che manca il COSA, ossia cosa fa il tuo sistema, cosa hai fatto di interessante, in che modo il tuo sistema è capace di superare delle open challenges, ect.
+Nelle sottosezioni che seguono si descrive il sistema realizzato, oltre che le tecniche e gli algoritmi utilizzati per la realizzazione degli obiettivi preposti.\\
+Sono state realizzate tre macro componenti.
 \begin{itemize}
 \item \textit{Crawling delle pagine Web}. Questo è regolato da alcuni parametri che rendono il processo flessibile e altamente modificabile.
 \item \textit{Costruzione del Dataset}, ovvero la strutturazione delle informazioni ottenute nel processo precedente, secondo alcuni criteri necessari per le successive elaborazioni.
 \item \textit{Clustering delle pagine Web} attraverso la combinazione dell'analisi del contenuto testuale e delle relazioni tra le pagine.
 \end{itemize}
-
-Nelle sottosezioni che seguono si descrive il sistema realizzato, oltre che le tecniche e gli algoritmi utilizzati per la realizzazione degli obiettivi preposti.
 
 \section{Web Crawling per l'estrazione dei dati}
 \label{crawling}
@@ -537,17 +511,3 @@ Deriva da \textit{Hierarchical Density-Based Spatial Clustering of Applications 
 \\
 Questo permette ad HDBSCAN di trovare cluster con densità diversa, principale svantaggio di DBSCAN.
 \end{itemize}
-
-\subsection{NLP nel Web: URL Embedding}
-I recenti algoritmi di Word Embedding, riescono a tenere in considerazione sempre più fattori e quindi restituire vettori sempre più accurati. In particolare vengono incluse informazioni riguardanti il contesto di una parola, ovvero gli altri termini contenute nella frase in cui compare la parola sotto esame. Questa informazione riesce ad estrarre correlazioni nascoste e raggruppare i termini in classi. Può sembrare banale ma diversamente dal Text Mining tradizionale, dove le parole vengono considerate al livello di documento, qui vengono considerate a livello di frase. Un esempio può riguardare il controverso caso delle analogie. 
-\\\\
-È stato osservato che correlazioni nascoste possono trovarsi nella differenza tra coppie di vettori~\cite{Mikolov13}, come nel caso di parole simili ma con leggere differenze come il genere o il numero, infatti esse appaiono in frasi tendenzialmente identiche, ma con delle piccole differenze. In questo caso l'informazione può essere interpretata come il genere o il numero.
-\\\\
-Informazioni simili possono essere trovate anche nel campo del Web, analizzando i percorsi di URL come se fossero frasi. È ormai consolidata la questione dell'autorità di alcune pagine~\cite{Kleinberg99}
-e di come queste abbiano un maggior numero di link in entrata. Alcune pagine tuttavia saranno accessibili prevalentemente attraverso alcuni percorsi e si troveranno quindi in un contesto con elementi simili. Il problema adesso è riuscire a dare un senso a queste correlazioni e dargli un significato utilizzabile. Nello sviluppo di Url2vec, tuttavia, sono emerse corrispondenze abbastanza naturali, come le pagine dei professori con i relativi corsi insegnati o i laboratori di afferenza. 
-\\\\
-Queste relazioni sono dovute al fatto che il grafo di un sito Web è fortemente connesso, ma la maggior parte delle volte in cui appare un determinato corso di studio appare anche il relativo docente e viceversa. 
-
-\subsection{Differenza tra parole ed URL}
-La sola analisi delle sequenze comunque può risultare limitata. Gli URL non sono parole, in quanto ad essi è associata un ulteriore informazione, ovvero il contenuto testuale. Questa proprietà si è rivelata molto utile, infatti combinando le informazioni ricavate dall'esame di tutti e due gli aspetti, il grado di accuratezza del processo di clustering è salito in modo significativo. 
-

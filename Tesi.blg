@@ -12,7 +12,7 @@ refers to entry "conf/emnlp/2013", which doesn't exist
 Warning--I didn't find a database entry for "conf/emnlp/2013"
 You've used 28 entries,
             2118 wiz_defined-function locations,
-            713 strings with 10024 characters,
+            714 strings with 10051 characters,
 and the built_in function-call counts, 10997 in all, are:
 = -- 1147
 > -- 463

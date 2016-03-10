@@ -15,7 +15,7 @@
 \contentsline {figure}{\numberline {2.2}{\ignorespaces Differenze tra ricerca in ampiezza e ricerca in profondit\IeC {\`a}\relax }}{22}
 \contentsline {figure}{\numberline {2.3}{\ignorespaces Rappresentazione visuale di 8 random walk monodimensionali. \relax }}{25}
 \contentsline {figure}{\numberline {2.4}{\ignorespaces Rappresentazione visuale di un random walk di 25.000 passi su due dimensioni. \relax }}{26}
-\contentsline {figure}{\numberline {2.5}{\ignorespaces Random walk sul grafo. \relax }}{29}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Random walk sul grafo. \relax }}{30}
 \contentsline {figure}{\numberline {2.6}{\ignorespaces Differenze fra i vari tipi di funzioni distanza\relax }}{35}
 \contentsline {figure}{\numberline {2.7}{\ignorespaces Betweenneess centrality score\relax }}{37}
 \contentsline {figure}{\numberline {2.8}{\ignorespaces Modularity score\relax }}{38}
@@ -23,6 +23,6 @@
 \contentsline {figure}{\numberline {2.10}{\ignorespaces Matrice termini-documenti. Ogni riga rappresenta un singolo termine ed ogni colonna rappresenta un singolo documento\relax }}{41}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Grafo del sito \texttt {cs.illinois.edu} etichettato manualmente.\relax }}{58}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Rappresentazione del sito \texttt {cs.illinois.edu}, clusterizzato con K-Means.\relax }}{60}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Grafo del sito \texttt {cs.illinois.edu} etichettato manualmente.\relax }}{57}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Rappresentazione del sito \texttt {cs.illinois.edu}, clusterizzato con K-Means.\relax }}{59}
 \addvspace {10\p@ }
