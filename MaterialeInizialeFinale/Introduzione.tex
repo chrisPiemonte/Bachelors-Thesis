@@ -9,26 +9,37 @@
 \cleardoublepage
 \chapter*{Introduzione}
 
-La principale caratteristica dell'era dell'informazione è rappresentata dalla possibilità di generare, memorizzare, trasmettere e processare enormi quantità di dati in modo rapido ed economico. La disponibilità di una simile quantità di dati, elaborabili automaticamente, ha consentito un forte incremento del processo di generazione e diffusione di conoscenza, utilizzabile per migliorare processi decisionali. Ad oggi, tuttavia, tali risorse non sono appieno sfruttate in tutti i campi e il loro valore potenziale riserva ancora numerose sorprese. La ricerca di pattern nella generazione e nell'utilizzo di nuovi contenuti web e la conoscenza che portano è un'area ancora giovane nell'informatica e in rapida crescita. 
-\\
-Con l'aumentare dei dati disponibili sul web e le potenzialmente infinite pagine generate dinamicamente, il bisogno di preprocessare questa informazione sembra scontrarsi con problemi computazionali. Indicizzare o cercare milioni di documenti non-omogenee sul web è diventata una sfida.
-\\
-A dispetto della diversità delle pagine web nella rete, quelle che risiedono all'interno di una particolare organizzazione, spesso, condividono una certa struttura.
-\\
-Il clustering di pagine web è un argomento trattato estensivamente in letteratura come un modo di raggruppare pagine  all'interno di cluster omogenei, anche se gran parte del lavoro svolto si basa su un insieme arbitrario di pagine derivanti da molteplici siti differenti. Relativamente poco è stato il lavoro svolto sul clustering di un specifico sito di una determinata organizzazione.
-\\
-In quest'ottica nasce Url2vec, che combinando tecniche di Data Mining e di Natural Language Processing, si propone come valida opzione per il clustering di pagine web estraendo informazioni latenti nella struttura degli hyperlink, denotando una correlazione nascosta nei cammini percorribili nel grafo del web.
-\\
+La principale caratteristica dell'Era dell'Informazione è rappresentata dalla possibilità di generare, memorizzare, trasmettere e processare enormi quantità di dati in modo rapido ed economico.
+
+ La disponibilità di una simile quantità di dati, elaborabili automaticamente, ha consentito un forte incremento del processo di generazione e diffusione di conoscenza, utilizzabile per migliorare processi decisionali. Ad oggi, tuttavia, tali risorse non sono appieno sfruttate in tutti i campi e il loro valore potenziale riserva ancora numerose sorprese.
+
+Questo problema è particolarmente sentito nel contesto Web. Il Web infatti può essere considerato la più grande, eterogenea e dinamica sorgente informativa pubblicamente accessibile. Tali caratteristiche rendono il processo di analisi dei dati e estrazione di nuova conoscenza un task altamente complesso e apre nuove sfide e frontiere per l'Informatica.
+%L'analisi di dati pubblicamente accessibili nel Web, l'estrazione di pattern e l'utilizzo degli stessi al fine di generare nuova conoscenza definiscono nuove sfide e frontiere per l'Informatica. 
+%  La ricerca di pattern nella generazione e nell'utilizzo di nuovi contenuti web e la conoscenza che portano è un'area ancora giovane nell'informatica e in rapida crescita. 
+%Con l'aumentare dei dati disponibili sul web e le potenzialmente infinite pagine generate dinamicamente, il bisogno di preprocessare questa informazione sembra scontrarsi con problemi computazionali. Indicizzare o cercare milioni di documenti non-omogenee sul web è diventata una sfida.
+
+%Ogni giorno migliaia di utenti utilizzano il Web per acquisire informazioni ricercando informazioni su motori di ricerca o navigando siti web. Tuttavia, quelle peculiarità che contraddistinguono il Web come dimensione, eterogeneicità e dinamicità generano notevoli difficoltà per gli utenti nel modo di interagire, ricercare ed utilizzare le informazioni.
+
+Un'importante sfida è rappresentata dal problema di organizzare i contenuti e la struttura dei documenti web.
+%A dispetto della diversità delle pagine web nella rete, quelle che risiedono all'interno di una particolare organizzazione, spesso, condividono una certa struttura.
+In particolare diversi lavori si sono concentrati sul problema del Web Clustering, ossia il processo di raggruppare pagine web in \textit{cluster} cosìcche ogetti simili  possano essere raggruppati nella stessa classe e oggetti dissimili possano essere raggruppati in classi differenti.
+Gli obiettivi di questo processo possono essere molteplici: migliorare l'accessibilità alle informazioni e il ritrovamento delle stesse, comprendere i comportamenti di navigazione degli utenti, comprendere come le informazioni si distribuiscono su più pagine web, etc.
+
+In quest'ottica nasce Url2vec, un sistema per il clustering di pagine web che utilizza il contenuto testuale delle pagine web e la struttura ad hyperlink del sito a cui le pagine da raggruppare appartengono, per estrarre cluster di pagine dello stesso tipo semantico (per esempio pagine web di professori, corsi, prodotti, etc.).
+
+Differentemente dagli algoritmi di clustering di pagine web esistenti in letteratura, Url2Vec non considera un sito web come una collezione di documenti testuali indipendenti tra loro, ma cerca di combinare informazioni relative al contenuto con informazioni strutturali, in modo che due pagine web vengano considerate simili se  caratterizzate da una simile distribuzione di termini e abbiano una una simile correlazione nascosta all'interno dei cammini percorribili nel sito web.
+%Il clustering di pagine web è un argomento trattato estensivamente in letteratura come un modo di raggruppare pagine  all'interno di cluster omogenei, anche se gran parte del lavoro svolto si basa su un insieme arbitrario di pagine derivanti da molteplici siti differenti. Relativamente poco è stato il lavoro svolto sul clustering di un specifico sito di una determinata organizzazione.
+ 
+ %Infatti, Url2vec combinando e adattando tecniche di Data Mining e di Natural Language Processing, si propone come valida opzione per il clustering di pagine web estraendo informazioni latenti nella struttura degli hyperlink, denotando una correlazione nascosta nei cammini percorribili nel grafo del web.
+
 Le motivazioni alla base dell'implementazione di Url2vec sono state guidate dal voler sfruttare conoscenza già immagazzinata nella risoluzione di problemi specifici in contesti differenti per il quale erano stati ideati, ricavando un trasferimento della conoscenza.
-\\
-L'obiettivo in particolare di questa tesi è estendere lo stato attuale esistente, implementando componenti per realizzare l'estrazione di pagine web correlate e raggrupparle sulla base delle sequenze attraversabili per vistarle, offrendo un diverso punto di vista considerando maggiormente le relazioni invece che il solo contenuto.
+Infatti Url2Vec combina algoritmi tipici dell'area del Natural Language Processing con quelli della Teoria dei Grafi al fine di utilizzare in modo innovativo algoritmi estenti nel contesto Web. 
+%L'obiettivo in particolare di questa tesi è estendere lo stato attuale esistente, implementando componenti per realizzare l'estrazione di pagine web correlate e raggrupparle sulla base delle sequenze attraversabili per vistarle, offrendo un diverso punto di vista considerando maggiormente le relazioni invece che il solo contenuto.
 
+Si definisce di seguito la struttura di questo lavoro di tesi.\\
 Nel capitolo 1 ci si occuperà di descrivere lo stato attuale, elencando le metodologie utilizzate, e di analizzare nel dettaglio le diverse problematiche da affrontare durante l'analisi dei dati.
-
 Nel capitolo 2 saranno presentati gli obiettivi principali che la metodologia presentata ed il sistema realizzato hanno seguito, descrivendo nel dettaglio le diverse tecniche utilizzate per la realizzazione delle fasi necessarie all'individuazione dei pattern latenti nella struttura del web.
-
 Nel capitolo 3 si descriverà la sperimentazione effettuata,completa di tabelle, grafici e commenti che evidenziano punti di forza e di debolezza individuati per ciascuna delle tecniche utilizzate per le diverse fasi eseguite dal sistema. Soffermandosi sulle novità introdotte con le metodologie presentate e cercando di confrontarle con quelle consolidate.
-
 Infine nel capitolo 4 si parlerà della frontiera attuale dell'Informatica in tali campi confrontando similitudini e spunti di riflessione.
 
 
