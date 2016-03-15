@@ -3,14 +3,14 @@
 \contentsline {chapter}{\numberline {1}Informazioni latenti nel Web}{1}
 \contentsline {section}{\numberline {1.1}Data Mining nel Web}{2}
 \contentsline {section}{\numberline {1.2}Web Structure mining}{5}
-\contentsline {section}{\numberline {1.3}Dati strutturati nel Web}{7}
-\contentsline {section}{\numberline {1.4}Rappresentazioni vettoriali di pagine Web}{8}
+\contentsline {section}{\numberline {1.3}Rappresentazioni vettoriali di pagine Web}{7}
+\contentsline {subsection}{\numberline {1.3.1}Apprendimento dalla struttura}{8}
 \contentsline {paragraph}{Analogie}{10}
-\contentsline {subsection}{\numberline {1.4.1}Word2vec}{11}
-\contentsline {section}{\numberline {1.5}Data Visualization}{14}
+\contentsline {subsection}{\numberline {1.3.2}Word2vec}{11}
+\contentsline {section}{\numberline {1.4}Data Visualization}{14}
 \contentsline {chapter}{\numberline {2}Il Sistema Url2vec}{16}
 \contentsline {subsection}{\numberline {2.0.1}NLP nel Web: URL Embedding}{17}
-\contentsline {subsection}{\numberline {2.0.2}Differenza tra parole ed URL}{18}
+\contentsline {subsubsection}{Differenza tra parole ed URL}{18}
 \contentsline {section}{\numberline {2.1}Web Crawling per l'estrazione dei dati}{19}
 \contentsline {subsection}{\numberline {2.1.1}Propriet\IeC {\`a} del web crawler}{21}
 \contentsline {subsubsection}{Normalizzazione degli URL}{21}
