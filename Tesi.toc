@@ -55,27 +55,27 @@
 \contentsline {subsubsection}{sequencesIDsFromHomepage.txt}{45}
 \contentsline {section}{\numberline {2.3}Web page Clustering}{45}
 \contentsline {chapter}{\numberline {3}Stato dell'Arte}{47}
-\contentsline {section}{\numberline {3.1}SiteMap Generator}{49}
-\contentsline {section}{\numberline {3.2}DeepWalk}{49}
-\contentsline {chapter}{\numberline {4}Sperimentazione}{51}
-\contentsline {section}{\numberline {4.1}Metriche}{52}
-\contentsline {paragraph}{Silhouette}{56}
-\contentsline {section}{\numberline {4.2}Configurazioni}{56}
-\contentsline {subsection}{\numberline {4.2.1}Community Detection}{57}
-\contentsline {paragraph}{\texttt {cs.illinois.edu}}{58}
-\contentsline {paragraph}{\texttt {cs.stanford.edu}}{59}
-\contentsline {paragraph}{\texttt {eecs.mit.edu}}{59}
-\contentsline {subsection}{\numberline {4.2.2}URL Embedding}{60}
-\contentsline {paragraph}{\texttt {cs.illinois.edu}}{61}
-\contentsline {paragraph}{\texttt {cs.stanford.edu}}{62}
-\contentsline {paragraph}{\texttt {eecs.mit.edu}}{63}
-\contentsline {subsection}{\numberline {4.2.3}Text Mining}{64}
-\contentsline {paragraph}{\texttt {cs.illinois.edu}}{65}
-\contentsline {paragraph}{\texttt {cs.stanford.edu}}{66}
-\contentsline {paragraph}{\texttt {eecs.mit.edu}}{67}
-\contentsline {subsection}{\numberline {4.2.4}Embedding e Text Mining}{68}
-\contentsline {paragraph}{\texttt {cs.illinois.edu}}{68}
-\contentsline {paragraph}{\texttt {cs.stanford.edu}}{69}
-\contentsline {paragraph}{\texttt {eecs.mit.edu}}{69}
-\contentsline {subsection}{\numberline {4.2.5}Analisi dei risultati}{70}
-\contentsline {chapter}{\numberline {5}Conclusioni e sviluppi futuri}{73}
+\contentsline {section}{\numberline {3.1}Liste da sorgenti dati strutturate}{49}
+\contentsline {section}{\numberline {3.2}Teoria dei Random Walk}{50}
+\contentsline {chapter}{\numberline {4}Sperimentazione}{52}
+\contentsline {section}{\numberline {4.1}Metriche}{53}
+\contentsline {paragraph}{Silhouette}{57}
+\contentsline {section}{\numberline {4.2}Configurazioni}{57}
+\contentsline {subsection}{\numberline {4.2.1}Community Detection}{58}
+\contentsline {paragraph}{\texttt {cs.illinois.edu}}{59}
+\contentsline {paragraph}{\texttt {cs.stanford.edu}}{60}
+\contentsline {paragraph}{\texttt {eecs.mit.edu}}{60}
+\contentsline {subsection}{\numberline {4.2.2}URL Embedding}{61}
+\contentsline {paragraph}{\texttt {cs.illinois.edu}}{62}
+\contentsline {paragraph}{\texttt {cs.stanford.edu}}{63}
+\contentsline {paragraph}{\texttt {eecs.mit.edu}}{64}
+\contentsline {subsection}{\numberline {4.2.3}Text Mining}{65}
+\contentsline {paragraph}{\texttt {cs.illinois.edu}}{66}
+\contentsline {paragraph}{\texttt {cs.stanford.edu}}{67}
+\contentsline {paragraph}{\texttt {eecs.mit.edu}}{68}
+\contentsline {subsection}{\numberline {4.2.4}Embedding e Text Mining}{69}
+\contentsline {paragraph}{\texttt {cs.illinois.edu}}{69}
+\contentsline {paragraph}{\texttt {cs.stanford.edu}}{70}
+\contentsline {paragraph}{\texttt {eecs.mit.edu}}{70}
+\contentsline {subsection}{\numberline {4.2.5}Analisi dei risultati}{71}
+\contentsline {chapter}{\numberline {5}Conclusioni e sviluppi futuri}{74}

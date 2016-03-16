@@ -7,48 +7,52 @@ Repeated entry---line 490 of file Bibliografia.bib
  : @article{Kleinberg99
  :                     ,
 I'm skipping whatever remains of this entry
+Repeated entry---line 607 of file Bibliografia.bib
+ : @article{Luxburg07
+ :                   ,
+I'm skipping whatever remains of this entry
 A bad cross reference---entry "Zou13"
 refers to entry "conf/emnlp/2013", which doesn't exist
 Warning--I didn't find a database entry for "conf/emnlp/2013"
-You've used 28 entries,
+You've used 33 entries,
             2118 wiz_defined-function locations,
-            714 strings with 10051 characters,
-and the built_in function-call counts, 10997 in all, are:
-= -- 1147
-> -- 463
+            751 strings with 10749 characters,
+and the built_in function-call counts, 12643 in all, are:
+= -- 1307
+> -- 542
 < -- 13
-+ -- 186
-- -- 154
-* -- 767
-:= -- 1734
-add.period$ -- 98
-call.type$ -- 28
-change.case$ -- 159
++ -- 217
+- -- 180
+* -- 897
+:= -- 2010
+add.period$ -- 113
+call.type$ -- 33
+change.case$ -- 187
 chr.to.int$ -- 0
-cite$ -- 28
-duplicate$ -- 440
-empty$ -- 865
-format.name$ -- 154
-if$ -- 2391
+cite$ -- 33
+duplicate$ -- 499
+empty$ -- 998
+format.name$ -- 180
+if$ -- 2727
 int.to.chr$ -- 0
-int.to.str$ -- 28
-missing$ -- 28
-newline$ -- 145
-num.names$ -- 56
-pop$ -- 160
+int.to.str$ -- 33
+missing$ -- 34
+newline$ -- 170
+num.names$ -- 66
+pop$ -- 188
 preamble$ -- 1
-purify$ -- 133
+purify$ -- 156
 quote$ -- 0
-skip$ -- 327
+skip$ -- 361
 stack$ -- 0
-substring$ -- 763
-swap$ -- 130
+substring$ -- 869
+swap$ -- 136
 text.length$ -- 13
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 108
+type$ -- 126
 warning$ -- 0
-while$ -- 108
-width$ -- 30
-write$ -- 340
-(There were 2 error messages)
+while$ -- 124
+width$ -- 35
+write$ -- 395
+(There were 3 error messages)
