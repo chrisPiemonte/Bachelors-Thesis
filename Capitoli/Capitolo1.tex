@@ -186,11 +186,190 @@ Infine usare PageRank par classificare le frasi nel grafo.
 	\label{5w2v}
 \end{figure}
 
-Word2vec è una rete neurale a due layer, sebbene non sia profonda (deep neural network) come spesso definita, trasforma il testo in modo che altre reti neurali possano comprenderlo. Prende in input un corpus di documenti e genera un insieme di vettori: feature vectors per ogni parola del corpus. I vettori restituiti sono rappresentazioni numeriche del contesto della singola parola. 
+Word2vec è una rete neurale a due layer, sebbene non sia profonda (Deep Neural Network) come spesso definita, trasforma il testo in modo che altre reti neurali possano comprenderlo. Prende in input un corpus di documenti e genera un insieme di vettori: Feature Vectors per ogni parola del corpus. I vettori restituiti sono rappresentazioni numeriche del contesto della singola parola. 
 \\\\
-Dati abbastanza dati, utilizzo e contesti, word2vec può apprendere rappresentazioni delle parole altamente accurate, basate sulle apparizioni della parola nei diversi contesti. Queste rappresentazioni possono essere usate per trovare associazioni fra parole o per raggruppare documenti e classificarli per argomento. La similarità fra i vettori può essere misurata attraverso la coseno similarità, dove nessuna similarità è espressa come un angolo di 90 gradi, mentre una similarità totale è data  da un angolo di 0 gradi tra i vettori. Ad esempio il vettore relativo a “Sweden” è uguale al vettore “Sweden” mentre il vettore “Norway” ha una distanza di similarità di $0.760124$.
+Dati abbastanza dati, utilizzo e contesti, Word2vec può apprendere rappresentazioni delle parole altamente accurate, basate sulle apparizioni della parola nei diversi contesti. Queste rappresentazioni possono essere usate per trovare associazioni fra parole o per raggruppare documenti e classificarli per argomento. La similarità fra i vettori può essere misurata attraverso la coseno similarità, dove nessuna similarità è espressa come un angolo di 90 gradi, mentre una similarità totale è data  da un angolo di 0 gradi tra i vettori. Ad esempio il vettore relativo a “Sweden” è uguale al vettore “Sweden” mentre il vettore “Norway” ha una distanza di similarità di $0.760124$.
 \\\\
-Word2vec può apprendere rappresentazioni principalemente in due modi, o usando il contesto per predire la parola data (metodo conosciuto come “continous bag of word”, o \textbf{CBOW}), o usando una parola per predire il contesto (\textbf{skip-gram}).
+Word2vec può apprendere rappresentazioni principalmente in due modi, o usando il contesto per predire la parola data (metodo conosciuto come “continous bag of word”, o \textbf{CBOW}), o usando una parola per predire il contesto (\textbf{skip-gram}). Per oggetti simili risulteranno rappresentazioni simili. Questo infatti costituisce uno dei primi passi da compiere per effettuare task di Machine Leaarning o Data Mining come ad esempio il raggruppamento di vettori simili in cluster attraverso una qualche funzione di similarità. La traduzione in vettori è necessaria per rendere le informazioni facilmente processabili.
+
+
+\section{Clustering}
+Più precisamente, il clustering consiste in un insieme di tecniche di analisi multivariata dei dati volte alla selezione e raggruppamento di elementi omogenei in un insieme di dati \cite{tryon}. Le tecniche di clustering si basano su misure relative alla somiglianza tra gli elementi. In molti approcci questa similarità (o dissimilarità) è concepita in termini di distanza in uno spazio multidimensionale. La bontà delle analisi ottenute dagli algoritmi di clustering dipende molto dalla scelta della metrica, e quindi da come è calcolata la distanza. Gli algoritmi di clustering raggruppano gli elementi sulla base della loro distanza reciproca, e quindi l'appartenenza o meno ad un insieme dipende da quanto l'elemento preso in esame è distante dall'insieme stesso dividendo gli elementi in più cluster(soft/fuzzy clustering) o in un solo cluster(hard cluster).
+Le tecniche di clustering si possono basare principalmente su due "filosofie":
+partizionale e gerarchico.
+
+\subsubsection{Partizionale}
+Gli algoritmi di clustering di questa famiglia creano una partizione delle osservazioni minimizzando una certa funzione di costo:
+\begin{equation}
+  \sum_{j=1}^{k} E\left ( C_j \right )
+\end{equation}
+dove $ k$ è il numero desiderato di cluster, $ C_j$ è il j-esimo cluster e $ E : C \to \mathbb{R^+}$ è la funzione di costo associata al singolo cluster. L'algoritmo più famoso appartenente a questa famiglia è il k-means, chiamato così da MacQueen nel 1967 \cite{MacQueen67}.
+
+\subsubsection{Gerarchico}
+Nel clustering gerarchico, invece, è necessario individuare il cluster da suddividere in due sottogruppi. Per questa ragione sono necessarie funzioni che misurino la compattezza del cluster, la densità o la distanza dei punti assegnati ad un cluster. Le funzioni normalmente utilizzate nel caso divisivo sono:
+\paragraph{Single-link proximity}
+Calcola la distanza tra i due cluster come la distanza minima tra elementi appartenenti a cluster diversi:
+\begin{equation}
+  D\left ( C_i, C_j \right ) = \min_{x \in C_i, y \in C_j} d\left ( x, y \right )
+\end{equation}
+
+\paragraph{Average-link proximity}
+Questa funzione calcola la distanza tra i due cluster come la media delle distanze elementi:
+\begin{equation}
+  D\left ( C_i, C_j \right ) = \frac{1}{|C_i||C_j|}\sum_{x \in C_i, y \in C_j} d\left ( x, y \right )
+\end{equation}
+
+\paragraph{Complete-link proximity}
+Questa funzione valuta la distanza massima tra due punti interni ad un cluster. Tale valore è noto anche come 'diametro del cluster': più tale valore è basso, più il cluster è compatto:
+\begin{equation}
+  D\left ( C_i, C_j \right ) = \max_{x \in C_i, y \in C_j} d\left ( x, y \right )
+\end{equation}
+
+\paragraph{Distanza tra centroidi}
+Questa funzione valuta la distanza massima tra due punti interni ad un cluster. Tale valore è noto anche come 'diametro del cluster': più tale valore è basso, più il cluster è compatto:
+\begin{equation}
+  D\left ( C_i, C_j \right ) = d\left ( \hat{c_i}, \hat{c_j} \right )
+\end{equation}
+
+
+Nei casi precedenti, $ d\left ( x, y \right )$ indica una qualsiasi funzione distanza su uno spazio metrico.
+\begin{figure}[htb]
+	\centering
+	\includegraphics[width = 100mm]{linkages.jpg}
+	\caption{Differenze fra i vari tipi di funzioni distanza}
+	\label{linkages}
+\end{figure}
+
+\subsection{Graph Clustering}
+Un grafo è una coppia ordinata $ G = (V, E)$ di insiemi, con $V$ insieme dei nodi ed $E$ insieme degli archi, tali che gli elementi di $E$ siano coppie di elementi da $V$ da $ E \subseteq V\times V$ segue in particolare che  $|E|\le |V|^2$.
+\\\\
+I grafi sono oggetti discreti che permettono di schematizzare una grande varietà di situazioni e di processi e spesso di consentirne delle analisi in termini quantitativi e algoritmici.
+\\\\
+Nello studio di reti complesse, è possibile trovare gruppi di nodi fortemente connessi, che possono essere raggruppati in comunità (potenzialmente sovrapposte). Questa disomogeneità di connessioni suggerisce che esiste una certa divisione naturale all’interno della rete. Nel caso particolare di strutture non sovrapposte, la ricerca di comunità implica la divisione della rete in gruppi di nodi con fortemente connessi internamente e connessioni sparse fra i gruppi.
+Una definizione più generale è basata sul principio che coppie di nodi sono più probabilmente connessi se fanno parte della stessa comunità, e meno probabilmente connessi se non condividono la stessa comunità.
+\\\\
+Le comunità sono molto comuni all’interno delle reti. Le reti sociali includono gruppi di comunità che condividono la posizione, gli interessi, l’occupazione ecc. Essere in grado di individuare queste sotto-strutture all’interno di una rete può fornire indizi  su come come funziona la rete in considerazione o la topologia che influenza i nodi. Questi indizi possono essere utili per implementare algoritmi sui grafi. Molti metodi di community detection sono stati sviluppati con diversi livelli di successo.
+
+\subsubsection{Minimum-cut method}
+In questo metodo, la rete è divisa in un numero predeterminato di parti, generalmente della stessa grandezza, scelte in modo che il numero degli archi tra i gruppi è minimizzato. Questo metodo funziona bene in molte applicazioni per le quali è stato ideato, ma non è la scelta migliore per scovare comunità in reti generali, dato che troverà comunità indistintamente dal fatto che queste ci siano o meno e troverà solo un numero fissato di comunità.
+
+\subsubsection{Hierachical-clustering}
+Un altro metodo per scovare sotto-strutture conesse nelle reti viene effettuato tramite algoritmi di clustering gerarchico. Con questo approccio si definisce una misura di similarità fra coppie di nodi. Misure comunemente usate sono la coseno similarità, l’indice di Jaccard e la distanza di Hamming fra le righe della matrice di adiacenza. Poi i gruppi di nodi simili vengono raggruppati in comunità.
+
+\subsubsection{Girvan-newman algorithm}
+Un altro algoritmo molto utilizzato è quello di Girvan–Newman. Questo algoritmo identifica all’interno della rete, gli archi che uniscono community diverse e li rimuove, isolandole. L’identificazione di tali archi è effettuata applicando una misura nota della teoria dei grafi: la \textbf{betweenness centrality}. Questa assegna un valore ad ogni arco, che è alto tanto più l’arco è attraversato nel cammino più breve (geodesico) che collega due qualsiasi nodi della rete.
+\begin{figure}[htb]
+	\centering
+	\includegraphics[width = 100mm]{betweenness.png}
+	\caption{Betweenneess centrality score}
+	\label{betweenness}
+\end{figure}
+
+\subsubsection{Modularity maximization}
+La modularità è una misura che viene attribuita al grafo.  Questa compara la densità all’interno dei cluster con la densità fra di essi. Indica una certa divisione intrinseca e viene utilizzata per conoscere “quanto“ un grafo è separato.
+\\\\
+Nonostante i suoi svantaggi uno dei metodi più utilizzati per il community detection è la massimizzazione della modularità. Questo approccio scova strutture connesse tramite la ricerca della miglior divisione di una rete in modo che la modularità risulti massimizzata. 
+\\\\
+Dato che effettuare un confronto su tutte le possibili combinazioni è solitamente impraticabile, gli algoritmi di questa famiglia si basano su metodi di ottimizzazione approssimati quali algoritmi greedy, cioè che cercano di ottenere una soluzione ottima da un punto di vista globale attraverso la scelta della soluzione considerata migliore ad ogni passo locale. Un famoso approccio di questo tipo è il metodo Louvain, che ottimizza le community locali iterativamente, fin quando la modularità globale non può più essere migliorata. 
+\\\\
+L’accuratezza di questi algoritmi, comunque, è dibattuta, in quanto è stato dimostrato che molte volte fallisce nell’individuare cluster più piccola di una certa soglia, dipendente dalla grandezza della rete. 
+\begin{figure}[htb]
+	\centering
+	\includegraphics[width = 100mm]{modularity.png}
+	\caption{Modularity score}
+	\label{modularity}
+\end{figure}
+\subsubsection{Clique-based methods}
+Le cricche (cliques) sono sottografi dove ogni nodo è collegato con ogni altro nodo nella cricca. Dato che i nodi non possono essere più connessi di così, non è sorprendente che ci siano molti metodi in community detection che si basano su questo approccio. È da notare che dato che un nodo può far parte di più di una cricca, quindi può far parte di più community contemporaneamente, questi metodi restituiscono strutture sovrapposte. 
+Un approccio consiste nel trovare cricche tali che non siano sottografi di altre cricche. Un classico algoritmo per scovare tali strutture è quello di Bron-Kerbosch.
+
+
+
+\subsection{Vector Clustering}
+Gli algoritmi di clustering in uno spazio vettoriale seguono un altro approccio. Qui viene preso in considerazione la vicinanza (o la distanza) degli elementi rappresentati come punti su un iperpiano. Il feature vector associato può avere grandi dimensioni e può essere ottenuto utilizzando diverse metodologie, dipendentemente dal tipo di dato eleborato. 
+
+\subsubsection{Hierarchical Clustering}
+Anche qui il clustering gerarchico è molto utilizzato, seguendo un approccio divisivo (top-down) o agglomerativo (bottom-up), l’idea è quella di unire (o separare) elementi in base alla loro vicinanza, seguendo uno degli approcci già descritti, costruendo così una struttura chiamata dendrogramma che raggruppa gli elementi ad ogni livello. La differenza risiede nel come viene calcolata la distanza.
+
+\subsubsection{Centroid-based clustering}
+Nell’approccio basato sui centroidi, i cluster sonorappresentati da un vettore centrale, che non è neccessariamente un membro del dataset. Quando il numero dei cluster è prefissato ad un numero k, la seguente definizione formale può essere applicata: vengono definiti k centroidi e si prosegue assegnando ogni elemento al centroide più vicino, tale che il quadrato delle distanze dal cluster è minimizzato. Molti algoritmi di questa famiglia richiedono che il parametro k sia stabilito in precedenza, che è il loro più grande svantaggio. Inoltre solitamente vengono trovati cluster di grandezza simile, dato che verrà assegnato un elemento al centroide più vicino. Questi metodi partizionano lo spazio dei dati in una struttura conosciuta come diagramma di Voronoi.
+\begin{figure}[htb]
+	\centering
+	\includegraphics[width = 130mm]{voronoi.png}
+	\caption{Diagramma di Voronoi}
+	\label{voronoi}
+\end{figure}
+Nonostante questo, rimangono tra degli approcci più utilizzati ed efficaci. Da notare anche la somiglianza concettuale con l’algoritmo di classificazione KNN (k nearest neighbor).
+
+\subsubsection{Distribution-based clustering}
+Il raggruppamento avviene analizzando l'intorno di ogni punto dello spazio. In particolare, viene considerata la densità di punti in un intorno di raggio fissato. Si basano sul considerare collegati due punti che si trovano all’interno di una certa distanza limite.
+I cluster sono definiti come aree con più alta densità rispetto al resto del dataset. Elementi in un area meno denso sono spesso considerati rumore, quindi come non facenti parte di nessun cluster.
+\\\\
+Uno degli svantaggi di questi algoritmi è che si aspettano un certo tipo di densità comune a tutti i cluster. Inoltre non eccellono nel scovare cluster presenti in molti dati del mondo reale.
+
+\subsubsection{Document Clustering}
+Agisce sempre nello spazio vettoriale, si differenzia principalmente nelle operazioni di pre-processing finalizzate ad ottenere un feature vector utilizzabile. 
+Un approccio efficace consiste nel rappresentare i documenti come vettori dove ogni dimensione rappresenta la frequenza di occorrenza di una parola del vocabolario, un insieme di parole precedentemente costruito utilizzando tutte le parole del corpus. 
+\begin{figure}[htb]
+	\centering
+	\includegraphics[width = 100mm]{tdm.png}
+	\caption{Matrice termini-documenti. Ogni riga rappresenta un singolo termine ed ogni colonna rappresenta un singolo documento}
+	\label{tdm}
+\end{figure}
+
+\paragraph{Term-Frequency (TF)}misura quante volte un termine appare in un documento. Dato che ogni documento ha lunghezza differente, è possibile che un termina possa apparire molte più volte nei documenti più lunghi che in quelli più corti. Quindi può essere necessario  dividere la frequenza dei termini per documenti aventi la stessa lunghezza.
+
+\paragraph{Inverse-Document-Frequency (IDF)}un altro aspetto da considerare è a frequenza di un termine in un documento relativamente alla sua presenza globale in tutto il corpus. Tenendo in considerazione solo la frequenza di occorrenza tutti i termini sono considerati ugulamente importanti. Termini che appaiono molte volte in un documento ma meno volte in tutto il corpus potrebbero essere molto più significativi per quel specifico documento e portare molta più informazione, quindi tendono ad essere più importanti. Così come i termini che appaiono molte volte in tutti i dcoumenti del corpus sono spesso poco rilevanti e considerati inutili (stopwords).
+\begin{equation}
+	idf_i = \log \frac{|D|}{|\left \{ d : t_i \in d \right \}|}
+\end{equation}
+dove $ |D| $ è il numero di documenti nella collezione, mentre il denominatore è il numero di documenti che contengono il termine $t_i$.
+Tale funzione aumenta proporzionalmente al numero di volte che il termine è contenuto nel documento, ma cresce in maniera inversamente proporzionale con la frequenza del termine nella collezione. L'idea alla base di questo comportamento è di dare più importanza ai termini che compaiono nel documento, ma che in generale sono poco frequenti.
+\\\\
+Altre tecniche utilizzate nel clustering sui documenti sono
+\paragraph{LSI} il \textbf{Latent Semantic Indexing} è un metodo di indicizzazione e reperimento che usa una tecnica matematica chiamata decomposizione a valori singolari (SVD) per identificare pattern nelle relazioni tra i termini e i concetti contenuti in una colezione non strutturata di testo. La LSI è basata sul principio che parole che sono usate nello stesso contesto tendono ad avere significato simile. Chiamata così per la sua abilità di correlare semanticamente termini correlati che sono nascosti (latenti) in grandi collezioni testuali. La SVD può venire troncata per task di dimensionality reduction, in modo da diminuire la dimensione del vettore mantenendo comunque il significato.
+
+\paragraph{Coseno similarità} una euristica per la misurazione della similitudine tra due vettori effettuata calcolando il coseno tra di loro. Dati due vettori di attributi numerici, $A$ e $B$, il livello di similarità tra di loro è espresso utilizzando la formula
+\begin{equation}
+	similarity = \cos \theta = \frac{A\cdot B}{||A||||B||}
+\end{equation}
+In base alla definizione del coseno, dati due vettori si otterrà sempre un valore di similitudine compreso tra $-1$ e $+1$, dove $-1$ indica una corrispondenza esatta ma opposta (ossia un vettore contiene l'opposto dei valori presenti nell'altro) e $+1$ indica due vettori uguali.
+Nel caso dell'analisi dei testi, poiché le frequenze dei termini sono sempre valori positivi, si otterranno valori che vanno da 0 a $+1$, dove $+1$ indica che le parole contenute nei due testi sono le stesse (ma non necessariamente nello stesso ordine) e $0$ che non c'è nessuna parola che appare in entrambi.
+
+\subsection{Algoritmi utilizzati}
+Vengono riportati di seguito gli algoritmi di clustering testati sul dataset generato. L'obiettivo della tesi comunque non è verificare la validità di questi ma verificare se la soluzione proposta rappresenti un miglioramento ed una possibile alternativa alle soluzioni più diffuse e consolidate nell'ambito del clustering di pagine Web.
+\begin{itemize}
+\item \textbf{WalkTrap}
+È un approccio basato su Random Walk. L'idea generale è che se vengono generati dei Random Walk sul grafo, i percorsi rimarrano probabilmente all'interno della stessa comunità perchè ci sono meno archi che congiungono comunità diverse. 
+\\
+L'algoritmo esegue piccoli Random Walk (dipendente da un parametro in input) è usa i risultati per fondere comunità diverse in maniera bottom-up. Tagliando il dendrogramma risultante ad una certa altezza è possibile ricevere il numero di cluster desiderati.
+
+\item \textbf{Fastgreedy}
+È un approccio gerarchico bottom-up. Cerca di ottimizzare una funzione di modularità in maniera greedy, euristica attuata effettuando la scelta migliore con le informazioni in possesso ad ogni iterazione.
+Inizialmente ogni nodo è una comunità separata e ricorsivamente si procede ad unire i nodi in modo che la fusione porti al massimo aumento di modularità rispetto al valore corrente. 
+\\
+L'algoritmo finisce quando non è più possibile aumentare la modularità. È un metodo veloce, solitamente usato come primo approccio perchè non ha parametri da modificare.
+\item \textbf{K-Means}
+Divide il dataset in un numero prefissato $k$ di cluster. Inizialmente vengono scelti casualmente $k$ punti, non necessariamente facenti parte del dataset, chiamati centroidi. Si procede assegnando ogni data point al centroide più vicino e ricalcolando il centroide sulla media aritmetica dei punti contiene. 
+\\
+Questo processo di assegnazione dei data point e ricalcolo dei centroidi continua fino a quando non avvengono più assegnazioni. I $k$ cluster risultanti saranno quelli restituiti. Anche questo algoritmo rappresenta spesso il punto di partenza nell'analisi di un dataset, in quanto molto spesso porta a buoni risultati ma ha come svantaggio il dover sapere a priori il numero di cluster desiderati.
+
+\item \textbf{DBSCAN}
+Deriva da \textit{Density-Based Spatial Clustering of Applications with Noise} è un algortimo basato sulla densità, connettendo regioni di punti con densità sufficientemente alta. Fondamentalmente, un punto $q$  è direttamente raggiungibile da un punto $p$ se non viene superata una data distanza $\epsilon$ e se $p$ è circondato da un numero sufficiente di punti, allora $p$ e $q$ possono essere considerati parti di un cluster. 
+\\
+Si può affermare che $q$ è density-reachable da $p$ se c'è una sequenza $p_1, p_2,  \ldots, p_n$ di punti con $p_1 = p$ e $p_n = q$ dove ogni $p_{i+1}$ è density-reachable direttamente da $p_i$. Da notare che la relazione density-reachable non è simmetrica (dato che $q$ potrebbe situarsi su una periferia del cluster, avendo un numero insufficiente di vicini per considerarlo un elemento genuino del cluster). Di conseguenza la nozione density-connected diventa: due punti $p$ e $q$ sono density-connected se c'è un punto $o$ tale che sia $o$ e $p$ che $o$ e $q$ sono density-reachable.
+\\
+Un cluster, che è un sotto-insieme dei punti del database, soddisfa due proprietà:
+
+\textit{i)}Tutti i punti all'interno del cluster sono mutualmente density-connected.
+\textit{ii)}Se un punto è density-connected a un altro punto del cluster, anch'esso è parte del cluster.
+
+\item \textbf{HDBSCAN}
+Deriva da \textit{Hierarchical Density-Based Spatial Clustering of Applications with Noise}~\cite{Campello15}. Applica DBSCAN variando il valore dell $\epsilon$ ed integra i risultati restituendo cluster che stabilizzano meglio tale valore.
+\\
+Questo permette ad HDBSCAN di trovare cluster con densità diversa, principale svantaggio di DBSCAN.
+\end{itemize}
+
 
 \section{Data Visualization}
 \begin{figure}[h!]

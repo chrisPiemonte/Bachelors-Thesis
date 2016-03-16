@@ -7,36 +7,35 @@
 
 %************************************************
 
-Il clustering di pagine web è un argomento trattato estensivamente in letteratura che ha come obiettivo raggruppare pagine all'interno di cluster omogenei, anche se gran parte del lavoro svolto si basa su un insieme arbitrario di pagine derivanti da molteplici siti differenti. Relativamente poco è stato il lavoro svolto sul clustering di un specifico sito di una determinata organizzazione.
-\\\\
-Principalmente si dividono sulla base dei criteri che utilizzano per raggruppare le pagine, ovvero se considerano la semantica, la struttura o l'utilizzo.
+Il clustering di pagine Web non è un nuovo ambito di ricerca. Nei diversi anni si sono susseguite in letteratura una serie di tecniche e metodologie per il raggruppamento ed il reperimento di pagine Web. 
+Tuttavia gli sforzi si sono concentrati prevalentemente su pagine provenienti da diversi siti Web. Relativamente poco è stato il lavoro svolto sul clustering di un specifico sito di una determinata organizzazione. Questo fattore influisce sulla semantica degli hyperlink all'interno di una pagina Web, questi hanno infatti significati diversi in relazione al domino di destinazione. Se la pagina puntata si trova nello stesso dominio, il collegamento avrà funzione di organizzazione dei contenuti, mentre se il collegamento punta ad una pagina esterna, questo sarà indirizzato alla conferma del contenuto mostrato e presenterà molto probabilmente argomenti simili.
+Inoltre scovare correlazioni nelle pagine Web può essere effettuato attraverso l'analisi del contenuto sia visivo, ovvero la renderizzazione del linguaggio di Markup, oppure del contenuto strutturale ed organizzativo di una pagina, ad esempio attraverso la scoperta di pattern nei tag HTML o XML. L'analisi del contenuto può essere usata per estrarre il topic di una pagina Web e raggrupparla con altre pagine non necessariamente collegate, ma trattanti lo stesso argomento. 
 
-\subsubsection{Semantica delle pagine web}
-Come proposto in \cite{Cooley03}, questo approccio suggerisce l'utilizzo di informazioni semantiche per migliorare il processo di estrazione, necessitano quindi meta-informazioni aggiuntive sulla struttura e sulla gerarchia. Le foglie nel livello più basso sono le pagine web, che sono poi raggruppate in cluster sulla base di una qualche affinità semantica. 
+Gli svantaggi di queste metodologie derivano dall'eterogeneità del Web e dalle assunzioni di partenza. Infatti la struttura a grafo fortemente connessa di un sito web può non bastare a codificare tutte le informazioni necessarie. Inoltre le assunzioni di indipendenza dei documenti nella collezione e dei termini nel documento non sono sempre verificate, soprattutto nel contesto del Web. 
+
+Le tecniche diffuse in letteratura possono dunque essere raggruppate in base alle informazioni che considerano, ovvero se la semantica, la struttura o l'utilizzo di una pagina Web.
+
+\begin{itemize}
+
+\item Come proposto in \cite{Cooley03}, questo approccio suggerisce l'utilizzo di informazioni semantiche per migliorare il processo di estrazione, necessitano quindi meta-informazioni aggiuntive sulla struttura e sulla gerarchia. Il contenuto può essere utilizzato per rappresentare la distribuzione dei termini o possono essere estratte informazioni aggiuntive attraverso l'analisi dei metadati o sapendo se è stato utilizzato un particolare tool per la gestione del sito.
+
+\item La struttura interna alle pagine Web può essere analizzata per scovare pattern ricorrenti nei tag. Infatti le pagine HTML presentano tag innestati in maniera gerarchica che formano una struttura ad albero. Questa può essere utilizzata per costruire una funzione di similarità. 
+
+\item Come introdotto precedentemente, la struttura del Web suggerisce l'applicazione di analisi del grafo ricavato dagli hyperlink. Soluzioni proposte \cite{Luxburg07} si basano sul dividere tale struttura in sotto-grafi, tramite una funzione che minimizza il numero di archi tra cluster e massimizza il numero degli archi tra i nodi di un cluster. In questo caso il clustering delle pagine web diventa il partizionamento del grafo. 
+
+\item Possono essere estratti pattern di utilizzo dai Web log ed essere utilizzati per predire il comportamento futuro degli utenti, per raggruppare le pagine in base agli interessi comuni o per pesare gli archi del grafo, in modo da combinare diversi approcci \cite{Shahabi97}. Lavori recenti si stanno dirigendo sempre più sullo Web Usage Mining, in modo da personalizzare le risposte alle query immesse nei motori di ricerca~\cite{Crabtree06}.
+\end{itemize}
+
+\section{SiteMap Generator}
+Molto del lavoro svolto sull'argomento si focalizza sul clustering di pagine web provenienti da siti diversi basandosi su di un approccio specifico piuttosto che un altro. Un caso interessante è il sistema SiteMap Generator (SMG)~\cite{Lin11} che mette in pratica un approccio ibrido, analizzando sia la struttura interna che quella esterna. Infatti esso divide la pagina in blocchi, li classifica sulla base della loro rilevanza per costruire la sitemap, ed infine analizza i collegamenti che ci sono fra blocchi per identificare i blocchi più autorevoli. In seguito i blocchi con alta frequenza di occorrenza e un alto valore hub, ottenuto nell'ultima fase tramite l'algoritmo HITS, vengono utilizzati per generare la sitemap.
 \\
-Gerarchie semantiche possono essere definite seguendo diversi criteri, che dipendono dagli obiettivi e dalle analisi. Le informazioni aggiuntive necessarie possono essere basate sul contenuto delle pagine web, come ad esempio i metadati, o sapere se è stato un particolare tool o processo nella creazione delle pagine.
-
-\subsubsection{Struttura interna delle pagine web}
-Questi prendono in considerazione la struttura interna di una pagina analizzandone il DOM. La struttura ad albero di una pagine HTML è stata usata per la segmentazione di una pagina ed utilizzare i collegamenti tra queste per raggrupparle \cite{Lin10} o per scovare pattern \cite{Kudelka08} ricorrenti, utili nel misurare la similarità.
-
-\subsubsection{Struttura del grafo del web}
-Utilizza il grafo del web, dove le pagine sono i nodi e gli archi sono i collegamenti fra queste.
+In SMG l'obiettivo è dunque la costruzione della sitemap, estraendo dalla struttura delle pagine di uno stesso dominio gli hyperlink necessari. Questo è un approccio particolare in quanto viene introdotto il concetto di inlink ed outlink fra blocchi piuttosto che tra pagine. 
 \\
-In questo caso il clustering delle pagine web diventa il partizionamento del grafo. Soluzioni proposte \cite{Luxburg07} si basano sul dividere tale struttura in sotto-grafi, tramite una funzione che minimizza il numero di archi tra cluster e massimizza il numero degli archi tra i nodi di un cluster.
+Anche se lo scopo è diverso, è utile notare che come in Url2vec, in SMG vengono ispezionate solo pagine all'interno di uno stesso dominio e vengono utilizzati algoritmi derivanti da svariate aree applicative, come la biologia o la già citata variante dell'algoritmo HITS \cite{Kleinberg99}
 
-\subsubsection{Web usage clustering}
-Possono essere estratti pattern di utilizzo dai web log ed essere utilizzati per predire il comportamento futuro degli utenti, per raggruppare le pagine in cluster in base agli interessi in comune o per pesare gli archi del grafo, in modo da combinare diversi approcci \cite{Shahabi97}. Lavori recenti si stanno dirigendo sempre più sullo web usage mining, quindi raggruppando pagine web prevalentemente in base all'utilizzo da parte degli utenti, in modo da personalizzare le risposte alle query immesse nei motori di ricerca~\cite{Crabtree06}.
-
-
-\section{In-domain clustering}
-Molto del lavoro svolto sull'argomento si focalizza sul clustering di pagine web provenienti da siti diversi basandosi su di un approccio specifico piuttosto che un altro. Un caso interessante è il sistema SiteMap Generator (SMG)~\cite{Lin11} che mette in pratica un approccio ibrido, analizzando sia la struttura interna che quella esterna. Infatti esso divide la pagina in blocchi, li classifica sulla base della loro rilevanza ed infine analizza i collegamenti che ci sono fra blocchi, eventualmente anche di pagine diverse. In seguito i blocchi con alta frequenza di occorrenza e un alto valore hub, ottenuto nell'ultima fase tramite l'algoritmo HITS, vengono utilizzati per generare la sitemap.
+\section{DeepWalk}
+Nell'ambito della Social Networks Analysis, DeepWalk \cite{Perozzi14} propone una metodologia interessante. Dato un grafo, vengono generati Random Walk di piccola lunghezza. Questi vengono poi trattati come frasi, e applicando tecniche di Natural Language Processing viene stimata la verosimiglianza che specifiche sequenze di parole (in questo caso i nodi del grafo) appaiano nel corpus, ovvero l'insieme dei Random Walk generati. Queste vengono poi rappresentate in uno spazio vettoriale.
 \\
-In SMG l'obiettivo è dunque la costruzione della sitemap, estraendo dalla struttura delle pagine di uno stesso dominio gli hyperlink necessari.
-
-\section{Random walk come frasi}
-Nell'ambito della social networks analysis, DeepWalk \cite{Perozzi14} propone una metodologia interessante attraverso l'analisi dei grafi. Dato un grafo, vengono generati random walk di piccola lunghezza. Questi vengono poi trattati come frasi, e applicando tecniche di Natural Language Processing viene stimata la verosimiglianza che specifiche sequenze di parole (in questo caso i nodi del grafo) appaiano nel corpus, ovvero l'insieme dei random walk generati. Queste vengono poi mappate in uno spazio vettoriale.
+Questo approccio viene applicato nell'ambito delle reti sociali per l'identificazione di gruppi sociali correlati, tecnica che viene chiamata ''Community Detection''.
 \\
-Questo approccio viene applicato nell'ambito dei social network per apprendere rappresentazioni sociali dei vertici. La parte interessante è l'applicazione di tecniche consolidate per la risoluzione di problemi differenti.
-
-\section{Sviluppi recenti}
-Articoli recenti si allontanano dalla classica rappresentazione vettoriale dei documenti, basata sula frequenza di occorrenza delle parole all'interno dei documenti. Questa può evidenziare una similarità tra i documenti non esaustiva. Può rivelarsi utile disambiguare le query immesse nei motori di ricerca o assegnare una misura di rilevanza di un documento ad un dato argomento.
+In Url2vec l'obiettivo rimane quello di raggruppare le pagine Web in cluster, quindi la sostanziale differenza riguarda l'informazione presente all'interno del nodo del grafo di interesse. Si tratta appunto di una pagina Web, che comprende informazioni di tipo testuale. 

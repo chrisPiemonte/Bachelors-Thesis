@@ -8,21 +8,21 @@
 \contentsline {figure}{\numberline {1.5}{\ignorespaces Vettori corrispondenti alle frasi\relax }}{12}
 \contentsline {figure}{\numberline {1.6}{\ignorespaces Matrice di similarit\IeC {\`a}\relax }}{13}
 \contentsline {figure}{\numberline {1.7}{\ignorespaces Assegna uno "score" utilizzando Pagerank\relax }}{14}
-\contentsline {figure}{\numberline {1.8}{\ignorespaces La visualizzazione dei dati \IeC {\`e} un passo fondamentale nell'analisi dei dati.\relax }}{14}
-\contentsline {figure}{\numberline {1.9}{\ignorespaces Riduzione da tre a due dimensioni.\relax }}{15}
+\contentsline {figure}{\numberline {1.8}{\ignorespaces Differenze fra i vari tipi di funzioni distanza\relax }}{16}
+\contentsline {figure}{\numberline {1.9}{\ignorespaces Betweenneess centrality score\relax }}{18}
+\contentsline {figure}{\numberline {1.10}{\ignorespaces Modularity score\relax }}{19}
+\contentsline {figure}{\numberline {1.11}{\ignorespaces Diagramma di Voronoi\relax }}{21}
+\contentsline {figure}{\numberline {1.12}{\ignorespaces Matrice termini-documenti. Ogni riga rappresenta un singolo termine ed ogni colonna rappresenta un singolo documento\relax }}{22}
+\contentsline {figure}{\numberline {1.13}{\ignorespaces La visualizzazione dei dati \IeC {\`e} un passo fondamentale nell'analisi dei dati.\relax }}{27}
+\contentsline {figure}{\numberline {1.14}{\ignorespaces Riduzione da tre a due dimensioni.\relax }}{27}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Architettura di un web crawler\relax }}{19}
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Differenze tra ricerca in ampiezza e ricerca in profondit\IeC {\`a}\relax }}{22}
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Rappresentazione visuale di 8 random walk monodimensionali. \relax }}{25}
-\contentsline {figure}{\numberline {2.4}{\ignorespaces Rappresentazione visuale di un random walk di 25.000 passi su due dimensioni. \relax }}{26}
-\contentsline {figure}{\numberline {2.5}{\ignorespaces Random walk sul grafo. \relax }}{30}
-\contentsline {figure}{\numberline {2.6}{\ignorespaces Differenze fra i vari tipi di funzioni distanza\relax }}{35}
-\contentsline {figure}{\numberline {2.7}{\ignorespaces Betweenneess centrality score\relax }}{37}
-\contentsline {figure}{\numberline {2.8}{\ignorespaces Modularity score\relax }}{38}
-\contentsline {figure}{\numberline {2.9}{\ignorespaces Diagramma di Voronoi\relax }}{40}
-\contentsline {figure}{\numberline {2.10}{\ignorespaces Matrice termini-documenti. Ogni riga rappresenta un singolo termine ed ogni colonna rappresenta un singolo documento\relax }}{41}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Architettura di un web crawler\relax }}{31}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Differenze tra ricerca in ampiezza e ricerca in profondit\IeC {\`a}\relax }}{34}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Rappresentazione visuale di 8 random walk monodimensionali. \relax }}{37}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Rappresentazione visuale di un random walk di 25.000 passi su due dimensioni. \relax }}{38}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Random walk sul grafo. \relax }}{42}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Grafo del sito \texttt {cs.illinois.edu} etichettato manualmente.\relax }}{57}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Rappresentazione del sito \texttt {cs.illinois.edu}, clusterizzato con K-Means.\relax }}{59}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Grafo del sito \texttt {cs.illinois.edu} etichettato manualmente.\relax }}{58}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Rappresentazione del sito \texttt {cs.illinois.edu}, clusterizzato con K-Means.\relax }}{60}
 \addvspace {10\p@ }
