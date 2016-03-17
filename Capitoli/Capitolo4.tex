@@ -8,10 +8,15 @@
 %************************************************
 In questo capitolo si descriverà la progettazione e l’esecuzione della sperimentazione. 
 
-Obiettivo di questo capitolo è quello di valutare l’efficacia dell'approccio realizzato al fine di comprendere se e come i dati strutturati, di cui un sito web si compone,  possano essere combinati con dati non strutturati, come quelli testuali, al fine di migliorare il processo di clustering e valutare in dettaglio le cause di un eventuale successo o insuccesso delle tecniche utilizzate. Questa tesi rappresenta quindi un lavoro preliminare utile a comprendere la bontà della soluzione proposta e quindi decidere se proseguire gli studi in questa direzione o definire strategie alternative.
+Obiettivo di questo capitolo è quello di valutare l’efficacia dell'approccio realizzato al fine di comprendere se e come i dati strutturati, di cui un sito web si compone,  possano essere combinati con dati non strutturati, come quelli testuali, al fine di migliorare il processo di clustering e valutare in dettaglio le cause di un eventuale successo o insuccesso delle tecniche utilizzate.
+A tal fine si confornteranno le performance degli algoritmi di clustering basati su rappresentazione a grafo con algoritmi di clustering basati su rappresentazione vettoriale contenente informazioni sulla struttura del grafo stesso.
+ 
+Questa tesi rappresenta un lavoro preliminare utile a comprendere la bontà della soluzione proposta e quindi decidere se proseguire gli studi in questa direzione o definire strategie alternative.
 
-A tal fine si è deciso di valutare la qualità dell'approccio proposto confrontando le prestazioni di alcuni algoritmi di clustering basati su due differenti tipi di rappresentazione: rappresentazione a grafo e rappresentazione vettoriale.
+Si descrivono di seguito i dataset e le configurazioni degli algoritmi di clustering su cui sono realizzate le sperimentazioni e le metriche utilizzate per valutare la qualità dei cluster estratti. Infine verranno mostrati una serie di grafici e tabelle utili a comparare i risultati ottenuti al variare delle configurazioni.
 
+%A tal fine si è deciso di valutare la qualità dell'approccio proposto confrontando le prestazioni di alcuni algoritmi di clustering basati su due differenti tipi di rappresentazione: rappresentazione a grafo e rappresentazione vettoriale.
+\section{Dataset}
 La sperimentazione è stata effettuata sfruttando i dati provenienti da siti web appartenenti a tre importanti dipartimenti di Computer Science:
 %i risultati ottenuti attraverso l'applicazione di diversi algoritmi di clustering su dataset ottenuti da differenti rappresentazioni. L'algoritmo è stato testato effettuando il crawling di $3$ siti web, che sono stati poi etichettati manualmente per ricavare le metriche necessarie alla valutazione della tesi proposta.
 
@@ -27,13 +32,14 @@ Il crawling è stato lanciato con profondità massima $10$, e immagazzinando un 
 
 \item Dipartimento di Computer Science dell'università di Princeton, NJ: \texttt{cs.princeton.edu} \\ Il crawling è stato lanciato con profondità massima $7$, e immagazzinando un massimo di $10.000$ termini per ogni pagina esplorata. Il grafo web estratto si compone di $16378$ pagine web e $206985$ hyperlink. Dal grafo sono state poi generate $10.000$ sequenze di lunghezza massima $10$.
 
-\item Dipartimento di Computer Science dell'università di Oxford, UK: \texttt{cs.ox.ac.uk} \\ Il crawling è stato lanciato con profondità massima $5$, e immagazzinando un massimo di $10.000$ termini per ogni pagina esplorata. Il grafo web estratto si compone di $4183$ pagine web e $27954$ hyperlink. Dal grafo sono state poi generate $10.000$ sequenze di lunghezza massima $10$.
+\item Dipartimento di Computer Science dell'università di Oxford, UK:\\ \texttt{cs.ox.ac.uk} \\ Il crawling è stato lanciato con profondità massima $5$, e immagazzinando un massimo di $10.000$ termini per ogni pagina esplorata. Il grafo web estratto si compone di $4183$ pagine web e $27954$ hyperlink. Dal grafo sono state poi generate $10.000$ sequenze di lunghezza massima $10$.
 
 \end{itemize}
 
 La scelta dei precedenti siti è dovuta a ragioni di confidenza con il dominio applicativo. Infatti la valutazione dei risultati sperimentali ha richiesto, oltre che il crawling dei siti web sopracitati anche una fase di etichettatura delle pagine web al fine di generare una ground truth.
 
-Si descrivono di seguito le metriche utilizzate per valutare la qualità dei cluster estratti, la scelta delle modalità di esecuzione più interessanti e si mostreranno una serie di tabelle e grafici contenenti i risultati ottenuti. 
+
+%Si descrivono di seguito le metriche utilizzate per valutare la qualità dei cluster estratti, la scelta delle modalità di esecuzione più interessanti e si mostreranno una serie di tabelle e grafici contenenti i risultati ottenuti. 
 
 
 \section{Metriche}
@@ -133,13 +139,21 @@ dove:
 
 La Silhouette può variare da $-1$, per cluster non definiti, a $1$ per cluster densamente connessi. Un valore intorno allo $0$ indica cluster sovrapposti. In generale cluster convessi o molto densi come quelli ottenuti con DBSCAN, assumono alti valori.
 %Tende comunque ad essere maggiore per cluster convessi, o con alta densità, come quelli ottenuti con DBSCAN.
-
-
 \section{Configurazioni}
+Si descrivono di seguito le configurazioni utilizzate per gli algoritmi di clustering utilizzati durante la fase di sperimentazione. 
+
+\subsection{Community Detection}
+
+\section{Configurazioni2}
+Si descrivono di seguito le configurazioni utilizzate per gli algoritmi di clustering utilizzati durante la fase di sperimentazione. 
+\color{red}
+
+QUESTA PARTE METTILA NELLA PARTE DI DISCUSSIONE DEI RISULTATI.
+
 Dalla scelta di apprendere le rappresentazioni vettoriali delle relazioni invece di utilizzare algoritmi di Community Detection del grafo, sono derivati dei vantaggi. Innanzitutto gli algoritmi di partizionamento dei grafi hanno complessità NP-completa, ovvero necessitano di un tempo superpolinomiale nella dimensione dell'input. Nel contesto del Web Mining la dimensione del dataset può crescere enormemente ed avere soluzioni più efficienti costituisce senz'altro una priorità. 
 \\
 In tutti i casi di seguito riportati sono stati generati grafi sia in modalità classica, che attraverso l'estrazione delle liste. Nel primo caso i dataset saranno chiamati \textbf{''nc''} (no-costraint, senza vincoli), mentre nel secondo caso \textbf{''lc''} (list-costraint, con il vincolo delle liste (vedere \ref{liste}). Dove omessa, la configurazione è rimasta invariata.
-
+\color{black}
 \subsection{Community Detection}
 Sono state applicate metodologie derivanti dalla teoria dei grafi per l'estrazione di strutture connesse all'interno del grafo web. Questo può essere utile nella individuazione di community all'interno di grafi come ad esempio social network. La divisione del grafo in community può essere effettuata seguendo diversi approcci, inoltre la rete costruita su di un tipico sito web è caratterizzata solitamente da un numero elevato di collegamenti tra pagine che suggeriscono l'utilizzo di alcune tipologie piuttosto che altre. Infatti misure come la betweenness non hanno restituito risultati significativi.
 Sono stati comunque effettuati test utilizzando la rappresentazione a grafo per confrontare al meglio i risultati globali ottenuti.
@@ -272,7 +286,7 @@ I parametri personalizzati sono:
 \frac{v_c \cdot v_w}{\sum\limits_{c \in C} v_c \cdot v_w}
 \end{equation}
 Questa operazione può essere molto lenta. Per accelerare il processo possono venir scelti $n$ contesti casuali da confrontare. Questo parametro, se maggiore di $0$, rappresenta il numero di vettori da confrontare.
-\item \textbf{sg} definisce l'algoritmo di apprendimento, di default viene usato \textit{CBOW}, mentre se impostato a $1$ utilizza \textit{skip-gram} \cite{Mikolov13}
+\item \textbf{sg} definisce l'algoritmo di apprendimento, di default viene usato \textit{CBOW}, mentre se impostato a $1$ utilizza \textit{skip-gram} \cite{Mikolov13}. Per lo scopo della sperimentazione si imposterà questo valore a  CBOW.
 \end{itemize}
 I migliori risultati sono stati osservati con:
 
