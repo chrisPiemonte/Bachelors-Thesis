@@ -58,24 +58,28 @@
 \contentsline {section}{\numberline {3.1}Liste da sorgenti dati strutturate}{49}
 \contentsline {section}{\numberline {3.2}Teoria dei Random Walk}{50}
 \contentsline {chapter}{\numberline {4}Sperimentazione}{52}
-\contentsline {section}{\numberline {4.1}Metriche}{53}
+\contentsline {section}{\numberline {4.1}Metriche}{54}
 \contentsline {paragraph}{Silhouette}{57}
-\contentsline {section}{\numberline {4.2}Configurazioni}{57}
+\contentsline {section}{\numberline {4.2}Configurazioni}{58}
 \contentsline {subsection}{\numberline {4.2.1}Community Detection}{58}
 \contentsline {paragraph}{\texttt {cs.illinois.edu}}{59}
 \contentsline {paragraph}{\texttt {cs.stanford.edu}}{60}
 \contentsline {paragraph}{\texttt {eecs.mit.edu}}{60}
+\contentsline {paragraph}{\texttt {cs.princeton.edu}}{61}
 \contentsline {subsection}{\numberline {4.2.2}URL Embedding}{61}
-\contentsline {paragraph}{\texttt {cs.illinois.edu}}{62}
+\contentsline {paragraph}{\texttt {cs.illinois.edu}}{63}
 \contentsline {paragraph}{\texttt {cs.stanford.edu}}{63}
 \contentsline {paragraph}{\texttt {eecs.mit.edu}}{64}
-\contentsline {subsection}{\numberline {4.2.3}Text Mining}{65}
-\contentsline {paragraph}{\texttt {cs.illinois.edu}}{66}
-\contentsline {paragraph}{\texttt {cs.stanford.edu}}{67}
-\contentsline {paragraph}{\texttt {eecs.mit.edu}}{68}
-\contentsline {subsection}{\numberline {4.2.4}Embedding e Text Mining}{69}
-\contentsline {paragraph}{\texttt {cs.illinois.edu}}{69}
-\contentsline {paragraph}{\texttt {cs.stanford.edu}}{70}
-\contentsline {paragraph}{\texttt {eecs.mit.edu}}{70}
-\contentsline {subsection}{\numberline {4.2.5}Analisi dei risultati}{71}
-\contentsline {chapter}{\numberline {5}Conclusioni e sviluppi futuri}{74}
+\contentsline {paragraph}{\texttt {cs.princeton.edu}}{65}
+\contentsline {subsection}{\numberline {4.2.3}Text Mining}{66}
+\contentsline {paragraph}{\texttt {cs.illinois.edu}}{67}
+\contentsline {paragraph}{\texttt {cs.stanford.edu}}{68}
+\contentsline {paragraph}{\texttt {eecs.mit.edu}}{69}
+\contentsline {paragraph}{\texttt {cs.princeton.edu}}{70}
+\contentsline {subsection}{\numberline {4.2.4}Embedding e Text Mining}{71}
+\contentsline {paragraph}{\texttt {cs.illinois.edu}}{71}
+\contentsline {paragraph}{\texttt {cs.stanford.edu}}{72}
+\contentsline {paragraph}{\texttt {eecs.mit.edu}}{72}
+\contentsline {paragraph}{\texttt {cs.princeton.edu}}{73}
+\contentsline {subsection}{\numberline {4.2.5}Analisi dei risultati}{73}
+\contentsline {chapter}{\numberline {5}Conclusioni e sviluppi futuri}{77}

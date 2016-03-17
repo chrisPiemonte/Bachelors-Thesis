@@ -19,11 +19,13 @@ La sperimentazione è stata effettuata sfruttando i dati provenienti da siti web
 
 \item Dipartimento di Computer Science dell'università di Urbana, IL:\\
 \texttt{www.cs.illinois.edu}\\
-Il crawling è stato lanciato con profondità massima $10$, e immagazzinando un massimo di $10.000$ termini per ogni pagina esplorata. Il grafo web estratto si compone di $728$ pagine web e $16993$ hyperlink. Dal grafo sono state poi generate $10.000$ sequenze di lunghezza massima $10$. Sono state collezionate $728$ pagine web.
+Il crawling è stato lanciato con profondità massima $10$, e immagazzinando un massimo di $10.000$ termini per ogni pagina esplorata. Il grafo web estratto si compone di $728$ pagine web e $16993$ hyperlink. Dal grafo sono state poi generate $10.000$ sequenze di lunghezza massima $10$.
 
-\item Dipartimento di Computer Science dell'università di Stanford, CA: \texttt{cs.stanford.edu} \\Il crawling è stato effettuato con profondità massima $10$, e immagazzinando un massimo di $10.000$ termini per ogni pagina esplorata. Il grafo web estratto si compone di $1458$ pagine web e $99686$ hyperlink. Dal grafo sono state poi generate $10.000$ sequenze di lunghezza massima $10$. Il processo ha collezionato $1458$ pagine web.
+\item Dipartimento di Computer Science dell'università di Stanford, CA: \texttt{cs.stanford.edu} \\Il crawling è stato effettuato con profondità massima $10$, e immagazzinando un massimo di $10.000$ termini per ogni pagina esplorata. Il grafo web estratto si compone di $1458$ pagine web e $99686$ hyperlink. Dal grafo sono state poi generate $10.000$ sequenze di lunghezza massima $10$.
 
-\item Dipartimento di Computer Science del  Massachusetts Institute of Technology a Cambridge, MA: \texttt{eecs.mit.edu} \\ Il crawling è stato lanciato con profondità massima $10$, e immagazzinando un massimo di $10.000$ termini per ogni pagina esplorata. Il grafo web estratto si compone di $1745$ pagine web e $63937$ hyperlink. Dal grafo sono state poi generate $10.000$ sequenze di lunghezza massima $10$. Sono state collezionate $1745$ pagine web.
+\item Dipartimento di Computer Science del  Massachusetts Institute of Technology a Cambridge, MA: \texttt{eecs.mit.edu} \\ Il crawling è stato lanciato con profondità massima $10$, e immagazzinando un massimo di $10.000$ termini per ogni pagina esplorata. Il grafo web estratto si compone di $1745$ pagine web e $63937$ hyperlink. Dal grafo sono state poi generate $10.000$ sequenze di lunghezza massima $10$.
+
+\item Dipartimento di Computer Science dell'università di Princeton, NJ: \texttt{cs.princeton.edu} \\ Il crawling è stato lanciato con profondità massima $7$, e immagazzinando un massimo di $10.000$ termini per ogni pagina esplorata. Il grafo web estratto si compone di $16378$ pagine web e $206985$ hyperlink. Dal grafo sono state poi generate $10.000$ sequenze di lunghezza massima $10$.
 
 \end{itemize}
 
@@ -60,7 +62,7 @@ Formalmente la \textit{Completezza} può essere così formulata:
 c = 1 - \frac{H(C|K)}{H(K)}
 \end{equation}
 dove $H(C|K)$ è definita nell'equazione \ref{hck} e $H(K)$ è l'entropia dei cluster. Come nel caso dell'Omogeneità la Completezza di una soluzione ideale assume valore 1.
-\item \textbf{V-Measure} è una misura basata sull'entropia che esplicitamente calcola quanto i criteri di omogeneità e completezza sono stati soddifatti. Essa è computata come la media armonica fra Omogeneità e Completezza, così come Precisione e Richiamo sono combinati nel calcolo del F-Measure:
+\item \textbf{V-Measure}: è una misura basata sull'entropia che esplicitamente calcola quanto i criteri di omogeneità e completezza sono stati soddifatti. Essa è computata come la media armonica fra Omogeneità e Completezza, così come Precisione e Richiamo sono combinati nel calcolo del F-Measure:
 \begin{equation}
 v = 2 \cdot \frac{h \cdot c}{h + c}
 \end{equation}
@@ -116,7 +118,7 @@ Queste, ad eccezione dell'ARI, essendo misure probabilistiche i valori possibili
 %Nelle metriche presentate, fatta eccezione per l'Adjusted Rand Index, $0.0$ rappresenta il valore peggiore, mentre $1.0$ il perfect score. Questi valori offrono una interpretazione intuitiva e può aiutare alla scoperta degli errori commessi nella assegnazione. Fra i vantaggi è degno di nota che nessuna assunzione viene fatta sulla struttura dei cluster, quindi possono essere utilizzate con algoritmi che identificano cluster di forma diversa.
 
 
-\paragraph{Silhouette} misura la forza di ogni cluster~\cite{Rousseeuw87}. Essa può essere usata per calcolare la qualità dei cluster anche quando la Ground Truth non è nota.
+\paragraph{Silhouette}: misura la forza di ogni cluster~\cite{Rousseeuw87}. Essa può essere usata per calcolare la qualità dei cluster anche quando la Ground Truth non è nota.
 Formalmente la Silhouette può essere così definita:
 \begin{equation}
 s = \frac{b - a}{\max (a,b)}
@@ -208,6 +210,26 @@ L'analisi del grafo considera unicamente le relazioni che intercorrono fra le pa
 	\caption{Risultati sperimentazione di partizionamento del grafo del sito \texttt{eecs.mit.edu}}
 	\label{metricheGraphMit}
 \end{table}
+
+\paragraph{\texttt{cs.princeton.edu}} Il grafo del sito presenta $16378$ nodi e $206985$ archi. L'algoritmo \textit{Fastgreedy} ha costruito un dendrogramma che è stato tagliato ad altezza $20$, il numero di cluster nella operazione di raggruppamento manuale. Ugualmente per \textit{WalkTrap}, che però necessitava della lunghezza dei Random Walk da effettuare. I risultati migliori sono stati osservati con percorsi di lunghezza $4$.
+
+\begin{table}[H]
+	\begin{tabular}{| l | c | c | c | c | c |}
+	\hline
+	\textbf{G - Princeton}  & \textbf{Homog} & \textbf{Compl} & \textbf{V-Measure}  & \textbf{ARI}  & \textbf{MI} \\ [3ex] \hline
+	\textbf{nc WalkTrap} & 0.0259 & 0.1568 & 0.0444 & -0.0221 & 0.0197\\ [3ex]
+	 \hline
+	\textbf{nc Fastgreedy} & 0.4900 & 0.5702 & 0.5270 & 0.4594 & 0.4848\\ [3ex]
+	 \hline	
+	\textbf{lc WalkTrap} & 0.1543 & 0.2983 & 0.2034 & 0.1935 & 0.1375\\ [3ex]
+	 \hline	
+	\textbf{lc Fastgreedy} & 0.4230 & 0.3817 & 0.4013 & 0.2168 & 0.3686\\ [3ex]
+	\hline
+	\end{tabular}
+	\caption{Risultati sperimentazione di partizionamento del grafo del sito \texttt{cs.princeton.edu}}
+	\label{metricheGraphPrinc}
+\end{table}
+
 
 \subsection{URL Embedding}
 Considerando i Random Walk generati sul grafo come frasi, è possibile applicare algoritmi di Word Embedding per raggruppare le pagine sulla base del contesto in cui appaiono, ovvero le pagine che più verosimilmente appariranno insieme nelle sequenze.
@@ -302,6 +324,28 @@ I migliori risultati sono stati osservati con:
 	\label{metricheEmbedMit}
 \end{table}
 
+\paragraph{\texttt{cs.princeton.edu}} è stata impostato un \textit{min-count} pari a $1$, \textit{window} con valore $5$ ed è stato utilizzato \textit{skip-gram} con $5$ \textit{negative} sampling. Gli algoritmi testati sono stati: DBSCAN con $\epsilon = 1.0$ ed \textit{min-samples}$ = 10$; HDBSCAN con \textit{min-cluster-size}$=10$; K-Means con numero di cluster pari a $10$. Per il dataset delle liste: DBSCAN con $\epsilon = 1.5$ ed \textit{min-samples}$ = 5$; HDBSCAN con \textit{min-cluster-size}$=13$; K-Means con numero di cluster pari a $10$.
+
+\begin{table}[H]
+	\begin{tabular}{| l | c | c | c | c | c | c |}
+	\hline
+	\textbf{E - Princeton}  & \textbf{Homog} & \textbf{Compl} & \textbf{V-Meas}  & \textbf{ARI}  & \textbf{MI}  & \textbf{Silh} \\ [3ex] \hline
+	\textbf{nc dbscan} & 0.0955 & 0.2417 & 0.1369 & 0.0622 & 0.0886 & 0.2656\\ [3ex]
+	 \hline 
+	\textbf{nc hdbscan} & 0.2302 & 0.3292 & 0.2710 & 0.1651 & 0.2195 & 0.1687\\ [3ex]
+	 \hline
+	\textbf{nc Kmeans} & 0.4311 & 0.3637 & 0.3946 & 0.3404 & 0.3522 & 0.3877\\ [3ex]
+	 \hline	
+	\textbf{lc dbscan} & 0.5941 & 0.5696 & 0.5816 & 0.7706 & 0.5579 & 0.2269\\ [3ex]
+	\hline
+	\textbf{lc hdbscan} & 0.6531 & 0.5416 & 0.5922 & 0.7708 & 0.5275 & 0.1789\\ [3ex]
+	\hline
+	\textbf{lc Kmeans} & 0.7611 & 0.4448 & 0.5615 & 0.4571 & 0.4304 & 0.2282\\ [3ex]
+	\hline
+	\end{tabular}
+	\caption{Risultati sperimentazione di URL embedding del sito \texttt{cs.princeton.edu}}
+	\label{metricheEmbedPrinc}
+\end{table}
 
 \subsection{Text Mining}
 Sono state utilizzate tecniche di Text Mining per il clustering basato sul contenuto testuale. I contenuti all'interno di uno stesso sito web avranno una struttura e termini comuni, differenziandosi al variare dell'argomento trattato. La struttura gerarchica di un sito web organizza solitamente le pagine in sezioni simili. Questa metodologia tuttavia, considera solo l'informazione testuale, assumendo che i termini all'interno del sito web siano indipendenti l'uno dall'altro così come i documenti, ignorando le relazioni interdipendenti tra questi. Il web si discosta dall'analisi classica dei documenti proprio per le relazioni che intercorrono tra le pagine, tuttavia l'analisi testuale rimane molto importante.
@@ -389,6 +433,29 @@ Sul dataset del sito, costituito da $1745$ pagine e $354$ termini, il corpus è 
 	\label{metricheTextMit}
 \end{table}
 
+\paragraph{\texttt{cs.princeton.edu}}
+Sul dataset del sito, costituito da $1745$ pagine e $354$ termini, il corpus è stato ripulito delle stopword, stemmatizzato ed è stato impostato il \textit{max-df} all'80\%, il \textit{min-df} a $0.1$ e sono stati considerati solo uni-grammi, bi-grammi e tri-grammi. Se i termini appaiono in più dell'80\% dei documenti, probabilmente avrà poco significato, lo stesso se appare troppe poche volte. Gli algoritmi testati sono stati: DBSCAN con $\epsilon = 0.9$ ed \textit{min-samples}$ = 9$; HDBSCAN con \textit{min-cluster-size}$=15$; K-Means con numero di cluster pari a $10$. \\Sul Dataset costruito estraendo le liste: DBSCAN con $\epsilon = 0.9$ ed \textit{min-samples}$ = 6$; HDBSCAN con \textit{min-cluster-size}$=9$; K-Means con numero di cluster pari a $10$. 
+
+\begin{table}[H]
+	\begin{tabular}{| l | c | c | c | c | c | c |}
+	\hline
+	\textbf{T - Princeton}  & \textbf{Homog} & \textbf{Compl} & \textbf{V-Meas}  & \textbf{ARI}  & \textbf{MI}  & \textbf{Silh} \\ [3ex] \hline
+	\textbf{nc dbscan} & 0.4231 & 0.3935 & 0.4078 & 0.3441 & 0.3773 & 0.4627\\ [3ex]
+	 \hline 
+	\textbf{nc hdbscan} & 0.3385 & 0.3082 & 0.3227 & 0.2662 & 0.2941 & 0.3442\\ [3ex]
+	 \hline
+	\textbf{nc Kmeans} & 0.4402 & 0.3369 & 0.3817 & 0.3891 & 0.3313 & 0.5111\\ [3ex]
+	 \hline	
+	\textbf{lc dbscan} & 0.3352 & 0.2267 & 0.2704 & 0.0513 & 0.1926 & 0.1077\\ [3ex]
+	\hline
+	\textbf{lc hdbscan} & 0.3099 & 0.2081 & 0.2490 & 0.1101 & 0.1772 & 0.1092\\ [3ex]
+	\hline
+	\textbf{lc Kmeans} & 0.6906 & 0.3715 & 0.4832 & 0.2795 & 0.3602 & 0.2115\\ [3ex]
+	\hline
+	\end{tabular}
+	\caption{Risultati sperimentazione di Text Mining del sito \texttt{cs.princeton.edu}}
+	\label{metricheTextPrinc}
+\end{table}
 
 \subsection{Embedding e Text Mining}
 I risultati hanno evidenziato che l'analisi singola, sia della correlazione tra le pagine sia del contenuto testuale, può non bastare a codificare esaustivamente la conoscenza che una pagina web può offrire. Entrambe le informazioni sono rilevanti ed andrebbero processate combinatamente. Effettuando i test precedenti è stato osservato come le informazioni codificate nelle due tipologie di vettori fossero complementari. Sono stati quindi considerati come un unico vettore. Il vantaggio di associare le relazioni in uno spazio vettoriale offre il vantaggio usare la stessa rappresentazione e quindi di unire i vettori derivanti dagli algoritmi di word embedding con quelli derivanti dall'analisi di contenuto testuale. 
@@ -456,6 +523,27 @@ Così facendo è possibile dare più importanza ad una tipologia di informazione
 	\end{tabular}
 	\caption{Risultati sperimentazione di Text-Embedding del sito \texttt{eecs.mit.edu}}
 	\label{metricheTextEmbedMit}
+\end{table}
+
+\paragraph{\texttt{cs.princeton.edu}} I vettori di word2vec sono stati generati di dimensione $48$, mentre i vettori-riga documenti sono stati ridotti con \textit{TruncateSVD} a dimensione $50$. Gli algoritmi testati sono stati: HDBSCAN con \textit{min-cluster-size}$=14$; K-Means con numero di cluster pari a $10$. 
+
+
+\begin{table}[H]
+	\begin{tabular}{| l | c | c | c | c | c | c |}
+	\hline
+	\textbf{ET - Princeton}  & \textbf{Homog} & \textbf{Compl} & \textbf{V-Meas}  & \textbf{ARI}  & \textbf{MI}  & \textbf{Silh} \\ [3ex] 
+	\hline
+	\textbf{nc hdbscan} & 0.1663 & 0.1963 & 0.1801 & -0.0134 & 0.1541 & 0.0379\\ [3ex]
+	 \hline
+	\textbf{nc Kmeans} & 0.4006 & 0.3326 & 0.3634 & 0.2929 & 0.3223 & 0.1974\\ [3ex]
+	 \hline	
+	\textbf{lc hdbscan} & 0.3024 & 0.3582 & 0.3279 & 0.1848 & 0.2913 & 0.0325\\ [3ex]
+	\hline
+	\textbf{lc Kmeans} & 0.7387 & 0.3921 & 0.5122 & 0.3175 & 0.3782 & 0.1307\\ [3ex]
+	\hline
+	\end{tabular}
+	\caption{Risultati sperimentazione di Text-Embedding del sito \texttt{cs.princeton.edu}}
+	\label{metricheTextEmbedPrinc}
 \end{table}
 
 \subsection{Analisi dei risultati}
