@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.12.22)  17 MAR 2016 01:43
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.12.22)  17 MAR 2016 17:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -849,77 +849,94 @@ less on input line 59.
 \openout4 = `Tesi.toc'.
 
  [3] (./Tesi.lot
-Overfull \hbox (34.12317pt too wide) in paragraph at lines 11--11
+Overfull \hbox (34.12317pt too wide) in paragraph at lines 12--12
  [][] []\OT1/cmr/m/n/12 Risultati spe-ri-men-ta-zio-ne di URL em-bed-ding del s
 i-to \OT1/cmtt/m/n/12 cs.illinois.edu [][]  
  []
 
 
-Overfull \hbox (34.12317pt too wide) in paragraph at lines 12--12
+Overfull \hbox (34.12317pt too wide) in paragraph at lines 13--13
  [][] []\OT1/cmr/m/n/12 Risultati spe-ri-men-ta-zio-ne di URL em-bed-ding del s
 i-to \OT1/cmtt/m/n/12 cs.stanford.edu [][]  
  []
 
 
-Overfull \hbox (15.59816pt too wide) in paragraph at lines 13--13
+Overfull \hbox (15.59816pt too wide) in paragraph at lines 14--14
  [][] []\OT1/cmr/m/n/12 Risultati spe-ri-men-ta-zio-ne di URL em-bed-ding del s
 i-to \OT1/cmtt/m/n/12 eecs.mit.edu [][]  
  []
 
 
-Overfull \hbox (40.29817pt too wide) in paragraph at lines 14--14
+Overfull \hbox (40.29817pt too wide) in paragraph at lines 15--15
  [][] []\OT1/cmr/m/n/12 Risultati spe-ri-men-ta-zio-ne di URL em-bed-ding del s
 i-to \OT1/cmtt/m/n/12 cs.princeton.edu [][]  
  []
 
 
-Overfull \hbox (13.56633pt too wide) in paragraph at lines 15--15
+Overfull \hbox (9.42316pt too wide) in paragraph at lines 16--16
+ [][] []\OT1/cmr/m/n/12 Risultati spe-ri-men-ta-zio-ne di URL em-bed-ding del s
+i-to \OT1/cmtt/m/n/12 cs.ox.ac.uk [][]  
+ []
+
+
+Overfull \hbox (13.56633pt too wide) in paragraph at lines 17--17
  [][] []\OT1/cmr/m/n/12 Risultati spe-ri-men-ta-zio-ne di Text Mi-ning del si-t
 o \OT1/cmtt/m/n/12 cs.illinois.edu [][]  
  []
 
 
-Overfull \hbox (13.56633pt too wide) in paragraph at lines 16--16
+Overfull \hbox (13.56633pt too wide) in paragraph at lines 18--18
  [][] []\OT1/cmr/m/n/12 Risultati spe-ri-men-ta-zio-ne di Text Mi-ning del si-t
 o \OT1/cmtt/m/n/12 cs.stanford.edu [][]  
  []
 
 
-Overfull \hbox (36.90498pt too wide) in paragraph at lines 18--18
+Overfull \hbox (19.74133pt too wide) in paragraph at lines 20--20
+ [][] []\OT1/cmr/m/n/12 Risultati spe-ri-men-ta-zio-ne di Text Mi-ning del si-t
+o \OT1/cmtt/m/n/12 cs.princeton.edu [][]  
+ []
+
+
+Overfull \hbox (36.90498pt too wide) in paragraph at lines 22--22
  [][] []\OT1/cmr/m/n/12 Risultati spe-ri-men-ta-zio-ne di Text-Embedding del si
 -to \OT1/cmtt/m/n/12 cs.illinois.edu [][]  
  []
 
 
-Overfull \hbox (36.90498pt too wide) in paragraph at lines 19--19
+Overfull \hbox (36.90498pt too wide) in paragraph at lines 23--23
  [][] []\OT1/cmr/m/n/12 Risultati spe-ri-men-ta-zio-ne di Text-Embedding del si
 -to \OT1/cmtt/m/n/12 cs.stanford.edu [][]  
  []
 
 
-Overfull \hbox (18.37997pt too wide) in paragraph at lines 20--20
+Overfull \hbox (18.37997pt too wide) in paragraph at lines 24--24
  [][] []\OT1/cmr/m/n/12 Risultati spe-ri-men-ta-zio-ne di Text-Embedding del si
 -to \OT1/cmtt/m/n/12 eecs.mit.edu [][]  
  []
 
 
-Overfull \hbox (43.07999pt too wide) in paragraph at lines 21--21
+Overfull \hbox (43.07999pt too wide) in paragraph at lines 25--25
  [][] []\OT1/cmr/m/n/12 Risultati spe-ri-men-ta-zio-ne di Text-Embedding del si
 -to \OT1/cmtt/m/n/12 cs.princeton.edu [][]  
  []
 
-)
-\tf@lot=\write5
-\openout5 = `Tesi.lot'.
 
+Overfull \hbox (12.20497pt too wide) in paragraph at lines 26--26
+ [][] []\OT1/cmr/m/n/12 Risultati spe-ri-men-ta-zio-ne di Text-Embedding del si
+-to \OT1/cmtt/m/n/12 cs.ox.ac.uk [][]  
+ []
 
 
 Package Fancyhdr Warning: \fancyfoot's `E' option without twoside option is use
-less on input line 89.
+less on input line 27.
 
 [4
 
-] [5] (./Tesi.lof)
+])
+\tf@lot=\write5
+\openout5 = `Tesi.lot'.
+
+ [5] (./Tesi.lof)
 \tf@lof=\write6
 \openout6 = `Tesi.lof'.
 
@@ -1412,8 +1429,14 @@ less on input line 23.
 
 [52
 
-] [53] [54] [55]
-Underfull \hbox (badness 10000) in paragraph at lines 77--87
+]
+Overfull \hbox (37.75464pt too wide) in paragraph at lines 30--31
+[]\OT1/cmr/m/n/12 Dipartimento di Com-pu-ter Scien-ce del-l'u-ni-ver-sit^^Ra di
+ Ox-ford, UK: \OT1/cmtt/m/n/12 cs.ox.ac.uk 
+ []
+
+[53] [54] [55]
+Underfull \hbox (badness 10000) in paragraph at lines 79--89
 
  []
 
@@ -1421,60 +1444,69 @@ Underfull \hbox (badness 10000) in paragraph at lines 77--87
 File: ./Immagini/nc_groundtruth.png Graphic file (type png)
 
 <use ./Immagini/nc_groundtruth.png>
-Package pdftex.def Info: ./Immagini/nc_groundtruth.png used on input line 152.
+Package pdftex.def Info: ./Immagini/nc_groundtruth.png used on input line 154.
 (pdftex.def)             Requested size: 284.52756pt x 312.1694pt.
 LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <12> not available
-(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 157.
+(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 159.
  [59 <./Immagini/nc_groundtruth.png>]
-[60] <./Immagini/lc_embedding_km.png, id=303, 2509.375pt x 903.375pt>
+[60] [61] <./Immagini/lc_embedding_km.png, id=307, 2509.375pt x 903.375pt>
 File: ./Immagini/lc_embedding_km.png Graphic file (type png)
 
 <use ./Immagini/lc_embedding_km.png>
-Package pdftex.def Info: ./Immagini/lc_embedding_km.png used on input line 241.
+Package pdftex.def Info: ./Immagini/lc_embedding_km.png used on input line 262.
 
 (pdftex.def)             Requested size: 369.88582pt x 133.15706pt.
- [61]
-Overfull \hbox (3.42181pt too wide) in paragraph at lines 254--255
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[62]
+Overfull \hbox (3.42181pt too wide) in paragraph at lines 275--276
 []\OT1/cmr/bx/n/12 sg \OT1/cmr/m/n/12 de-fi-ni-sce l'al-go-rit-mo di ap-pren-di
 -men-to, di de-fault vie-ne usa-to \OT1/cmr/m/it/12 CBOW\OT1/cmr/m/n/12 ,
  []
 
-[62 <./Immagini/lc_embedding_km.png>] [63] [64]
-Overfull \hbox (1.91289pt too wide) in paragraph at lines 330--346
+[63 <./Immagini/lc_embedding_km.png>] [64] [65]
+Overfull \hbox (1.91289pt too wide) in paragraph at lines 351--367
 [][] 
  []
 
-[65] [66] [67] [68] [69]
-Overfull \hbox (2.44064pt too wide) in paragraph at lines 440--456
+[66] [67] [68] [69] [70] [71]
+Overfull \hbox (2.44064pt too wide) in paragraph at lines 485--501
 [][] 
  []
 
-[70] [71]
-Overfull \hbox (4.35732pt too wide) in paragraph at lines 490--503
+[72] [73] [74]
+Overfull \hbox (4.35732pt too wide) in paragraph at lines 561--574
 [][] 
  []
 
-[72]
-Overfull \hbox (15.21838pt too wide) in paragraph at lines 532--545
+[75]
+Overfull \hbox (15.21838pt too wide) in paragraph at lines 603--616
 [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 550--553
+Overfull \hbox (2.64194pt too wide) in paragraph at lines 624--637
+[][] 
+ []
+
+[76]
+Underfull \hbox (badness 10000) in paragraph at lines 642--645
 
  []
 
-[73] [74]
-Underfull \hbox (badness 10000) in paragraph at lines 608--618
+[77]
+Underfull \hbox (badness 10000) in paragraph at lines 700--709
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 608--618
+Underfull \hbox (badness 10000) in paragraph at lines 700--709
 
  []
 
-[75]) [76]
+[78]) [79]
 Capitolo 5.
 (./MaterialeInizialeFinale/Conclusioni.tex)
 Underfull \hbox (badness 10000) in paragraph at lines 9--146
@@ -1486,25 +1518,25 @@ Underfull \hbox (badness 10000) in paragraph at lines 9--146
 Package Fancyhdr Warning: \fancyfoot's `E' option without twoside option is use
 less on input line 1.
 
-[77
+[80
 
 ]
 
 Package Fancyhdr Warning: \fancyfoot's `E' option without twoside option is use
 less on input line 42.
 
-[78
+[81
 
-] [79] [80] [81]) [82] (./Tesi.aux)
+] [82] [83] [84]) [85] (./Tesi.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 15383 strings out of 493304
- 295591 string characters out of 6139870
- 316578 words of memory out of 5000000
- 18510 multiletter control sequences out of 15000+600000
+ 15387 strings out of 493304
+ 295662 string characters out of 6139870
+ 316638 words of memory out of 5000000
+ 18514 multiletter control sequences out of 15000+600000
  13732 words of font info for 51 fonts, out of 8000000 for 9000
  958 hyphenation exceptions out of 8191
  39i,12n,44p,10418b,589s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1525,10 +1557,10 @@ r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share
 ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/share/texlive/tex
 mf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/share/texlive/texmf-dist
 /fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on Tesi.pdf (94 pages, 3055240 bytes).
+Output written on Tesi.pdf (97 pages, 3061639 bytes).
 PDF statistics:
- 429 PDF objects out of 1000 (max. 8388607)
- 281 compressed objects within 3 object streams
+ 439 PDF objects out of 1000 (max. 8388607)
+ 288 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
  111 words of extra memory for PDF output out of 10000 (max. 10000000)
 

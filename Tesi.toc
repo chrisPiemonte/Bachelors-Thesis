@@ -66,20 +66,24 @@
 \contentsline {paragraph}{\texttt {cs.stanford.edu}}{60}
 \contentsline {paragraph}{\texttt {eecs.mit.edu}}{60}
 \contentsline {paragraph}{\texttt {cs.princeton.edu}}{61}
-\contentsline {subsection}{\numberline {4.2.2}URL Embedding}{61}
+\contentsline {paragraph}{\texttt {cs.ox.ac.uk}}{62}
+\contentsline {subsection}{\numberline {4.2.2}URL Embedding}{62}
 \contentsline {paragraph}{\texttt {cs.illinois.edu}}{63}
-\contentsline {paragraph}{\texttt {cs.stanford.edu}}{63}
-\contentsline {paragraph}{\texttt {eecs.mit.edu}}{64}
-\contentsline {paragraph}{\texttt {cs.princeton.edu}}{65}
-\contentsline {subsection}{\numberline {4.2.3}Text Mining}{66}
-\contentsline {paragraph}{\texttt {cs.illinois.edu}}{67}
-\contentsline {paragraph}{\texttt {cs.stanford.edu}}{68}
-\contentsline {paragraph}{\texttt {eecs.mit.edu}}{69}
-\contentsline {paragraph}{\texttt {cs.princeton.edu}}{70}
-\contentsline {subsection}{\numberline {4.2.4}Embedding e Text Mining}{71}
-\contentsline {paragraph}{\texttt {cs.illinois.edu}}{71}
-\contentsline {paragraph}{\texttt {cs.stanford.edu}}{72}
-\contentsline {paragraph}{\texttt {eecs.mit.edu}}{72}
-\contentsline {paragraph}{\texttt {cs.princeton.edu}}{73}
-\contentsline {subsection}{\numberline {4.2.5}Analisi dei risultati}{73}
-\contentsline {chapter}{\numberline {5}Conclusioni e sviluppi futuri}{77}
+\contentsline {paragraph}{\texttt {cs.stanford.edu}}{64}
+\contentsline {paragraph}{\texttt {eecs.mit.edu}}{65}
+\contentsline {paragraph}{\texttt {cs.princeton.edu}}{66}
+\contentsline {paragraph}{\texttt {cs.ox.ac.uk}}{67}
+\contentsline {subsection}{\numberline {4.2.3}Text Mining}{68}
+\contentsline {paragraph}{\texttt {cs.illinois.edu}}{69}
+\contentsline {paragraph}{\texttt {cs.stanford.edu}}{70}
+\contentsline {paragraph}{\texttt {eecs.mit.edu}}{71}
+\contentsline {paragraph}{\texttt {cs.princeton.edu}}{72}
+\contentsline {paragraph}{\texttt {cs.ox.ac.uk}}{73}
+\contentsline {subsection}{\numberline {4.2.4}Embedding e Text Mining}{74}
+\contentsline {paragraph}{\texttt {cs.illinois.edu}}{74}
+\contentsline {paragraph}{\texttt {cs.stanford.edu}}{75}
+\contentsline {paragraph}{\texttt {eecs.mit.edu}}{75}
+\contentsline {paragraph}{\texttt {cs.princeton.edu}}{76}
+\contentsline {paragraph}{\texttt {cs.ox.ac.uk}}{76}
+\contentsline {subsection}{\numberline {4.2.5}Analisi dei risultati}{77}
+\contentsline {chapter}{\numberline {5}Conclusioni e sviluppi futuri}{80}

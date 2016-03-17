@@ -27,6 +27,8 @@ Il crawling è stato lanciato con profondità massima $10$, e immagazzinando un 
 
 \item Dipartimento di Computer Science dell'università di Princeton, NJ: \texttt{cs.princeton.edu} \\ Il crawling è stato lanciato con profondità massima $7$, e immagazzinando un massimo di $10.000$ termini per ogni pagina esplorata. Il grafo web estratto si compone di $16378$ pagine web e $206985$ hyperlink. Dal grafo sono state poi generate $10.000$ sequenze di lunghezza massima $10$.
 
+\item Dipartimento di Computer Science dell'università di Oxford, UK: \texttt{cs.ox.ac.uk} \\ Il crawling è stato lanciato con profondità massima $5$, e immagazzinando un massimo di $10.000$ termini per ogni pagina esplorata. Il grafo web estratto si compone di $4183$ pagine web e $27954$ hyperlink. Dal grafo sono state poi generate $10.000$ sequenze di lunghezza massima $10$.
+
 \end{itemize}
 
 La scelta dei precedenti siti è dovuta a ragioni di confidenza con il dominio applicativo. Infatti la valutazione dei risultati sperimentali ha richiesto, oltre che il crawling dei siti web sopracitati anche una fase di etichettatura delle pagine web al fine di generare una ground truth.
@@ -230,6 +232,25 @@ L'analisi del grafo considera unicamente le relazioni che intercorrono fra le pa
 	\label{metricheGraphPrinc}
 \end{table}
 
+\paragraph{\texttt{cs.ox.ac.uk}} Il grafo del sito presenta $4183$ nodi e $27954$ archi. L'algoritmo \textit{Fastgreedy} ha costruito un dendrogramma che è stato tagliato ad altezza $20$, il numero di cluster nella operazione di raggruppamento manuale. Ugualmente per \textit{WalkTrap}, che però necessitava della lunghezza dei Random Walk da effettuare. I risultati migliori sono stati osservati con percorsi di lunghezza $4$.
+
+\begin{table}[H]
+	\begin{tabular}{| l | c | c | c | c | c |}
+	\hline
+	\textbf{G - Oxford}  & \textbf{Homog} & \textbf{Compl} & \textbf{V-Measure}  & \textbf{ARI}  & \textbf{MI} \\ [3ex] \hline
+	\textbf{nc WalkTrap} & 0.2264 & 0.8330 & 0.3560 & 0.1133 & 0.2149 \\ [3ex]
+	 \hline
+	\textbf{nc Fastgreedy} & 0.4416 & 0.5005 & 0.4692 & 0.2617 & 0.4302 \\ [3ex]
+	 \hline	
+	\textbf{lc WalkTrap} & 0.1888 & 0.5069 & 0.2751 & 0.0034 & 0.1753 \\ [3ex]
+	 \hline	
+	\textbf{lc Fastgreedy} & 0.4445 & 0.4444 & 0.4444 & 0.1758 & 0.4322 \\ [3ex]
+	\hline
+	\end{tabular}
+	\caption{Risultati sperimentazione di partizionamento del grafo del sito \texttt{cs.ox.ac.uk}}
+	\label{metricheGraphOx}
+\end{table}
+
 
 \subsection{URL Embedding}
 Considerando i Random Walk generati sul grafo come frasi, è possibile applicare algoritmi di Word Embedding per raggruppare le pagine sulla base del contesto in cui appaiono, ovvero le pagine che più verosimilmente appariranno insieme nelle sequenze.
@@ -324,7 +345,7 @@ I migliori risultati sono stati osservati con:
 	\label{metricheEmbedMit}
 \end{table}
 
-\paragraph{\texttt{cs.princeton.edu}} è stata impostato un \textit{min-count} pari a $1$, \textit{window} con valore $5$ ed è stato utilizzato \textit{skip-gram} con $5$ \textit{negative} sampling. Gli algoritmi testati sono stati: DBSCAN con $\epsilon = 1.0$ ed \textit{min-samples}$ = 10$; HDBSCAN con \textit{min-cluster-size}$=10$; K-Means con numero di cluster pari a $10$. Per il dataset delle liste: DBSCAN con $\epsilon = 1.5$ ed \textit{min-samples}$ = 5$; HDBSCAN con \textit{min-cluster-size}$=13$; K-Means con numero di cluster pari a $10$.
+\paragraph{\texttt{cs.princeton.edu}} è stata impostato un \textit{min-count} pari a $1$, \textit{window} con valore $5$ ed è stato utilizzato \textit{skip-gram} con $5$ \textit{negative} sampling. Gli algoritmi testati sono stati: DBSCAN con $\epsilon = 0.8$ ed \textit{min-samples}$ = 7$; HDBSCAN con \textit{min-cluster-size}$=10$; K-Means con numero di cluster pari a $30$. Per il dataset delle liste: DBSCAN con $\epsilon = 0.7$ ed \textit{min-samples}$ = 5$; HDBSCAN con \textit{min-cluster-size}$=8$; K-Means con numero di cluster pari a $25$.
 
 \begin{table}[H]
 	\begin{tabular}{| l | c | c | c | c | c | c |}
@@ -345,6 +366,30 @@ I migliori risultati sono stati osservati con:
 	\end{tabular}
 	\caption{Risultati sperimentazione di URL embedding del sito \texttt{cs.princeton.edu}}
 	\label{metricheEmbedPrinc}
+\end{table}
+
+\paragraph{\texttt{cs.ox.ac.uk}} è stata impostato un \textit{min-count} pari a $1$, \textit{window} con valore $5$ ed è stato utilizzato \textit{skip-gram} con $5$ \textit{negative} sampling. Gli algoritmi testati sono stati: DBSCAN con $\epsilon = 0.8$ ed \textit{min-samples}$ = 7$; HDBSCAN con \textit{min-cluster-size}$=10$; K-Means con numero di cluster pari a $30$. Per il dataset delle liste: DBSCAN con $\epsilon = 0.7$ ed \textit{min-samples}$ = 5$; HDBSCAN con \textit{min-cluster-size}$=8$; K-Means con numero di cluster pari a $25$.
+
+
+\begin{table}[H]
+	\begin{tabular}{| l | c | c | c | c | c | c |}
+	\hline
+	\textbf{E - Oxford}  & \textbf{Homog} & \textbf{Compl} & \textbf{V-Meas}  & \textbf{ARI}  & \textbf{MI}  & \textbf{Silh} \\ [3ex] \hline
+	\textbf{nc dbscan} & 0.2289 & 0.4673 & 0.3073 & 0.1777 & 0.2126 & 0.5214 \\ [3ex]
+	 \hline 
+	\textbf{nc hdbscan} & 0.2391 & 0.4616 & 0.3150 & 0.1811 & 0.2213 & 0.5241 \\ [3ex]
+	 \hline
+	\textbf{nc Kmeans} & 0.3966 & 0.4649 & 0.4281 & 0.2516 & 0.3746 & 0.3991 \\ [3ex]
+	 \hline	
+	\textbf{lc dbscan} & 0.2401 & 0.5187 & 0.3282 & 0.2619 & 0.2319 & 0.5037 \\ [3ex]
+	\hline
+	\textbf{lc hdbscan} & 0.3007 & 0.5382 & 0.3859 & 0.2965 & 0.288052 & 0.4503 \\ [3ex]
+	\hline
+	\textbf{lc Kmeans} & 0.4247 & 0.4010 & 0.4125 & 0.2630 & 0.3788 & 0.2372 \\ [3ex]
+	\hline
+	\end{tabular}
+	\caption{Risultati sperimentazione di URL embedding del sito \texttt{cs.ox.ac.uk}}
+	\label{metricheEmbedOx}
 \end{table}
 
 \subsection{Text Mining}
@@ -434,7 +479,7 @@ Sul dataset del sito, costituito da $1745$ pagine e $354$ termini, il corpus è 
 \end{table}
 
 \paragraph{\texttt{cs.princeton.edu}}
-Sul dataset del sito, costituito da $1745$ pagine e $354$ termini, il corpus è stato ripulito delle stopword, stemmatizzato ed è stato impostato il \textit{max-df} all'80\%, il \textit{min-df} a $0.1$ e sono stati considerati solo uni-grammi, bi-grammi e tri-grammi. Se i termini appaiono in più dell'80\% dei documenti, probabilmente avrà poco significato, lo stesso se appare troppe poche volte. Gli algoritmi testati sono stati: DBSCAN con $\epsilon = 0.9$ ed \textit{min-samples}$ = 9$; HDBSCAN con \textit{min-cluster-size}$=15$; K-Means con numero di cluster pari a $10$. \\Sul Dataset costruito estraendo le liste: DBSCAN con $\epsilon = 0.9$ ed \textit{min-samples}$ = 6$; HDBSCAN con \textit{min-cluster-size}$=9$; K-Means con numero di cluster pari a $10$. 
+Sul dataset del sito, costituito da $16378$ pagine e $470$ termini, il corpus è stato ripulito delle stopword, stemmatizzato ed è stato impostato il \textit{max-df} all'80\%, il \textit{min-df} a $0.1$ e sono stati considerati solo uni-grammi, bi-grammi e tri-grammi. Se i termini appaiono in più dell'80\% dei documenti, probabilmente avrà poco significato, lo stesso se appare troppe poche volte. Gli algoritmi testati sono stati: DBSCAN con $\epsilon = 0.3$ ed \textit{min-samples}$ = 5$; HDBSCAN con \textit{min-cluster-size}$=15$; K-Means con numero di cluster pari a $10$. \\Sul Dataset costruito estraendo le liste: DBSCAN con $\epsilon = 0.9$ ed \textit{min-samples}$ = 6$; HDBSCAN con \textit{min-cluster-size}$=15$; K-Means con numero di cluster pari a $25$.  
 
 \begin{table}[H]
 	\begin{tabular}{| l | c | c | c | c | c | c |}
@@ -456,6 +501,32 @@ Sul dataset del sito, costituito da $1745$ pagine e $354$ termini, il corpus è 
 	\caption{Risultati sperimentazione di Text Mining del sito \texttt{cs.princeton.edu}}
 	\label{metricheTextPrinc}
 \end{table}
+
+\paragraph{\texttt{cs.ox.ac.uk}}
+Sul dataset del sito, costituito da $3951$ pagine e $363$ termini, il corpus è stato ripulito delle stopword, stemmatizzato ed è stato impostato il \textit{max-df} all'80\%, il \textit{min-df} a $0.1$ e sono stati considerati solo uni-grammi, bi-grammi e tri-grammi. Se i termini appaiono in più dell'80\% dei documenti, probabilmente avrà poco significato, lo stesso se appare troppe poche volte. Gli algoritmi testati sono stati: DBSCAN con $\epsilon = 0.3$ ed \textit{min-samples}$ = 5$; HDBSCAN con \textit{min-cluster-size}$=15$; K-Means con numero di cluster pari a $10$. \\Sul Dataset costruito estraendo le liste: DBSCAN con $\epsilon = 0.7$ ed \textit{min-samples}$ = 7$; HDBSCAN con \textit{min-cluster-size}$=7$; K-Means con numero di cluster pari a $25$. 
+
+\begin{table}[H]
+	\begin{tabular}{| l | c | c | c | c | c | c |}
+	\hline
+	\textbf{T - Oxford}  & \textbf{Homog} & \textbf{Compl} & \textbf{V-Meas}  & \textbf{ARI}  & \textbf{MI}  & \textbf{Silh} \\ [3ex] \hline
+	\textbf{nc dbscan} & 0.2014 & 0.5083 & 0.2885 & 0.0658 & 0.1813 & -0.1190 \\ [3ex]
+	 \hline 
+	\textbf{nc hdbscan} & 0.3421 & 0.4731 & 0.3971 & 0.1062 & 0.3260 & 0.0598 \\ [3ex]
+	 \hline
+	\textbf{nc Kmeans} & 0.7021 & 0.4976 & 0.5825 & 0.2714 & 0.4821 & 0.1555 \\ [3ex]
+	 \hline	
+	\textbf{lc dbscan} & 0.4961 & 0.4837 & 0.4898 & 0.2616 & 0.4689 & 0.1319 \\ [3ex]
+	\hline
+	\textbf{lc hdbscan} & 0.4613 & 0.4744 & 0.4677 & 0.1219 & 0.4418 & 0.0526 \\ [3ex]
+	\hline
+	\textbf{lc Kmeans} & 0.7314 & 0.4946 & 0.5901 & 0.2623 & 0.4813 & 0.1600 \\ [3ex]
+	\hline
+	\end{tabular}
+	\caption{Risultati sperimentazione di Text Mining del sito \texttt{cs.ox.ac.uk}}
+	\label{metricheTextOx}
+\end{table}
+
+
 
 \subsection{Embedding e Text Mining}
 I risultati hanno evidenziato che l'analisi singola, sia della correlazione tra le pagine sia del contenuto testuale, può non bastare a codificare esaustivamente la conoscenza che una pagina web può offrire. Entrambe le informazioni sono rilevanti ed andrebbero processate combinatamente. Effettuando i test precedenti è stato osservato come le informazioni codificate nelle due tipologie di vettori fossero complementari. Sono stati quindi considerati come un unico vettore. Il vantaggio di associare le relazioni in uno spazio vettoriale offre il vantaggio usare la stessa rappresentazione e quindi di unire i vettori derivanti dagli algoritmi di word embedding con quelli derivanti dall'analisi di contenuto testuale. 
@@ -546,6 +617,27 @@ Così facendo è possibile dare più importanza ad una tipologia di informazione
 	\label{metricheTextEmbedPrinc}
 \end{table}
 
+\paragraph{\texttt{cs.ox.ac.uk}} I vettori di word2vec sono stati generati di dimensione $48$, mentre i vettori-riga documenti sono stati ridotti con \textit{TruncateSVD} a dimensione $50$. Gli algoritmi testati sono stati: HDBSCAN con \textit{min-cluster-size}$=14$; K-Means con numero di cluster pari a $10$. 
+
+
+\begin{table}[H]
+	\begin{tabular}{| l | c | c | c | c | c | c |}
+	\hline
+	\textbf{ET - Oxford}  & \textbf{Homog} & \textbf{Compl} & \textbf{V-Meas}  & \textbf{ARI}  & \textbf{MI}  & \textbf{Silh} \\ [3ex] 
+	\hline
+	\textbf{nc hdbscan} & 0.1343 & 0.1762 & 0.1524 & -0.0357 & 0.1012 & -0.0826 \\ [3ex]
+	 \hline
+	\textbf{nc Kmeans} & 0.3681 & 0.3052 & 0.3338 & 0.1337 & 0.2846 & 0.1322 \\ [3ex]
+	 \hline	
+	\textbf{lc hdbscan} & 0.1537 & 0.1741 & 0.1632 & -0.0383 & 0.1248 & -0.0319 \\ [3ex]
+	\hline
+	\textbf{lc Kmeans} & 0.3869 & 0.2836 & 0.3273 & 0.1277 & 0.2638 & 0.1386 \\ [3ex]
+	\hline
+	\end{tabular}
+	\caption{Risultati sperimentazione di Text-Embedding del sito \texttt{cs.ox.ac.uk}}
+	\label{metricheTextEmbedOx}
+\end{table}
+
 \subsection{Analisi dei risultati}
 Il processo di crawling è stato svolto su $3$ siti, sui quali sono state generate sequenze di $2$ tipi diversi, ossia Random Walk senza vincoli e Random Walk con i vincoli delle liste. Su di esse sono state poi effettuate $4$ metodologie diverse: grafo, Word Embedding, Text Mining e Word Embedding \& Text Mining. Per ogni metodologia, inoltre, sono stati usati $3$ algoritmi di apprendimento diversi, ovvero K-Means, HDBSCAN e DBSCAN. Infine, su ogni algoritmo sono state ricavate $6$ metriche. In tutto sono $432$ valori. 
 \\\\
@@ -607,7 +699,6 @@ Qui, invece, è risultata migliore l'applicazione dell'embedding, con un miglior
 
 Lo scopo della tesi non era valutare l'efficacia dei vari algoritmi riportati, ma verificare un eventuale miglioramento nei risultati ottenuti.
 \\
-Dalle metriche rilevate è emerso che l'uso delle liste non ha influenzato particolarmente i risultati ottenuti.
 Valutare i risultati di un algoritmo di clustering non è un operazione semplice. Infatti l'assegnazione manuale delle etichette denota una certa arbitrarietà. 
 \\
 Inoltre, l'analisi dei percorsi ha fatto notare come certe classi, idealmente raggruppate insieme in quanto stessa entità (e.g. docenti), possano invece essere divise in fase di apprendimento per motivi ragionevoli. Ad esempio, nel sito \textit{cs.illinois.edu}, erano presenti molteplici pagine relative agli stessi professori. Questo era dovuto al fatto che durante gli anni erano state pubblicate diverse edizioni del sito. Questo ha portato le diverse versioni della stessa pagina (concettuale) ad essere presenti con diversa frequenza in percorsi diversi. O ancora ad avere anche testo differente. Infatti anche l'analisi testuale fra le diverse versioni era differente. 

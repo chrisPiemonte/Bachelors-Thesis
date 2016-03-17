@@ -8,19 +8,23 @@
 \contentsline {table}{\numberline {4.2}{\ignorespaces Risultati sperimentazione di partizionamento del grafo del sito \texttt {cs.stanford.edu}\relax }}{60}
 \contentsline {table}{\numberline {4.3}{\ignorespaces Risultati sperimentazione di partizionamento del grafo del sito \texttt {eecs.mit.edu}\relax }}{61}
 \contentsline {table}{\numberline {4.4}{\ignorespaces Risultati sperimentazione di partizionamento del grafo del sito \texttt {cs.princeton.edu}\relax }}{61}
-\contentsline {table}{\numberline {4.5}{\ignorespaces Risultati sperimentazione di URL embedding del sito \texttt {cs.illinois.edu}\relax }}{63}
-\contentsline {table}{\numberline {4.6}{\ignorespaces Risultati sperimentazione di URL embedding del sito \texttt {cs.stanford.edu}\relax }}{64}
-\contentsline {table}{\numberline {4.7}{\ignorespaces Risultati sperimentazione di URL embedding del sito \texttt {eecs.mit.edu}\relax }}{65}
-\contentsline {table}{\numberline {4.8}{\ignorespaces Risultati sperimentazione di URL embedding del sito \texttt {cs.princeton.edu}\relax }}{66}
-\contentsline {table}{\numberline {4.9}{\ignorespaces Risultati sperimentazione di Text Mining del sito \texttt {cs.illinois.edu}\relax }}{68}
-\contentsline {table}{\numberline {4.10}{\ignorespaces Risultati sperimentazione di Text Mining del sito \texttt {cs.stanford.edu}\relax }}{69}
-\contentsline {table}{\numberline {4.11}{\ignorespaces Risultati sperimentazione di Text Mining del sito \texttt {eecs.mit.edu}\relax }}{70}
-\contentsline {table}{\numberline {4.12}{\ignorespaces Risultati sperimentazione di Text Mining del sito \texttt {cs.princeton.edu}\relax }}{71}
-\contentsline {table}{\numberline {4.13}{\ignorespaces Risultati sperimentazione di Text-Embedding del sito \texttt {cs.illinois.edu}\relax }}{72}
-\contentsline {table}{\numberline {4.14}{\ignorespaces Risultati sperimentazione di Text-Embedding del sito \texttt {cs.stanford.edu}\relax }}{72}
-\contentsline {table}{\numberline {4.15}{\ignorespaces Risultati sperimentazione di Text-Embedding del sito \texttt {eecs.mit.edu}\relax }}{73}
-\contentsline {table}{\numberline {4.16}{\ignorespaces Risultati sperimentazione di Text-Embedding del sito \texttt {cs.princeton.edu}\relax }}{73}
-\contentsline {table}{\numberline {4.17}{\ignorespaces Risultati sperimentazione raggruppati per algoritmo K-Means sul sito \texttt {cs.illinois.edu}\relax }}{74}
-\contentsline {table}{\numberline {4.18}{\ignorespaces Risultati sperimentazione raggruppati per algoritmo K-Means sul sito \texttt {ecs.mit.edu}\relax }}{74}
-\contentsline {table}{\numberline {4.19}{\ignorespaces Risultati sperimentazione raggruppati per algoritmo K-Means sul sito \texttt {ecs.mit.edu}\relax }}{75}
+\contentsline {table}{\numberline {4.5}{\ignorespaces Risultati sperimentazione di partizionamento del grafo del sito \texttt {cs.ox.ac.uk}\relax }}{62}
+\contentsline {table}{\numberline {4.6}{\ignorespaces Risultati sperimentazione di URL embedding del sito \texttt {cs.illinois.edu}\relax }}{64}
+\contentsline {table}{\numberline {4.7}{\ignorespaces Risultati sperimentazione di URL embedding del sito \texttt {cs.stanford.edu}\relax }}{65}
+\contentsline {table}{\numberline {4.8}{\ignorespaces Risultati sperimentazione di URL embedding del sito \texttt {eecs.mit.edu}\relax }}{66}
+\contentsline {table}{\numberline {4.9}{\ignorespaces Risultati sperimentazione di URL embedding del sito \texttt {cs.princeton.edu}\relax }}{67}
+\contentsline {table}{\numberline {4.10}{\ignorespaces Risultati sperimentazione di URL embedding del sito \texttt {cs.ox.ac.uk}\relax }}{68}
+\contentsline {table}{\numberline {4.11}{\ignorespaces Risultati sperimentazione di Text Mining del sito \texttt {cs.illinois.edu}\relax }}{70}
+\contentsline {table}{\numberline {4.12}{\ignorespaces Risultati sperimentazione di Text Mining del sito \texttt {cs.stanford.edu}\relax }}{71}
+\contentsline {table}{\numberline {4.13}{\ignorespaces Risultati sperimentazione di Text Mining del sito \texttt {eecs.mit.edu}\relax }}{72}
+\contentsline {table}{\numberline {4.14}{\ignorespaces Risultati sperimentazione di Text Mining del sito \texttt {cs.princeton.edu}\relax }}{73}
+\contentsline {table}{\numberline {4.15}{\ignorespaces Risultati sperimentazione di Text Mining del sito \texttt {cs.ox.ac.uk}\relax }}{74}
+\contentsline {table}{\numberline {4.16}{\ignorespaces Risultati sperimentazione di Text-Embedding del sito \texttt {cs.illinois.edu}\relax }}{75}
+\contentsline {table}{\numberline {4.17}{\ignorespaces Risultati sperimentazione di Text-Embedding del sito \texttt {cs.stanford.edu}\relax }}{75}
+\contentsline {table}{\numberline {4.18}{\ignorespaces Risultati sperimentazione di Text-Embedding del sito \texttt {eecs.mit.edu}\relax }}{76}
+\contentsline {table}{\numberline {4.19}{\ignorespaces Risultati sperimentazione di Text-Embedding del sito \texttt {cs.princeton.edu}\relax }}{76}
+\contentsline {table}{\numberline {4.20}{\ignorespaces Risultati sperimentazione di Text-Embedding del sito \texttt {cs.ox.ac.uk}\relax }}{77}
+\contentsline {table}{\numberline {4.21}{\ignorespaces Risultati sperimentazione raggruppati per algoritmo K-Means sul sito \texttt {cs.illinois.edu}\relax }}{77}
+\contentsline {table}{\numberline {4.22}{\ignorespaces Risultati sperimentazione raggruppati per algoritmo K-Means sul sito \texttt {ecs.mit.edu}\relax }}{78}
+\contentsline {table}{\numberline {4.23}{\ignorespaces Risultati sperimentazione raggruppati per algoritmo K-Means sul sito \texttt {ecs.mit.edu}\relax }}{78}
 \addvspace {10\p@ }
