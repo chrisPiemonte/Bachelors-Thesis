@@ -23,6 +23,7 @@
 \contentsline {figure}{\numberline {2.5}{\ignorespaces Random walk sul grafo. \relax }}{42}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Grafo del sito \texttt {cs.illinois.edu} etichettato manualmente.\relax }}{59}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Rappresentazione del sito \texttt {cs.illinois.edu}, clusterizzato con K-Means.\relax }}{63}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Rappresentazione del sito \texttt {cs.illinois.edu}, clusterizzato con K-Means.\relax }}{60}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Grafo del sito \texttt {cs.illinois.edu} etichettato manualmente.\relax }}{72}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Rappresentazione del sito \texttt {cs.illinois.edu}, clusterizzato con K-Means.\relax }}{76}
 \addvspace {10\p@ }
