@@ -249,11 +249,11 @@ Di seguito si confrontano i risultati degli algoritmi di clustering basati su gr
 Inoltre per gli algoritmi di clustering basati su vettori si analizzano le prestazioni degli algoritmi al variare delle rappresentazioni vettoriali (Url-embedding, Tf-idf, Url-embeddig + tf-idf).
 
 La divisione del grafo in Community può essere effettuata seguendo diversi approcci, tuttavia la rete costruita su un sito web è caratterizzata solitamente da un numero elevato di collegamenti tra pagine, il quale suggerisce l'utilizzo di alcune tipologie piuttosto che altre. Infatti misure come la betweenness non hanno restituito risultati significativi.
-Dalla scelta di apprendere le rappresentazioni vettoriali delle relazioni invece di utilizzare algoritmi di Community Detection del grafo, sono derivati dei vantaggi. Innanzitutto gli algoritmi di partizionamento dei grafi hanno complessità NP-completa, ovvero necessitano di un tempo superpolinomiale nella dimensione dell'input. Nel contesto del Web Mining la dimensione del dataset può crescere enormemente ed avere soluzioni più efficienti costituisce senz'altro una priorità. 
+Dalla scelta di apprendere le rappresentazioni vettoriali delle relazioni invece di utilizzare algoritmi di Community Detection del grafo, sono derivati dei vantaggi. Innanzitutto gli algoritmi di partizionamento dei grafi hanno complessità NP-completa, ovvero necessitano di un tempo esponenziale nella dimensione dell'input. Nel contesto del Web Mining la dimensione del dataset può crescere enormemente ed avere soluzioni più efficienti costituisce senz'altro una priorità. 
 \\
 In tutti i casi di seguito riportati sono stati generati grafi sia in modalità classica, che attraverso l'estrazione delle liste. Nel primo caso i dataset saranno chiamati \textbf{''nc''} (no-costraint, senza vincoli), mentre nel secondo caso \textbf{''lc''} (list-costraint, con il vincolo delle liste (vedere sezione \ref{liste}). Dove omessa, la configurazione è rimasta invariata.
 
-\subsubsection{\texttt{cs.illinois.edu}}
+\subsection{cs.illinois.edu}
 \begin{table}[H]
 	\begin{tabular}{| l | c | c | c | c | c | c |}
 	\hline
@@ -280,19 +280,12 @@ In tutti i casi di seguito riportati sono stati generati grafi sia in modalità 
 	\textbf{E-lc Kmeans} & 0.8095 & 0.6593 & 0.7267 & 0.6189 & 0.6473 & 0.2281\\ [2ex]
 	\hline
 	
-	\textbf{T-nc dbscan} & 0.5601 & 0.5962 & 0.5776 & 0.4078 & 0.5346 & 0.1242\\ [2ex]
+	\textbf{T dbscan} & 0.5601 & 0.5962 & 0.5776 & 0.4078 & 0.5346 & 0.1242\\ [2ex]
 	 \hline 
-	\textbf{T-nc hdbscan} & 0.5152 & 0.6029 & 0.5556 & 0.3862 & 0.4858 & 0.0881\\ [2ex]
+	\textbf{T hdbscan} & 0.5152 & 0.6029 & 0.5556 & 0.3862 & 0.4858 & 0.0881\\ [2ex]
 	 \hline
-	\textbf{T-nc Kmeans} & 0.7619 & 0.5814 & 0.6596 & 0.3184 & 0.5586 & 0.1767\\ [2ex]
-	 \hline	
-	\textbf{T-lc dbscan} & 0.5710 & 0.7042 & 0.6306 & 0.5197 & 0.5566 & 0.1406\\ [2ex]
-	\hline
-	\textbf{T-lc hdbscan} & 0.4501 & 0.5104 & 0.4783 & 0.1938 & 0.4297 & 0.1018\\ [2ex]
-	\hline
-	\textbf{T-lc Kmeans} & 0.8061 & 0.5892 & 0.6808 & 0.4296 & 0.5748 & 0.2002\\ [2ex]
-	\hline
-	
+	\textbf{T Kmeans} & 0.7619 & 0.5814 & 0.6596 & 0.3184 & 0.5586 & 0.1767\\ [2ex]
+	 \hline		
 	\textbf{ET-nc hdbscan} & 0.7327 & 0.7534 & 0.7429 & 0.7204 & 0.7186 & 0.2070\\ [2ex]
 	 \hline 
 	\textbf{ET-nc Kmeans} & \textbf{0.8812} & 0.8069 & \textbf{0.8424} & \textbf{0.8299} & \textbf{0.7949} & \textbf{0.3198}\\ [2ex]
@@ -315,7 +308,17 @@ In tutti i casi di seguito riportati sono stati generati grafi sia in modalità 
 \end{figure}
 
 I risultati hanno evidenziato che l'analisi singola, sia della correlazione tra le pagine sia del contenuto testuale, può non bastare a codificare esaustivamente la conoscenza che una pagina web può offrire. Entrambe le informazioni sono rilevanti ed andrebbero processate insieme in quanto le informazioni codificate nelle due tipologie di vettori sono complementari.
-Le sperimentazioni effettuate sul grafo intero (\textbf{nc}) e sul grafo costruito unicamente con gli hyperlink nelle liste (\textbf{lc}), hanno restituito risultati migliori delle altre configurazioni. Tuttavia le liste in questo caso non hanno migliorato la qualità dei Random Walk. Le pagine hanno formato cluster sferici e abbastanza separati, rendendo l'algoritmo K-Means il più performante. Ad un analisi più dettagliata, è emerso che pagine etichettate diversamente sono state raggruppate insieme secondo alcuni criteri ragionevoli. Ad esempio pagine relative agli studenti triennali, ma riguardanti sezioni diverse, sono state raggruppate nello stesso cluster, così come quelle relative agli studenti magistrali. Questo è stato dovuto alla presenza di simili distribuzioni dei termini ed alla presenza negli stessi Random Walk. Infine, erano presenti diverse versioni della stessa pagina, ad esempio relative agli stessi professori. Queste presentavano una diversa distribuzione di termini ed apparivano in percorsi diversi e sono state raggruppate in cluster diversi.
+\color{red}Le sperimentazioni effettuate sul grafo intero (\textbf{nc}) e sul grafo costruito unicamente con gli hyperlink nelle liste (\textbf{lc}), hanno restituito risultati migliori delle altre configurazioni. \color{black}
+
+Dai risultati si osserva come gli algoritmi di clustering basati su rappresentazione vettoriale ottengono per il sito cs.iillinois.edu migliori performace degli algoritmi di clustering basati su rappresentazione a grafo. SCRIVERE EVENTUALMENTE PERCHE'
+Inoltre, analizzando i risultati degli algoritmi basati su rappresentazione vettoriale gli embedding costruiti a partire dal grafo web senza constraint (i.e. configurazione nc) permettono in generale di ottenere cluster più accurati indipendentemente dall' algoritmo di clustering utilizzato.
+SCRIVERE EVENTUALMENTE IL PERCHE'.
+Infine si osserva che in generale i risultati migliori sono ottenuti applicando l'algoritmo K-Means. SCRIVERE EVENTUALMENTE IL PERCHE'.
+Quindi per il sito web in analisi i risultati migliori sono stati ottenuti con la configurazione \textbf{ET-nc Kmeans}. 
+Da questa sperimentazione si evince come combinare le informazioni strutturali con informazioni relative al contenuto testuale permette un miglioramento degli algoritmi di clustering (HDBSCAN $+24\%$, dbScan $3\%$, etc.). 
+
+
+Tuttavia le liste in questo caso non hanno migliorato la qualità dei Random Walk. Le pagine hanno formato cluster sferici e abbastanza separati, rendendo l'algoritmo K-Means il più performante. Ad un analisi più dettagliata, è emerso che pagine etichettate diversamente sono state raggruppate insieme secondo alcuni criteri ragionevoli. Ad esempio pagine relative agli studenti triennali, ma riguardanti sezioni diverse, sono state raggruppate nello stesso cluster, così come quelle relative agli studenti magistrali. Questo è stato dovuto alla presenza di simili distribuzioni dei termini ed alla presenza negli stessi Random Walk. Infine, erano presenti diverse versioni della stessa pagina, ad esempio relative agli stessi professori. Queste presentavano una diversa distribuzione di termini ed apparivano in percorsi diversi e sono state raggruppate in cluster diversi.
 
 \subsubsection{\texttt{cs.stanford.edu}}
 
