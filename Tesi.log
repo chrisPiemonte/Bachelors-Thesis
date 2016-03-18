@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.12.22)  18 MAR 2016 01:16
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.12.22)  18 MAR 2016 18:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -712,6 +712,12 @@ LaTeX Warning: Label `englishchinese' multiply defined.
 
 LaTeX Warning: Label `nc_embedding_km' multiply defined.
 
+
+LaTeX Warning: Label `lc_embText_km' multiply defined.
+
+
+LaTeX Warning: Label `lc_embText_km' multiply defined.
+
 )
 \openout1 = `Tesi.aux'.
 
@@ -946,7 +952,19 @@ less on input line 27.
 
 [6
 
-])
+]
+Overfull \hbox (8.58841pt too wide) in paragraph at lines 29--29
+ [][] []\OT1/cmr/m/n/12 Rappresentazione del si-to \OT1/cmtt/m/n/12 eecs.mit.ed
+u\OT1/cmr/m/n/12 , clu-ste-riz-za-to con Fast- 
+ []
+
+
+Overfull \hbox (8.58841pt too wide) in paragraph at lines 30--30
+ [][] []\OT1/cmr/m/n/12 Rappresentazione del si-to \OT1/cmtt/m/n/12 eecs.mit.ed
+u\OT1/cmr/m/n/12 , clu-ste-riz-za-to con Fast- 
+ []
+
+)
 \tf@lof=\write6
 \openout6 = `Tesi.lof'.
 
@@ -1443,123 +1461,135 @@ LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 159.
 
 
-Overfull \hbox (52.10846pt too wide) in paragraph at lines 163--172
- [][] 
+Underfull \hbox (badness 10000) in paragraph at lines 175--179
+
  []
 
-<./Immagini/lc_embedding_km.png, id=294, 2509.375pt x 903.375pt>
+[59]
+Overfull \hbox (3.42181pt too wide) in paragraph at lines 189--190
+[]\OT1/cmr/bx/n/12 sg \OT1/cmr/m/n/12 de-fi-ni-sce l'al-go-rit-mo di ap-pren-di
+-men-to, di de-fault vie-ne usa-to \OT1/cmr/m/it/12 CBOW\OT1/cmr/m/n/12 ,
+ []
+
+<./Immagini/lc_embedding_km.png, id=297, 2509.375pt x 903.375pt>
 File: ./Immagini/lc_embedding_km.png Graphic file (type png)
 
 <use ./Immagini/lc_embedding_km.png>
-Package pdftex.def Info: ./Immagini/lc_embedding_km.png used on input line 181.
+Package pdftex.def Info: ./Immagini/lc_embedding_km.png used on input line 197.
 
-(pdftex.def)             Requested size: 369.88582pt x 133.15706pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[59]
-Overfull \hbox (3.42181pt too wide) in paragraph at lines 194--195
-[]\OT1/cmr/bx/n/12 sg \OT1/cmr/m/n/12 de-fi-ni-sce l'al-go-rit-mo di ap-pren-di
--men-to, di de-fault vie-ne usa-to \OT1/cmr/m/it/12 CBOW\OT1/cmr/m/n/12 ,
- []
-
-[60 <./Immagini/lc_embedding_km.png>] [61] [62] [63] [64]
+(pdftex.def)             Requested size: 369.88072pt x 264.61864pt.
+ [60 <./Immagini/lc_embedding_km.png>]
+[61] [62] [63] [64] [65]
 LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <12> not available
-(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 254.
+(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 256.
 
-Overfull \hbox (10.83746pt too wide) in paragraph at lines 256--304
+Overfull \hbox (10.83746pt too wide) in paragraph at lines 258--306
 [][] 
  []
-
-[65]
-Overfull \vbox (25.67755pt too high) has occurred while \output is active []
-
 
 [66]
-Overfull \hbox (10.83746pt too wide) in paragraph at lines 311--360
+File: ./Immagini/lc_embedding_km.png Graphic file (type png)
+ <use ./Immagini/lc_embedding_km.png>
+Package pdftex.def Info: ./Immagini/lc_embedding_km.png used on input line 312.
+
+(pdftex.def)             Requested size: 369.88072pt x 213.3959pt.
+ [67]
+Overfull \hbox (10.83746pt too wide) in paragraph at lines 323--372
 [][] 
  []
 
+[68] <./Immagini/stanf_lc_kmeans.png, id=329, 319.1925pt x 97.3236pt>
+File: ./Immagini/stanf_lc_kmeans.png Graphic file (type png)
 
-Overfull \hbox (10.83746pt too wide) in paragraph at lines 367--415
+<use ./Immagini/stanf_lc_kmeans.png>
+Package pdftex.def Info: ./Immagini/stanf_lc_kmeans.png used on input line 379.
+
+(pdftex.def)             Requested size: 369.88852pt x 213.419pt.
+ [69]
+Overfull \hbox (10.83746pt too wide) in paragraph at lines 391--439
 [][] 
  []
 
-[67]
-Overfull \hbox (10.83746pt too wide) in paragraph at lines 422--470
+[70 <./Immagini/stanf_lc_kmeans.png>]
+<./Immagini/mit_lc_fg.png, id=337, 481.8pt x 481.8pt>
+File: ./Immagini/mit_lc_fg.png Graphic file (type png)
+
+<use ./Immagini/mit_lc_fg.png>
+Package pdftex.def Info: ./Immagini/mit_lc_fg.png used on input line 445.
+(pdftex.def)             Requested size: 369.88582pt x 369.8991pt.
+ [71]
+Overfull \hbox (10.83746pt too wide) in paragraph at lines 453--501
 [][] 
  []
 
-[68]
-Overfull \hbox (10.83746pt too wide) in paragraph at lines 477--524
+[72 <./Immagini/mit_lc_fg.png>]
+<./Immagini/prince_emb_lc_h.png, id=345, 844.3545pt x 381.1038pt>
+File: ./Immagini/prince_emb_lc_h.png Graphic file (type png)
+
+<use ./Immagini/prince_emb_lc_h.png>
+Package pdftex.def Info: ./Immagini/prince_emb_lc_h.png used on input line 507.
+
+(pdftex.def)             Requested size: 369.88089pt x 264.6134pt.
+ [73]
+Overfull \hbox (10.83746pt too wide) in paragraph at lines 518--565
 [][] 
  []
 
-[69] [70] [71] <./Immagini/nc_groundtruth.png, id=338, 702.625pt x 770.88pt>
+[74 <./Immagini/prince_emb_lc_h.png>] [75]
+<./Immagini/nc_groundtruth.png, id=357, 702.625pt x 770.88pt>
 File: ./Immagini/nc_groundtruth.png Graphic file (type png)
 
 <use ./Immagini/nc_groundtruth.png>
-Package pdftex.def Info: ./Immagini/nc_groundtruth.png used on input line 557.
+Package pdftex.def Info: ./Immagini/nc_groundtruth.png used on input line 581.
 (pdftex.def)             Requested size: 284.52756pt x 312.1694pt.
- [72 <./Immagini/nc_groundtruth.png>]
-[73] [74]
-File: ./Immagini/lc_embedding_km.png Graphic file (type png)
- <use ./Immagini/lc_embedding_km.png>
-Package pdftex.def Info: ./Immagini/lc_embedding_km.png used on input line 665.
-
-(pdftex.def)             Requested size: 369.88582pt x 133.15706pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[75]
-Overfull \hbox (3.42181pt too wide) in paragraph at lines 678--679
+ [76 <./Immagini/nc_groundtruth.png>]
+[77] [78] [79]
+Overfull \hbox (3.42181pt too wide) in paragraph at lines 696--697
 []\OT1/cmr/bx/n/12 sg \OT1/cmr/m/n/12 de-fi-ni-sce l'al-go-rit-mo di ap-pren-di
 -men-to, di de-fault vie-ne usa-to \OT1/cmr/m/it/12 CBOW\OT1/cmr/m/n/12 ,
  []
 
-[76] [77] [78]
-Overfull \hbox (1.91289pt too wide) in paragraph at lines 754--770
+[80] [81]
+Overfull \hbox (1.91289pt too wide) in paragraph at lines 772--788
 [][] 
  []
 
-[79] [80] [81] [82] [83] [84]
-Overfull \hbox (2.44064pt too wide) in paragraph at lines 888--904
+[82] [83] [84] [85] [86] [87]
+Overfull \hbox (2.44064pt too wide) in paragraph at lines 906--922
 [][] 
  []
 
-[85] [86] [87]
-Overfull \hbox (4.35732pt too wide) in paragraph at lines 964--977
+[88] [89] [90]
+Overfull \hbox (4.35732pt too wide) in paragraph at lines 982--995
 [][] 
  []
 
-[88]
-Overfull \hbox (15.21838pt too wide) in paragraph at lines 1006--1019
+[91]
+Overfull \hbox (15.21838pt too wide) in paragraph at lines 1024--1037
 [][] 
  []
 
 
-Overfull \hbox (2.64194pt too wide) in paragraph at lines 1027--1040
+Overfull \hbox (2.64194pt too wide) in paragraph at lines 1045--1058
 [][] 
  []
 
-[89]
-Underfull \hbox (badness 10000) in paragraph at lines 1045--1048
+[92]
+Underfull \hbox (badness 10000) in paragraph at lines 1063--1066
 
  []
 
-[90]
-Underfull \hbox (badness 10000) in paragraph at lines 1103--1112
+[93]
+Underfull \hbox (badness 10000) in paragraph at lines 1121--1130
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1103--1112
+Underfull \hbox (badness 10000) in paragraph at lines 1121--1130
 
  []
 
-[91]) [92]
+[94]) [95]
 Capitolo 5.
 (./MaterialeInizialeFinale/Conclusioni.tex)
 Underfull \hbox (badness 10000) in paragraph at lines 9--146
@@ -1571,25 +1601,25 @@ Underfull \hbox (badness 10000) in paragraph at lines 9--146
 Package Fancyhdr Warning: \fancyfoot's `E' option without twoside option is use
 less on input line 1.
 
-[93
+[96
 
 ]
 
 Package Fancyhdr Warning: \fancyfoot's `E' option without twoside option is use
 less on input line 42.
 
-[94
+[97
 
-] [95] [96] [97]) [98] (./Tesi.aux)
+] [98] [99] [100]) [101] (./Tesi.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 15393 strings out of 493304
- 295743 string characters out of 6139870
- 324710 words of memory out of 5000000
- 18520 multiletter control sequences out of 15000+600000
+ 15410 strings out of 493304
+ 296212 string characters out of 6139870
+ 319721 words of memory out of 5000000
+ 18534 multiletter control sequences out of 15000+600000
  13732 words of font info for 51 fonts, out of 8000000 for 9000
  958 hyphenation exceptions out of 8191
  39i,12n,44p,10418b,589s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1610,10 +1640,10 @@ r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share
 ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/share/texlive/tex
 mf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/share/texlive/texmf-dist
 /fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on Tesi.pdf (110 pages, 3089837 bytes).
+Output written on Tesi.pdf (113 pages, 6088390 bytes).
 PDF statistics:
- 482 PDF objects out of 1000 (max. 8388607)
- 317 compressed objects within 4 object streams
+ 497 PDF objects out of 1000 (max. 8388607)
+ 323 compressed objects within 4 object streams
  0 named destinations out of 1000 (max. 500000)
- 111 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 126 words of extra memory for PDF output out of 10000 (max. 10000000)
 

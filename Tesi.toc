@@ -64,38 +64,37 @@
 \contentsline {section}{\numberline {4.3}Configurazioni}{58}
 \contentsline {subsection}{\numberline {4.3.1}Community Detection}{58}
 \contentsline {subsection}{\numberline {4.3.2}URL Embedding}{59}
-\contentsline {subsection}{\numberline {4.3.3}Text Mining}{61}
+\contentsline {subsection}{\numberline {4.3.3}Text Mining}{62}
 \contentsline {subsection}{\numberline {4.3.4}Embedding e Text Mining}{64}
-\contentsline {subsection}{\numberline {4.3.5}Analisi dei risultati}{65}
-\contentsline {section}{\numberline {4.4}Configurazioni2}{66}
-\contentsline {subsubsection}{\texttt {cs.illinois.edu}}{66}
-\contentsline {subsubsection}{\texttt {cs.stanford.edu}}{67}
-\contentsline {subsubsection}{\texttt {eecs.mit.edu}}{68}
-\contentsline {subsubsection}{\texttt {cs.princeton.edu}}{69}
-\contentsline {subsubsection}{\texttt {cs.ox.ac.uk}}{70}
-\contentsline {subsection}{\numberline {4.4.1}Community Detection}{71}
-\contentsline {paragraph}{\texttt {cs.illinois.edu}}{72}
-\contentsline {paragraph}{\texttt {cs.stanford.edu}}{73}
-\contentsline {paragraph}{\texttt {eecs.mit.edu}}{73}
-\contentsline {paragraph}{\texttt {cs.princeton.edu}}{74}
-\contentsline {paragraph}{\texttt {cs.ox.ac.uk}}{74}
-\contentsline {subsection}{\numberline {4.4.2}URL Embedding}{75}
+\contentsline {section}{\numberline {4.4}Analisi dei risultati}{65}
+\contentsline {subsubsection}{\texttt {cs.illinois.edu}}{67}
+\contentsline {subsubsection}{\texttt {cs.stanford.edu}}{69}
+\contentsline {subsubsection}{\texttt {eecs.mit.edu}}{71}
+\contentsline {subsubsection}{\texttt {cs.princeton.edu}}{73}
+\contentsline {subsubsection}{\texttt {cs.ox.ac.uk}}{75}
+\contentsline {subsection}{\numberline {4.4.1}Community Detection}{76}
 \contentsline {paragraph}{\texttt {cs.illinois.edu}}{76}
 \contentsline {paragraph}{\texttt {cs.stanford.edu}}{77}
-\contentsline {paragraph}{\texttt {eecs.mit.edu}}{78}
-\contentsline {paragraph}{\texttt {cs.princeton.edu}}{79}
-\contentsline {paragraph}{\texttt {cs.ox.ac.uk}}{80}
-\contentsline {subsection}{\numberline {4.4.3}Text Mining}{81}
-\contentsline {paragraph}{\texttt {cs.illinois.edu}}{82}
-\contentsline {paragraph}{\texttt {cs.stanford.edu}}{83}
-\contentsline {paragraph}{\texttt {eecs.mit.edu}}{84}
-\contentsline {paragraph}{\texttt {cs.princeton.edu}}{85}
-\contentsline {paragraph}{\texttt {cs.ox.ac.uk}}{86}
-\contentsline {subsection}{\numberline {4.4.4}Embedding e Text Mining}{87}
-\contentsline {paragraph}{\texttt {cs.illinois.edu}}{87}
-\contentsline {paragraph}{\texttt {cs.stanford.edu}}{88}
-\contentsline {paragraph}{\texttt {eecs.mit.edu}}{88}
-\contentsline {paragraph}{\texttt {cs.princeton.edu}}{89}
+\contentsline {paragraph}{\texttt {eecs.mit.edu}}{77}
+\contentsline {paragraph}{\texttt {cs.princeton.edu}}{78}
+\contentsline {paragraph}{\texttt {cs.ox.ac.uk}}{78}
+\contentsline {subsection}{\numberline {4.4.2}URL Embedding}{79}
+\contentsline {paragraph}{\texttt {cs.illinois.edu}}{80}
+\contentsline {paragraph}{\texttt {cs.stanford.edu}}{81}
+\contentsline {paragraph}{\texttt {eecs.mit.edu}}{81}
+\contentsline {paragraph}{\texttt {cs.princeton.edu}}{82}
+\contentsline {paragraph}{\texttt {cs.ox.ac.uk}}{83}
+\contentsline {subsection}{\numberline {4.4.3}Text Mining}{84}
+\contentsline {paragraph}{\texttt {cs.illinois.edu}}{85}
+\contentsline {paragraph}{\texttt {cs.stanford.edu}}{86}
+\contentsline {paragraph}{\texttt {eecs.mit.edu}}{87}
+\contentsline {paragraph}{\texttt {cs.princeton.edu}}{88}
 \contentsline {paragraph}{\texttt {cs.ox.ac.uk}}{89}
-\contentsline {subsection}{\numberline {4.4.5}Analisi dei risultati}{90}
-\contentsline {chapter}{\numberline {5}Conclusioni e sviluppi futuri}{93}
+\contentsline {subsection}{\numberline {4.4.4}Embedding e Text Mining}{90}
+\contentsline {paragraph}{\texttt {cs.illinois.edu}}{90}
+\contentsline {paragraph}{\texttt {cs.stanford.edu}}{91}
+\contentsline {paragraph}{\texttt {eecs.mit.edu}}{91}
+\contentsline {paragraph}{\texttt {cs.princeton.edu}}{92}
+\contentsline {paragraph}{\texttt {cs.ox.ac.uk}}{92}
+\contentsline {subsection}{\numberline {4.4.5}Analisi dei risultati}{93}
+\contentsline {chapter}{\numberline {5}Conclusioni e sviluppi futuri}{96}

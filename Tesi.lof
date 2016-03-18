@@ -24,6 +24,9 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {4.1}{\ignorespaces Rappresentazione del sito \texttt {cs.illinois.edu}, clusterizzato con K-Means.\relax }}{60}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Grafo del sito \texttt {cs.illinois.edu} etichettato manualmente.\relax }}{72}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Rappresentazione del sito \texttt {cs.illinois.edu}, clusterizzato con K-Means.\relax }}{76}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Rappresentazione del sito \texttt {cs.illinois.edu}, clusterizzato con K-Means.\relax }}{68}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Rappresentazione del sito \texttt {cs.stanford.edu}, clusterizzato con K-Means.\relax }}{70}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Rappresentazione del sito \texttt {eecs.mit.edu}, clusterizzato con Fastgreedy.\relax }}{72}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Rappresentazione del sito \texttt {cs.princeton.edu}, clusterizzato con Fastgreedy.\relax }}{74}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Grafo del sito \texttt {cs.illinois.edu} etichettato manualmente.\relax }}{76}
 \addvspace {10\p@ }

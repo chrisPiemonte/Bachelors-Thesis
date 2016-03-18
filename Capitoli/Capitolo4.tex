@@ -148,9 +148,9 @@ La Silhouette può variare da $-1$, per cluster non definiti, a $1$ per cluster 
 Si descrivono di seguito le configurazioni utilizzate per gli algoritmi di clustering utilizzati durante la fase di sperimentazione. 
 
 \subsection{Community Detection}
-Per gli algoritmi di clustering basati su grafo sono stati utilizzati \textit{Walk Trap} e \textit{Fastgreedy}. Questi rappresentano gli algoritmi più comunemente utilizzati in applicazioni come social network mining per estrarre web community.
+Per gli algoritmi di clustering basati su grafo sono stati utilizzati \textit{Walk Trap} e \textit{Fastgreedy}. Questi rappresentano gli algoritmi più comunemente utilizzati in applicazioni come \textit{Social Network Mining} per estrarre Web Community.
 
-Fastgreedy non richiede parametri specifici, tuttavia per ogni sito web è stata definita un'altezza entro cui tagliare il dendogramma in modo tale che il numero dei cluster restituiti sia simile al numero dei cluster della groud truth. WalkTrap invece richiede in input la lunghezza dei random walk.
+Fastgreedy non richiede parametri specifici, tuttavia per ogni sito web è stata definita un'altezza entro cui tagliare il dendogramma in modo tale che il numero dei cluster restituiti sia simile al numero dei cluster della groud truth. WalkTrap invece richiede in input la lunghezza dei Random Walk.
 
 
 
@@ -162,12 +162,12 @@ La tabella \ref{tabwebsites} mostra per ogni sito web oggetto di analisi i param
 \label{tabwebsites}
 \begin{tabular}{|l|l|l|l|l|l|}
 \hline
- \textbf{Web site}& \textbf{random walk len} & \textbf{dendrogram cut} & \textbf{num. real clusters}\\ \hline
-\texttt{cs.illinois.edu}  & 3 &   15 &\\ \hline
-\texttt{cs.stanford.edu}& 3 & 10 &\\ \hline
-\texttt{eecs.mit.edu} & 3 & 15 &\\ \hline
-\texttt{cs.princeton} & 4 &   20&\\ \hline
-\texttt{cs.ox.ac.uk} & 4 & 20  &\\ \hline
+ \textbf{Web site}& \textbf{ran walk len} & \textbf{dendr.cut} & \textbf{num. real clusters}\\ \hline
+\texttt{cs.illinois.edu}  & 3 &   15 & 16 \\ \hline
+\texttt{cs.stanford.edu}& 3 & 10 & 13 \\ \hline
+\texttt{eecs.mit.edu} & 3 & 15 & 16 \\ \hline
+\texttt{cs.princeton} & 4 & 20 & 29 \\ \hline
+\texttt{cs.ox.ac.uk} & 4 & 20 & 26 \\ \hline
 \end{tabular}
 \end{table}
 
@@ -176,12 +176,7 @@ Considerando i Random Walk generati sul grafo come frasi, è possibile applicare
 \\
 Le sequenze di Random Walk sono state usate per apprendere rappresentazioni vettoriali delle pagine Web. La fase di URL embedding è stata effetuata utilizzando l'algoritmo Word2vec, \cite{gensim} (esaminato in Sezione \ref{word2vec}) modificando alcuni parametri e lasciando invariato altri.
 \\
-\begin{figure}[h!]
-	\centering
-	\includegraphics[width = 130mm]{lc_embedding_km.png}
-	\caption{Rappresentazione del sito \texttt{cs.illinois.edu}, clusterizzato con K-Means.}
-	\label{nc_embedding_km}
-\end{figure}
+
 I parametri personalizzati sono:
 \begin{itemize}
 \item \textbf{min-count}: tutte le parole (o URL) con frequenza di occorrenza minore i questo valore vengono ignorate.
@@ -194,12 +189,19 @@ Questa operazione può essere molto lenta. Per accelerare il processo possono ve
 \item \textbf{sg} definisce l'algoritmo di apprendimento, di default viene usato \textit{CBOW}, mentre se impostato a $1$ utilizza \textit{skip-gram} \cite{Mikolov13}. Per lo scopo della sperimentazione si imposterà questo valore a  CBOW.
 \end{itemize}
 
-Sulle rappresentazioni vettoriali estratte sono stati applicati gli algoritmi HDBSCA e K-MEANS.
+Sulle rappresentazioni vettoriali estratte sono stati applicati gli algoritmi HDBSCAN e K-MEANS.
 Di seguito si definiscono i parametri utilizzati per ogni sito web: 
 \begin{itemize}
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width = 130mm, height=93mm]{lc_embedding_km.png}
+	\caption{Rappresentazione del sito \texttt{cs.illinois.edu}, clusterizzato con K-Means.}
+	\label{nc_embedding_km}
+\end{figure}
+
 \item \texttt{cs.illinois.edu} è stata impostato un \textit{min-count} pari a $1$, \textit{window} con valore $5$ ed è stato utilizzato \textit{skip-gram} con $5$ \textit{negative} sampling. Gli algoritmi testati sono stati: DBSCAN con $\epsilon = 0.9$ ed \textit{min-samples}$ = 4$; HDBSCAN con \textit{min-cluster-size}$=6$; K-Means con numero di cluster pari a $15$. 
-\item \texttt{cs.stanford.edu} è stata impostato un \textit{min-count} pari a $1$, \textit{window} con valore $5$ ed è stato utilizzato \textit{skip-gram} con $5$ \textit{negative} sampling. Gli algoritmi testati sono stati: DBSCAN con $\epsilon = 0.9$ ed \textit{min-samples}$ = 7$; HDBSCAN con \textit{min-cluster-size}$=10$; K-Means con numero di cluster pari a $15$. Per il dataset delle liste: DBSCAN con $\epsilon = 1.6$ ed \textit{min-samples}$ = 3$; HDBSCAN con \textit{min-cluster-size}$=5$; K-Means con numero di cluster pari a $15$.
-\item \texttt{eecs.mit.edu} è stata impostato un \textit{min-count} pari a $1$, \textit{window} con valore $5$ ed è stato utilizzato \textit{skip-gram} con $5$ \textit{negative} sampling. Gli algoritmi testati sono stati: DBSCAN con $\epsilon = 1.0$ ed \textit{min-samples}$ = 10$; HDBSCAN con \textit{min-cluster-size}$=10$; K-Means con numero di cluster pari a $10$. Per il dataset delle liste: DBSCAN con $\epsilon = 1.5$ ed \textit{min-samples}$ = 5$; HDBSCAN con \textit{min-cluster-size}$=13$; K-Means con numero di cluster pari a $10$.
+\item \texttt{cs.stanford.edu} è stata impostato un \textit{min-count} pari a $1$, \textit{window} con valore $5$ ed è stato utilizzato \textit{skip-gram} con $5$ \textit{negative} sampling. Gli algoritmi testati sono stati: DBSCAN con $\epsilon = 0.9$ ed \textit{min-samples}$ = 7$; HDBSCAN con \textit{min-cluster-size}$=10$; K-Means con numero di cluster pari a $10$. Per il dataset delle liste: DBSCAN con $\epsilon = 1.6$ ed \textit{min-samples}$ = 3$; HDBSCAN con \textit{min-cluster-size}$=5$; K-Means con numero di cluster pari a $10$.
+\item \texttt{eecs.mit.edu} è stata impostato un \textit{min-count} pari a $1$, \textit{window} con valore $5$ ed è stato utilizzato \textit{skip-gram} con $5$ \textit{negative} sampling. Gli algoritmi testati sono stati: DBSCAN con $\epsilon = 1.0$ ed \textit{min-samples}$ = 10$; HDBSCAN con \textit{min-cluster-size}$=10$; K-Means con numero di cluster pari a $15$. Per il dataset delle liste: DBSCAN con $\epsilon = 1.5$ ed \textit{min-samples}$ = 5$; HDBSCAN con \textit{min-cluster-size}$=13$; K-Means con numero di cluster pari a $15$.
 \item \texttt{cs.princeton.edu} è stata impostato un \textit{min-count} pari a $1$, \textit{window} con valore $5$ ed è stato utilizzato \textit{skip-gram} con $5$ \textit{negative} sampling. Gli algoritmi testati sono stati: DBSCAN con $\epsilon = 0.8$ ed \textit{min-samples}$ = 7$; HDBSCAN con \textit{min-cluster-size}$=10$; K-Means con numero di cluster pari a $30$. Per il dataset delle liste: DBSCAN con $\epsilon = 0.7$ ed \textit{min-samples}$ = 5$; HDBSCAN con \textit{min-cluster-size}$=8$; K-Means con numero di cluster pari a $25$.
 \item \texttt{cs.ox.ac.uk} è stata impostato un \textit{min-count} pari a $1$, \textit{window} con valore $5$ ed è stato utilizzato \textit{skip-gram} con $5$ \textit{negative} sampling. Gli algoritmi testati sono stati: DBSCAN con $\epsilon = 0.8$ ed \textit{min-samples}$ = 7$; HDBSCAN con \textit{min-cluster-size}$=10$; K-Means con numero di cluster pari a $30$. Per il dataset delle liste: DBSCAN con $\epsilon = 0.7$ ed \textit{min-samples}$ = 5$; HDBSCAN con \textit{min-cluster-size}$=8$; K-Means con numero di cluster pari a $25$.
 \end{itemize}
@@ -221,35 +223,35 @@ I cluster estratti sono stati ottenuti nel seguente modo:
 \item \texttt{cs.illinois.edu}
 Sul dataset del sito, costituito da $728$ pagine e $433$ termini, il corpus è stato ripulito delle stopword, stemmatizzato ed è stato impostato il \textit{max-df} all'80\%, il \textit{min-df} a $0.1$ e sono stati considerati solo uni-grammi, bi-grammi e tri-grammi. Se i termini appaiono in più dell'80\% dei documenti, probabilmente avrà poco significato, lo stesso se appare troppe poche volte. Gli algoritmi testati sono stati: DBSCAN con $\epsilon = 0.9$ ed \textit{min-samples}$ = 4$; HDBSCAN con \textit{min-cluster-size}$=4$; K-Means con numero di cluster pari a $15$. \\Sul Dataset costruito estraendo le liste: DBSCAN con $\epsilon = 0.7$ ed \textit{min-samples}$ = 4$; HDBSCAN con \textit{min-cluster-size}$=7$; K-Means con numero di cluster pari a $15$. 
 \item \texttt{cs.stanford.edu}
-Sul dataset del sito, costituito da $1458$ pagine e $843$ termini, il corpus è stato ripulito delle stopword, stemmatizzato ed è stato impostato il \textit{max-df} all'80\%, il \textit{min-df} a $0.1$ e sono stati considerati solo uni-grammi, bi-grammi e tri-grammi. Se i termini appaiono in più dell'80\% dei documenti, probabilmente avrà poco significato, lo stesso se appare troppe poche volte. Gli algoritmi testati sono stati: DBSCAN con $\epsilon = 0.3$ ed \textit{min-samples}$ = 5$; HDBSCAN con \textit{min-cluster-size}$=15$; K-Means con numero di cluster pari a $15$. \\Sul Dataset costruito estraendo le liste: DBSCAN con $\epsilon = 0.5$ ed \textit{min-samples}$ = 3$; HDBSCAN con \textit{min-cluster-size}$=5$; K-Means con numero di cluster pari a $15$. 
+Sul dataset del sito, costituito da $1458$ pagine e $843$ termini, il corpus è stato ripulito delle stopword, stemmatizzato ed è stato impostato il \textit{max-df} all'80\%, il \textit{min-df} a $0.1$ e sono stati considerati solo uni-grammi, bi-grammi e tri-grammi. Se i termini appaiono in più dell'80\% dei documenti, probabilmente avrà poco significato, lo stesso se appare troppe poche volte. Gli algoritmi testati sono stati: DBSCAN con $\epsilon = 0.3$ ed \textit{min-samples}$ = 5$; HDBSCAN con \textit{min-cluster-size}$=15$; K-Means con numero di cluster pari a $10$. \\Sul Dataset costruito estraendo le liste: DBSCAN con $\epsilon = 0.5$ ed \textit{min-samples}$ = 3$; HDBSCAN con \textit{min-cluster-size}$=5$; K-Means con numero di cluster pari a $10$. 
 \item \texttt{eecs.mit.edu}
-Sul dataset del sito, costituito da $1745$ pagine e $354$ termini, il corpus è stato ripulito delle stopword, stemmatizzato ed è stato impostato il \textit{max-df} all'80\%, il \textit{min-df} a $0.1$ e sono stati considerati solo uni-grammi, bi-grammi e tri-grammi. Se i termini appaiono in più dell'80\% dei documenti, probabilmente avrà poco significato, lo stesso se appare troppe poche volte. Gli algoritmi testati sono stati: DBSCAN con $\epsilon = 0.9$ ed \textit{min-samples}$ = 9$; HDBSCAN con \textit{min-cluster-size}$=15$; K-Means con numero di cluster pari a $10$. \\Sul Dataset costruito estraendo le liste: DBSCAN con $\epsilon = 0.9$ ed \textit{min-samples}$ = 6$; HDBSCAN con \textit{min-cluster-size}$=9$; K-Means con numero di cluster pari a $10$. 
+Sul dataset del sito, costituito da $1745$ pagine e $354$ termini, il corpus è stato ripulito delle stopword, stemmatizzato ed è stato impostato il \textit{max-df} all'80\%, il \textit{min-df} a $0.1$ e sono stati considerati solo uni-grammi, bi-grammi e tri-grammi. Se i termini appaiono in più dell'80\% dei documenti, probabilmente avrà poco significato, lo stesso se appare troppe poche volte. Gli algoritmi testati sono stati: DBSCAN con $\epsilon = 0.9$ ed \textit{min-samples}$ = 9$; HDBSCAN con \textit{min-cluster-size}$=15$; K-Means con numero di cluster pari a $15$. \\Sul Dataset costruito estraendo le liste: DBSCAN con $\epsilon = 0.9$ ed \textit{min-samples}$ = 6$; HDBSCAN con \textit{min-cluster-size}$=9$; K-Means con numero di cluster pari a $15$. 
 \item \texttt{cs.princeton.edu}
-Sul dataset del sito, costituito da $16378$ pagine e $470$ termini, il corpus è stato ripulito delle stopword, stemmatizzato ed è stato impostato il \textit{max-df} all'80\%, il \textit{min-df} a $0.1$ e sono stati considerati solo uni-grammi, bi-grammi e tri-grammi. Se i termini appaiono in più dell'80\% dei documenti, probabilmente avrà poco significato, lo stesso se appare troppe poche volte. Gli algoritmi testati sono stati: DBSCAN con $\epsilon = 0.3$ ed \textit{min-samples}$ = 5$; HDBSCAN con \textit{min-cluster-size}$=15$; K-Means con numero di cluster pari a $10$. \\Sul Dataset costruito estraendo le liste: DBSCAN con $\epsilon = 0.9$ ed \textit{min-samples}$ = 6$; HDBSCAN con \textit{min-cluster-size}$=15$; K-Means con numero di cluster pari a $25$.  
+Sul dataset del sito, costituito da $16378$ pagine e $470$ termini, il corpus è stato ripulito delle stopword, stemmatizzato ed è stato impostato il \textit{max-df} all'80\%, il \textit{min-df} a $0.1$ e sono stati considerati solo uni-grammi, bi-grammi e tri-grammi. Se i termini appaiono in più dell'80\% dei documenti, probabilmente avrà poco significato, lo stesso se appare troppe poche volte. Gli algoritmi testati sono stati: DBSCAN con $\epsilon = 0.3$ ed \textit{min-samples}$ = 5$; HDBSCAN con \textit{min-cluster-size}$=15$; K-Means con numero di cluster pari a $20$. \\Sul Dataset costruito estraendo le liste: DBSCAN con $\epsilon = 0.9$ ed \textit{min-samples}$ = 6$; HDBSCAN con \textit{min-cluster-size}$=15$; K-Means con numero di cluster pari a $20$.  
 \item \texttt{cs.ox.ac.uk}
-Sul dataset del sito, costituito da $3951$ pagine e $363$ termini, il corpus è stato ripulito delle stopword, stemmatizzato ed è stato impostato il \textit{max-df} all'80\%, il \textit{min-df} a $0.1$ e sono stati considerati solo uni-grammi, bi-grammi e tri-grammi. Se i termini appaiono in più dell'80\% dei documenti, probabilmente avrà poco significato, lo stesso se appare troppe poche volte. Gli algoritmi testati sono stati: DBSCAN con $\epsilon = 0.3$ ed \textit{min-samples}$ = 5$; HDBSCAN con \textit{min-cluster-size}$=15$; K-Means con numero di cluster pari a $10$. \\Sul Dataset costruito estraendo le liste: DBSCAN con $\epsilon = 0.7$ ed \textit{min-samples}$ = 7$; HDBSCAN con \textit{min-cluster-size}$=7$; K-Means con numero di cluster pari a $25$. 
+Sul dataset del sito, costituito da $3951$ pagine e $363$ termini, il corpus è stato ripulito delle stopword, stemmatizzato ed è stato impostato il \textit{max-df} all'80\%, il \textit{min-df} a $0.1$ e sono stati considerati solo uni-grammi, bi-grammi e tri-grammi. Se i termini appaiono in più dell'80\% dei documenti, probabilmente avrà poco significato, lo stesso se appare troppe poche volte. Gli algoritmi testati sono stati: DBSCAN con $\epsilon = 0.3$ ed \textit{min-samples}$ = 5$; HDBSCAN con \textit{min-cluster-size}$=15$; K-Means con numero di cluster pari a $20$. \\Sul Dataset costruito estraendo le liste: DBSCAN con $\epsilon = 0.7$ ed \textit{min-samples}$ = 7$; HDBSCAN con \textit{min-cluster-size}$=7$; K-Means con numero di cluster pari a $20$. 
 \end{itemize}
 
 \subsection{Embedding e Text Mining}
-La terza ed ultima configurazione analizzata è rappresentata dalla combinazione nella rappresentazione vettoriale di informazioni riguardanti il contenuto testuale delle pagine web e la struttura del sito web. Questo è realizzato attraverso la combinazione di rappresentazioni vettoriali ottenute con algoritmi di word embedding e rappresentazioni vettoriali ottenute con algoritmi derivanti dall'analisi del contenuto testuale. 
+La terza ed ultima configurazione analizzata è rappresentata dalla combinazione nella rappresentazione vettoriale di informazioni riguardanti il contenuto testuale delle pagine web e la struttura del sito web. Questo è realizzato attraverso la combinazione di rappresentazioni vettoriali ottenute con algoritmi di Word Embedding e rappresentazioni vettoriali ottenute con algoritmi derivanti dall'analisi del contenuto testuale. 
 
 Di seguito si definiscono i parametri e gli algoritmi utilizzati in questa configurazione:
 \begin{itemize}
 \item \texttt{cs.illinois.edu} I vettori di word2vec sono stati generati di dimensione $48$, mentre i vettori-riga documenti sono stati ridotti con \textit{TruncateSVD} a dimensione $50$. Gli algoritmi testati sono stati: HDBSCAN con \textit{min-cluster-size}$=7$; K-Means con numero di cluster pari a $15$.
 \item \texttt{cs.stanford.edu} I vettori di word2vec sono stati generati di dimensione $48$, mentre i vettori-riga documenti sono stati ridotti con \textit{TruncateSVD} a dimensione $50$. Gli algoritmi testati sono stati: HDBSCAN con \textit{min-cluster-size}$=10$; K-Means con numero di cluster pari a $15$. 
-\item \texttt{eecs.mit.edu} I vettori di word2vec sono stati generati di dimensione $48$, mentre i vettori-riga documenti sono stati ridotti con \textit{TruncateSVD} a dimensione $50$. Gli algoritmi testati sono stati: HDBSCAN con \textit{min-cluster-size}$=14$; K-Means con numero di cluster pari a $10$. 
-\item \texttt{cs.princeton.edu} I vettori di word2vec sono stati generati di dimensione $48$, mentre i vettori-riga documenti sono stati ridotti con \textit{TruncateSVD} a dimensione $50$. Gli algoritmi testati sono stati: HDBSCAN con \textit{min-cluster-size}$=14$; K-Means con numero di cluster pari a $10$. 
-\item \texttt{cs.ox.ac.uk} I vettori di word2vec sono stati generati di dimensione $48$, mentre i vettori-riga documenti sono stati ridotti con \textit{TruncateSVD} a dimensione $50$. Gli algoritmi testati sono stati: HDBSCAN con \textit{min-cluster-size}$=14$; K-Means con numero di cluster pari a $10$.
+\item \texttt{eecs.mit.edu} I vettori di word2vec sono stati generati di dimensione $48$, mentre i vettori-riga documenti sono stati ridotti con \textit{TruncateSVD} a dimensione $50$. Gli algoritmi testati sono stati: HDBSCAN con \textit{min-cluster-size}$=14$; K-Means con numero di cluster pari a $15$. 
+\item \texttt{cs.princeton.edu} I vettori di word2vec sono stati generati di dimensione $48$, mentre i vettori-riga documenti sono stati ridotti con \textit{TruncateSVD} a dimensione $50$. Gli algoritmi testati sono stati: HDBSCAN con \textit{min-cluster-size}$=14$; K-Means con numero di cluster pari a $20$. 
+\item \texttt{cs.ox.ac.uk} I vettori di Word2vec sono stati generati di dimensione $48$, mentre i vettori-riga documenti sono stati ridotti con \textit{TruncateSVD} a dimensione $50$. Gli algoritmi testati sono stati: HDBSCAN con \textit{min-cluster-size}$=14$; K-Means con numero di cluster pari a $20$.
 \end{itemize}
 
-\subsection{Analisi dei risultati}
+\section{Analisi dei risultati}
 Di seguito si confrontano i risultati degli algoritmi di clustering basati su grafo con quelli basati su rappresentazioni vettoriali al variare del grafo web (list-constraint vs no-constraint).
 Inoltre per gli algoritmi di clustering basati su vettori si analizzano le prestazioni degli algoritmi al variare delle rappresentazioni vettoriali (Url-embedding, Tf-idf, Url-embeddig + tf-idf).
 
-\color{red}
-I PARAGRAFI SEGUENTI SONO QUELLI VECCHI
-
-\section{Configurazioni2}
+La divisione del grafo in Community può essere effettuata seguendo diversi approcci, tuttavia la rete costruita su un sito web è caratterizzata solitamente da un numero elevato di collegamenti tra pagine, il quale suggerisce l'utilizzo di alcune tipologie piuttosto che altre. Infatti misure come la betweenness non hanno restituito risultati significativi.
+Dalla scelta di apprendere le rappresentazioni vettoriali delle relazioni invece di utilizzare algoritmi di Community Detection del grafo, sono derivati dei vantaggi. Innanzitutto gli algoritmi di partizionamento dei grafi hanno complessità NP-completa, ovvero necessitano di un tempo superpolinomiale nella dimensione dell'input. Nel contesto del Web Mining la dimensione del dataset può crescere enormemente ed avere soluzioni più efficienti costituisce senz'altro una priorità. 
+\\
+In tutti i casi di seguito riportati sono stati generati grafi sia in modalità classica, che attraverso l'estrazione delle liste. Nel primo caso i dataset saranno chiamati \textbf{''nc''} (no-costraint, senza vincoli), mentre nel secondo caso \textbf{''lc''} (list-costraint, con il vincolo delle liste (vedere sezione \ref{liste}). Dove omessa, la configurazione è rimasta invariata.
 
 \subsubsection{\texttt{cs.illinois.edu}}
 \begin{table}[H]
@@ -304,6 +306,16 @@ I PARAGRAFI SEGUENTI SONO QUELLI VECCHI
 	\caption{Risultati sperimentazione del sito \texttt{cs.illinois.edu}}
 	\label{metricheIll}
 \end{table}
+
+\begin{figure}[ht!]
+	\centering
+	\includegraphics[width = 130mm, height=75mm]{lc_embedding_km.png}
+	\caption{Rappresentazione del sito \texttt{cs.illinois.edu}, clusterizzato con K-Means.}
+	\label{nc_embedding_km}
+\end{figure}
+
+I risultati hanno evidenziato che l'analisi singola, sia della correlazione tra le pagine sia del contenuto testuale, può non bastare a codificare esaustivamente la conoscenza che una pagina web può offrire. Entrambe le informazioni sono rilevanti ed andrebbero processate insieme in quanto le informazioni codificate nelle due tipologie di vettori sono complementari.
+Le sperimentazioni effettuate sul grafo intero (\textbf{nc}) e sul grafo costruito unicamente con gli hyperlink nelle liste (\textbf{lc}), hanno restituito risultati migliori delle altre configurazioni. Tuttavia le liste in questo caso non hanno migliorato la qualità dei Random Walk. Le pagine hanno formato cluster sferici e abbastanza separati, rendendo l'algoritmo K-Means il più performante. Ad un analisi più dettagliata, è emerso che pagine etichettate diversamente sono state raggruppate insieme secondo alcuni criteri ragionevoli. Ad esempio pagine relative agli studenti triennali, ma riguardanti sezioni diverse, sono state raggruppate nello stesso cluster, così come quelle relative agli studenti magistrali. Questo è stato dovuto alla presenza di simili distribuzioni dei termini ed alla presenza negli stessi Random Walk. Infine, erano presenti diverse versioni della stessa pagina, ad esempio relative agli stessi professori. Queste presentavano una diversa distribuzione di termini ed apparivano in percorsi diversi e sono state raggruppate in cluster diversi.
 
 \subsubsection{\texttt{cs.stanford.edu}}
 
@@ -361,6 +373,18 @@ I PARAGRAFI SEGUENTI SONO QUELLI VECCHI
 	\label{metricheStanf}
 \end{table}
 
+
+\begin{figure}[ht!]
+	\centering
+	\includegraphics[width = 130mm, height=75mm]{stanf_lc_kmeans.png}
+	\caption{Rappresentazione del sito \texttt{cs.stanford.edu}, clusterizzato con K-Means.}
+	\label{lc_embText_km}
+\end{figure}
+
+Nonostante il dataset del grafo completo presenti un maggiore coefficiente di Silhouette, l'applicazione delle listehanno restituito risultati migliori. In questo caso hanno filtrato in modo consistente le pagine esplorate in quanto il DOM del sito includeva la maggior parte degli hyperlink in sezione nascoste, prevalentemente menù dropdown. Questo ha garantito una diversificazione marcata dei percorsi. Inoltre i risultati dell'analisi testuale si attestano al di sotto di quelli ottenuti attraverso l'URL embedding. 
+
+Anche qui i cluster si sono formati prevalentemente con forma sferica, favorendo il K-Means sugli altri.
+
 \subsubsection{\texttt{eecs.mit.edu}}
 
 \begin{table}[H]
@@ -416,6 +440,13 @@ I PARAGRAFI SEGUENTI SONO QUELLI VECCHI
 	\label{metricheMit}
 \end{table}
 
+\begin{figure}[ht!]
+	\centering
+	\includegraphics[width = 130mm]{mit_lc_fg.png}
+	\caption{Rappresentazione del sito \texttt{eecs.mit.edu}, clusterizzato con Fastgreedy.}
+	\label{lc_embText_km}
+\end{figure}
+In questo caso il partizionamento del grafo si è rivelato più efficace. L'embedding degli URL ha comunque restituito una omogeneità dei cluster maggiore. In questo caso i Random Walk, sia nell'algoritmo WalkTrap sul grafo, sia quelli utilizzati per apprendere rappresentazioni vettoriali, non sono riusciti a codificare abbastanza informazioni. La modularità del grafo, utilizzata in Fastgreedy, ha evidenziato una forte divisione fra le Community presenti. Questo è stato dovuto dalle maggiori connessioni tra le pagine all'interno dello stesso cluster, rispetto alle connessioni fra pagine di cluster diversi. Le liste hanno contribuito a filtrare i cammini percorribili.
 \subsubsection{\texttt{cs.princeton.edu}}
 
 \begin{table}[H]
@@ -471,6 +502,16 @@ I PARAGRAFI SEGUENTI SONO QUELLI VECCHI
 	\label{metrichePrinc}
 \end{table}
 
+\begin{figure}[ht!]
+	\centering
+	\includegraphics[width = 130mm, height=93mm]{prince_emb_lc_h.png}
+	\caption{Rappresentazione del sito \texttt{cs.princeton.edu}, clusterizzato con Fastgreedy.}
+	\label{lc_emb_h}
+\end{figure}
+
+I cluster generati dalle rappresentazioni vettoriali delle pagine hanno formato cluster densi. L'algoritmo HDBSCAN è riuscito a distinguere meglio le pagine presentano la più alta V-measure e Adjusted Random Index. Anche qui le liste hanno migliorato notevolmente i risultati ottenuti. 
+
+
 \subsubsection{\texttt{cs.ox.ac.uk}}
 
 \begin{table}[H]
@@ -525,32 +566,15 @@ I PARAGRAFI SEGUENTI SONO QUELLI VECCHI
 	\label{metricheOx}
 \end{table}
 
+L'analisi testuale ha sorpassato di gran lunge le altre rappresentazioni. Nel sito dell'università di Oxford, le pagine si sono rivelate consistenti tra loro e con gli argomenti trattati mentre l'analisi della componente connessa del sito non è stata sufficiente per riuscire ad estrarre le informazioni desiderate. I topic dell'università inglese si sono rivelati la componente più informativa.
 
-
-
-
-
-
-
-
-
-Si descrivono di seguito le configurazioni utilizzate per gli algoritmi di clustering utilizzati durante la fase di sperimentazione. 
 \color{red}
-
 QUESTA PARTE METTILA NELLA PARTE DI DISCUSSIONE DEI RISULTATI.
 
-Dalla scelta di apprendere le rappresentazioni vettoriali delle relazioni invece di utilizzare algoritmi di Community Detection del grafo, sono derivati dei vantaggi. Innanzitutto gli algoritmi di partizionamento dei grafi hanno complessità NP-completa, ovvero necessitano di un tempo superpolinomiale nella dimensione dell'input. Nel contesto del Web Mining la dimensione del dataset può crescere enormemente ed avere soluzioni più efficienti costituisce senz'altro una priorità. 
-\\
-In tutti i casi di seguito riportati sono stati generati grafi sia in modalità classica, che attraverso l'estrazione delle liste. Nel primo caso i dataset saranno chiamati \textbf{''nc''} (no-costraint, senza vincoli), mentre nel secondo caso \textbf{''lc''} (list-costraint, con il vincolo delle liste (vedere \ref{liste}). Dove omessa, la configurazione è rimasta invariata.
+
 \color{black}
 \subsection{Community Detection}
-Sono state applicate metodologie derivanti dalla teoria dei grafi per l'estrazione di strutture connesse all'interno del grafo web. Questo può essere utile nella individuazione di community all'interno di grafi come ad esempio social network. La divisione del grafo in community può essere effettuata seguendo diversi approcci, inoltre la rete costruita su di un tipico sito web è caratterizzata solitamente da un numero elevato di collegamenti tra pagine che suggeriscono l'utilizzo di alcune tipologie piuttosto che altre. Infatti misure come la betweenness non hanno restituito risultati significativi.
-Sono stati comunque effettuati test utilizzando la rappresentazione a grafo per confrontare al meglio i risultati globali ottenuti.
-
-
-I grafi utilizzati rappresentano le due diverse operazioni di estrazione di collegamenti effettuate. La prima contiene tutti i collegamenti presenti all'interno di una pagina e mostrerà quindi più archi. La seconda estrae solamente gli hyperlink dalle liste.
-
-L'analisi del grafo considera unicamente le relazioni che intercorrono fra le pagine web e tralascia informazioni riguardanti il contenuto. Dalle metriche rilevate risulta in tabella \ref{metricheGraphIll}, risulta che il partizionamento del grafo web non riesce a dividere al meglio i cluster.
+%Sono state applicate metodologie derivanti dalla teoria dei grafi per l'estrazione di strutture connesse all'interno del grafo web. Questo può essere utile nella individuazione di community all'interno di grafi come ad esempio social network. Sono stati comunque effettuati test utilizzando la rappresentazione a grafo per confrontare al meglio i risultati globali ottenuti.I grafi utilizzati rappresentano le due diverse operazioni di estrazione di collegamenti effettuate. La prima contiene tutti i collegamenti presenti all'interno di una pagina e mostrerà quindi più archi. La seconda estrae solamente gli hyperlink dalle liste. L'analisi del grafo considera unicamente le relazioni che intercorrono fra le pagine web e tralascia informazioni riguardanti il contenuto. Dalle metriche rilevate risulta in tabella \ref{metricheGraphIll}, risulta che il partizionamento del grafo web non riesce a dividere al meglio i cluster.
  
 \begin{figure}[htb]
 	\centering
@@ -559,7 +583,7 @@ L'analisi del grafo considera unicamente le relazioni che intercorrono fra le pa
 	\label{nc_groundtruth}
 \end{figure}
 
-\paragraph{\texttt{cs.illinois.edu}} Il grafo del sito presenta $728$ nodi e $16993$ archi. L'algoritmo \textit{Fastgreedy} non richiede parametri specifici ma è stato tagliato il dendrogramma ad altezza $15$, il numero di cluster nella operazione di raggruppamento manuale. Ugualmente per \textit{WalkTrap}, che però necessitava della lunghezza dei Random Walk da effettuare. I risultati migliori sono stati osservati con percorsi di lunghezza $3$.
+\paragraph{\texttt{cs.illinois.edu}}L'algoritmo \textit{Fastgreedy} non richiede parametri specifici ma è stato tagliato il dendrogramma ad altezza $15$, il numero di cluster nella operazione di raggruppamento manuale. Ugualmente per \textit{WalkTrap}, che però necessitava della lunghezza dei Random Walk da effettuare. I risultati migliori sono stati osservati con percorsi di lunghezza $3$.
 \begin{table}[H]
 	\begin{tabular}{| l | c | c | c | c | c |}
 	\hline
@@ -660,12 +684,6 @@ Considerando i Random Walk generati sul grafo come frasi, è possibile applicare
 \\
 Le squenze di Random Walk sono state usate per apprendere rappresentazioni vettoriali delle pagine Web. La fase di URL embedding è stata effetuata utilizzando l'algoritmo Word2vec, \cite{gensim} (esaminato in \ref{word2vec}) modificando alcuni parametri e lasciando invariato altri.
 \\
-\begin{figure}[h!]
-	\centering
-	\includegraphics[width = 130mm]{lc_embedding_km.png}
-	\caption{Rappresentazione del sito \texttt{cs.illinois.edu}, clusterizzato con K-Means.}
-	\label{nc_embedding_km}
-\end{figure}
 I parametri personalizzati sono:
 \begin{itemize}
 \item \textbf{min-count}: tutte le parole (o URL) con frequenza di occorrenza minore i questo valore vengono ignorate.
@@ -932,7 +950,7 @@ Sul dataset del sito, costituito da $3951$ pagine e $363$ termini, il corpus è 
 
 
 \subsection{Embedding e Text Mining}
-I risultati hanno evidenziato che l'analisi singola, sia della correlazione tra le pagine sia del contenuto testuale, può non bastare a codificare esaustivamente la conoscenza che una pagina web può offrire. Entrambe le informazioni sono rilevanti ed andrebbero processate combinatamente. Effettuando i test precedenti è stato osservato come le informazioni codificate nelle due tipologie di vettori fossero complementari. Sono stati quindi considerati come un unico vettore. Il vantaggio di associare le relazioni in uno spazio vettoriale offre il vantaggio usare la stessa rappresentazione e quindi di unire i vettori derivanti dagli algoritmi di word embedding con quelli derivanti dall'analisi di contenuto testuale. 
+Sono stati quindi considerati come un unico vettore. Il vantaggio di associare entrambe le relazioni in uno spazio vettoriale offre il vantaggio usare la stessa rappresentazione e quindi di unire i vettori derivanti dagli algoritmi di Word Embedding con quelli derivanti dall'analisi di contenuto testuale. 
 \\
 Così facendo è possibile dare più importanza ad una tipologia di informazione piuttosto che ad un altra, andando a modificare il rapporto tra le dimensioni dei vettori.
 
