@@ -6,10 +6,16 @@
 %*******************************************************
 % Introduzione
 %*******************************************************
-In questo lavoro di tesi è stato trattato il clustering di pagine Web, proponendo una nuova metodologia.
-La trattazione effettuata è incentrata sull'utilizzo dei Random Walk per apprendere rappresentazioni vettoriali delle pagine, unitamente al loro contenuto testuale. Il lavoro non pretende di essere esaustivo, ma piuttosto un punto di partenza per ulteriori sviluppi, sia teorici che sperimentali. 
-\\\\
+In questo lavoro di tesi è stato trattato il clustering di pagine Web, proponendo l'utilizzo dei Random Walk per apprendere rappresentazioni vettoriali delle pagine, utilizzato unitamente al loro contenuto testuale. Il lavoro non pretende di essere esaustivo, ma piuttosto un punto di partenza per ulteriori sviluppi, sia teorici che sperimentali. 
+
 I risultati sperimentali prodotti si sono rivelati discreti e incentivano a proseguire gli studi in questa direzione in modo da individuare nuove tecniche che permettano di migliorare i risultati raggiunti in termini di qualità. 
-In particolare è stato osservato come la forma dei cluster vari in funzione dal Dataset. Quindi, sarebbe opportuno utilizzare l'algoritmo più appropriato in base al contesto. 
+In particolare è stato osservato come la forma dei cluster e le informazioni celate nei vari aspetti considerati; varino in funzione dal Dataset. Quindi, sarebbe opportuno utilizzare l'algoritmo più appropriato in base al contesto. 
 \\
 Da notare come le ''analogie'' estraibili dall'utilizzo di \textit{Word2vec} su collezioni di documenti, abbiano avuto un riscontro nel Web.
+
+Lo scopo della tesi non era valutare l'efficacia dei vari algoritmi riportati, ma verificare un eventuale miglioramento nei risultati ottenuti attraverso l'applicazione del metodo proposto.
+\\
+Valutare i risultati di un algoritmo di clustering non è un operazione semplice. Infatti l'assegnazione manuale delle etichette denota una certa arbitrarietà. Sviluppi futuri potrebbero concentrarsi su di una analisi approfondita e molto più ampia delle performance dell'algoritmo.
+Infatti, l'analisi dei percorsi ha fatto notare come certe classi, idealmente raggruppate insieme in quanto stessa entità (e.g. docenti), possano invece essere divise in fase di apprendimento per motivi ragionevoli.
+\\\\
+In conclusione il problema del clustering di pagine web può rivelarsi ostico e dare risultati diversi da quelli desiderati ma comunque sensati. Considerare più aspetti può essere rivelarsi utile in molti contesti applicativi.
