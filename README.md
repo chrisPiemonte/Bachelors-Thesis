@@ -4,9 +4,9 @@ Bachelor's thesis about Web Graph Clustering.
 
 ### Abstract
 
-In this thesis, clustering of Web pages was discussed, and a new methodology is proposed using Random Walks between pages, together with their textual content, to learn vector representations for nodes in the web graph. 
+In this thesis a new methodology for clustering Web pages is discussed, using Random Walks between pages, together with their textual content, to learn vector representations for nodes in the web graph. 
 
-Url2vec is implemented to extract clusters of pages of the same semantic type. Unlike the clustering algorithms proposed in literature, Url2Vec does not consider a website as a collection of text documents independent from each other, but tries to combine information about the content and the structure.
+Url2vec is implemented to extract clusters of pages of the same semantic type. Unlike the clustering algorithms proposed in literature, Url2Vec does not consider a website as a collection of text documents independent from each other, but tries to combine information about the content of the pages and the structure of the website.
 
 The experimental results produced proved to be discreet and encouraged to follow the studies in this direction to identify new ways to improve the results achieved in terms of quality.
 
